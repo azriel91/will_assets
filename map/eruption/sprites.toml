@@ -1,0 +1,15 @@
+[[sheets]]
+  # 0
+  path = "ground.png"
+  sprite_w = 800
+  sprite_h = 199
+  row_count = 3
+  column_count = 1
+
+[[sheets]]
+  # 1
+  path = "sky.png"
+  sprite_w = 800
+  sprite_h = 376
+  row_count = 1
+  column_count = 1
