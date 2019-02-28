@@ -21,12 +21,12 @@
 
 [sequences.stand_attack]
   [[sequences.stand_attack.frames]]
-    wait = 1
+    wait = 2
     sprite = { sheet = 2, index = 0 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
   [[sequences.stand_attack.frames]]
-    wait = 1
+    wait = 2
     sprite = { sheet = 2, index = 1 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
     interactions = [
@@ -34,7 +34,7 @@
     ]
 
   [[sequences.stand_attack.frames]]
-    wait = 1
+    wait = 2
     sprite = { sheet = 2, index = 2 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
     interactions = [
