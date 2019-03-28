@@ -52,15 +52,36 @@
   ]
 
 [sequences.run]
-  frames = [
-    { wait = 4, sprite = { sheet = 0, index =  8 } },
-    { wait = 4, sprite = { sheet = 0, index =  9 } },
-    { wait = 4, sprite = { sheet = 0, index = 10 } },
-    { wait = 4, sprite = { sheet = 0, index =  9 } },
-  ]
+  [[sequences.run.frames]]
+    wait = 4
+    sprite = { sheet = 0, index =  8 }
+    body = [{ box = { x = 25, y = 177, w = 31, h = 62 } }]
+
+  [[sequences.run.frames]]
+    wait = 4
+    sprite = { sheet = 0, index =  9 }
+    body = [{ box = { x = 105, y = 177, w = 31, h = 62 } }]
+
+  [[sequences.run.frames]]
+    wait = 4
+    sprite = { sheet = 0, index = 10 }
+    body = [{ box = { x = 185, y = 177, w = 31, h = 62 } }]
+
+  [[sequences.run.frames]]
+    wait = 4
+    sprite = { sheet = 0, index =  9 }
+    body = [{ box = { x = 265, y = 177, w = 31, h = 62 } }]
 
 [sequences.run_stop]
   frames = [{ wait = 3, sprite = { sheet = 0, index = 11 } }]
+
+[sequences.dodge]
+  frames = [
+    { wait = 4, sprite = { sheet = 0, index = 20 } },
+    { wait = 4, sprite = { sheet = 0, index = 21 } },
+    { wait = 4, sprite = { sheet = 0, index = 22 } },
+    { wait = 4, sprite = { sheet = 0, index = 20 } },
+  ]
 
 [sequences.jump]
   frames = [
@@ -78,6 +99,32 @@
   frames = [{ wait = 1, sprite = { sheet = 0, index = 14 } }]
 
 [sequences.jump_descend_land]
+  frames = [
+    { wait = 0, sprite = { sheet = 0, index = 12 } },
+    { wait = 0, sprite = { sheet = 0, index = 13 } },
+    { wait = 1, sprite = { sheet = 0, index = 12 } },
+  ]
+
+# Dashing
+[sequences.dash_forward]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 16 } }]
+
+[sequences.dash_forward_ascend]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 16 } }]
+
+[sequences.dash_forward_descend]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 17 } }]
+
+[sequences.dash_back]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 18 } }]
+
+[sequences.dash_back_ascend]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 18 } }]
+
+[sequences.dash_back_descend]
+  frames = [{ wait = 1, sprite = { sheet = 0, index = 19 } }]
+
+[sequences.dash_descend_land]
   frames = [
     { wait = 0, sprite = { sheet = 0, index = 12 } },
     { wait = 0, sprite = { sheet = 0, index = 13 } },
