@@ -142,19 +142,30 @@
   ]
 
 [sequences.jump]
-  frames = [
-    { wait = 2, sprite = { sheet = 0, index = 12 } },
-    { wait = 1, sprite = { sheet = 0, index = 13 } },
-  ]
+  [[sequences.jump.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 12 }
+
+  [[sequences.jump.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 13 }
 
 [sequences.jump_off]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 14 } }]
+  [[sequences.jump_off.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 14 }
 
 [sequences.jump_ascend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 14 } }]
+  [[sequences.jump_ascend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 14 }
+    transitions = { press_attack = "jump_attack" }
 
 [sequences.jump_descend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 14 } }]
+  [[sequences.jump_descend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 14 }
+    transitions = { press_attack = "jump_attack" }
 
 [sequences.jump_descend_land]
   frames = [
@@ -163,15 +174,42 @@
     { wait = 1, sprite = { sheet = 0, index = 12 } },
   ]
 
+[sequences.jump_attack]
+  [[sequences.jump_attack.frames]]
+    wait = 2
+    sprite = { sheet = 2, index = 6 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
+
+  [[sequences.jump_attack.frames]]
+    wait = 4
+    sprite = { sheet = 2, index = 7 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
+
+    [[sequences.jump_attack.frames.interactions]]
+      hit = { hp_damage = 10 }
+      bounds = [{ box = { x = 37, y = 46, w = 21, h = 24 } }]
+
 # Dashing
 [sequences.dash_forward]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 16 } }]
+  [[sequences.dash_forward.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 16 }
+    body = [{ box = { x = 27, y = 10, w = 31, h = 60 } }]
+    transitions = { press_attack = "dash_attack" }
 
 [sequences.dash_forward_ascend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 16 } }]
+  [[sequences.dash_forward_ascend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 16 }
+    body = [{ box = { x = 27, y = 10, w = 31, h = 60 } }]
+    transitions = { press_attack = "dash_attack" }
 
 [sequences.dash_forward_descend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 17 } }]
+  [[sequences.dash_forward_descend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 17 }
+    body = [{ box = { x = 27, y = 10, w = 31, h = 60 } }]
+    transitions = { press_attack = "dash_attack" }
 
 [sequences.dash_back]
   frames = [{ wait = 1, sprite = { sheet = 0, index = 18 } }]
@@ -188,6 +226,21 @@
     { wait = 0, sprite = { sheet = 0, index = 13 } },
     { wait = 1, sprite = { sheet = 0, index = 12 } },
   ]
+
+[sequences.dash_attack]
+  [[sequences.dash_attack.frames]]
+    wait = 5
+    sprite = { sheet = 2, index = 9 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }  ]
+
+  [[sequences.dash_attack.frames]]
+    wait = 9
+    sprite = { sheet = 2, index = 10 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
+
+    [[sequences.dash_attack.frames.interactions]]
+      hit = { hp_damage = 10 }
+      bounds = [{ box = { x = 38, y = 31, w = 25, h = 20 } }]
 
 # Flinch when character is hit.
 #
