@@ -35,7 +35,7 @@
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_0.frames.interactions]]
-      hit = { repeat_delay = 9, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 7 }
       bounds = [{ box = { x = 50, y = 32, w = 17, h = 18 } }]
 
   [[sequences.stand_attack_0.frames]]
@@ -45,7 +45,7 @@
     transitions = { press_attack = "stand_attack_1" }
 
     [[sequences.stand_attack_0.frames.interactions]]
-      hit = { repeat_delay = 9, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 7 }
       bounds = [{ box = { x = 50, y = 30, w = 22, h = 18 } }]
 
 [sequences.stand_attack_1]
@@ -60,7 +60,7 @@
     body = [{ box = { x = 25, y = 91, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_1.frames.interactions]]
-      hit = { repeat_delay = 9, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 7 }
       bounds = [{ box = { x = 27, y = 35, w = 25, h = 13 } }]
 
   [[sequences.stand_attack_1.frames]]
@@ -69,7 +69,7 @@
     body = [{ box = { x = 25, y = 91, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_1.frames.interactions]]
-      hit = { repeat_delay = 9, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 7 }
       bounds = [{ box = { x = 31, y = 34, w = 23, h = 16 } }]
 
 [sequences.walk]
@@ -111,22 +111,22 @@
 
 [sequences.run]
   [[sequences.run.frames]]
-    wait = 4
+    wait = 6
     sprite = { sheet = 0, index =  8 }
     body = [{ box = { x = 25, y = 177, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
-    wait = 4
+    wait = 6
     sprite = { sheet = 0, index =  9 }
     body = [{ box = { x = 105, y = 177, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
-    wait = 4
+    wait = 6
     sprite = { sheet = 0, index = 10 }
     body = [{ box = { x = 185, y = 177, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
-    wait = 4
+    wait = 6
     sprite = { sheet = 0, index =  9 }
     body = [{ box = { x = 265, y = 177, w = 31, h = 62 } }]
 
@@ -159,13 +159,13 @@
   [[sequences.jump_ascend.frames]]
     wait = 1
     sprite = { sheet = 0, index = 14 }
-    transitions = { press_attack = "jump_attack" }
+    transitions = { hold_attack = "jump_attack" }
 
 [sequences.jump_descend]
   [[sequences.jump_descend.frames]]
     wait = 1
     sprite = { sheet = 0, index = 14 }
-    transitions = { press_attack = "jump_attack" }
+    transitions = { hold_attack = "jump_attack" }
 
 [sequences.jump_descend_land]
   frames = [
@@ -176,17 +176,21 @@
 
 [sequences.jump_attack]
   [[sequences.jump_attack.frames]]
-    wait = 2
+    wait = 5
     sprite = { sheet = 2, index = 6 }
     body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
 
+    [[sequences.jump_attack.frames.interactions]]
+      hit = { repeat_delay = 17, hp_damage = 10 }
+      bounds = [{ box = { x = 37, y = 46, w = 21, h = 24 } }]
+
   [[sequences.jump_attack.frames]]
-    wait = 4
+    wait = 11
     sprite = { sheet = 2, index = 7 }
     body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
 
     [[sequences.jump_attack.frames.interactions]]
-      hit = { hp_damage = 10 }
+      hit = { repeat_delay = 17, hp_damage = 10 }
       bounds = [{ box = { x = 37, y = 46, w = 21, h = 24 } }]
 
 # Dashing
@@ -229,17 +233,31 @@
 
 [sequences.dash_attack]
   [[sequences.dash_attack.frames]]
-    wait = 5
-    sprite = { sheet = 2, index = 9 }
+    wait = 3
+    sprite = { sheet = 2, index = 8 }
     body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }  ]
 
   [[sequences.dash_attack.frames]]
-    wait = 9
+    wait = 3
+    sprite = { sheet = 2, index = 9 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
+
+  [[sequences.dash_attack.frames]]
+    wait = 3
     sprite = { sheet = 2, index = 10 }
     body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
 
     [[sequences.dash_attack.frames.interactions]]
-      hit = { hp_damage = 10 }
+      hit = { repeat_delay = 20, hp_damage = 10 }
+      bounds = [{ box = { x = 38, y = 31, w = 25, h = 20 } }]
+
+  [[sequences.dash_attack.frames]]
+    wait = 9
+    sprite = { sheet = 2, index = 11 }
+    body = [{ box = { x = 16, y = 10, w = 31, h = 61 } }]
+
+    [[sequences.dash_attack.frames.interactions]]
+      hit = { repeat_delay = 20, hp_damage = 10 }
       bounds = [{ box = { x = 38, y = 31, w = 25, h = 20 } }]
 
 # Flinch when character is hit.
