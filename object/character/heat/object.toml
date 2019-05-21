@@ -35,7 +35,7 @@
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_0.frames.interactions]]
-      hit = { repeat_delay = 10, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 50, y = 32, w = 17, h = 18 } }]
 
   [[sequences.stand_attack_0.frames]]
@@ -45,93 +45,96 @@
     transitions = { press_attack = "stand_attack_1" }
 
     [[sequences.stand_attack_0.frames.interactions]]
-      hit = { repeat_delay = 10, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 50, y = 30, w = 22, h = 18 } }]
 
 [sequences.stand_attack_1]
   [[sequences.stand_attack_1.frames]]
     wait = 2
     sprite = { sheet = 2, index = 3 }
-    body = [{ box = { x = 25, y = 91, w = 31, h = 68 } }]
+    body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
   [[sequences.stand_attack_1.frames]]
     wait = 2
     sprite = { sheet = 2, index = 4 }
-    body = [{ box = { x = 25, y = 91, w = 31, h = 68 } }]
+    body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_1.frames.interactions]]
-      hit = { repeat_delay = 10, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 27, y = 35, w = 25, h = 13 } }]
 
   [[sequences.stand_attack_1.frames]]
     wait = 3
     sprite = { sheet = 2, index = 5 }
-    body = [{ box = { x = 25, y = 91, w = 31, h = 68 } }]
+    body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
     [[sequences.stand_attack_1.frames.interactions]]
-      hit = { repeat_delay = 10, hp_damage = 7 }
+      hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 31, y = 34, w = 23, h = 16 } }]
 
 [sequences.walk]
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 4 }
-    body = [{ box = { x = 25, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 5 }
-    body = [{ box = { x = 105, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 6 }
-    body = [{ box = { x = 185, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 7 }
-    body = [{ box = { x = 265, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 6 }
-    body = [{ box = { x = 185, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 5 }
-    body = [{ box = { x = 105, y = 93, w = 35, h = 66 } }]
+    body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
     transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
 [sequences.run]
   [[sequences.run.frames]]
     wait = 6
     sprite = { sheet = 0, index =  8 }
-    body = [{ box = { x = 25, y = 177, w = 31, h = 62 } }]
+    body = [{ box = { x = 25, y = 17, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
     wait = 6
     sprite = { sheet = 0, index =  9 }
-    body = [{ box = { x = 105, y = 177, w = 31, h = 62 } }]
+    body = [{ box = { x = 25, y = 17, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
     wait = 6
     sprite = { sheet = 0, index = 10 }
-    body = [{ box = { x = 185, y = 177, w = 31, h = 62 } }]
+    body = [{ box = { x = 25, y = 17, w = 31, h = 62 } }]
 
   [[sequences.run.frames]]
     wait = 6
     sprite = { sheet = 0, index =  9 }
-    body = [{ box = { x = 265, y = 177, w = 31, h = 62 } }]
+    body = [{ box = { x = 25, y = 17, w = 31, h = 62 } }]
 
 [sequences.run_stop]
-  frames = [{ wait = 3, sprite = { sheet = 0, index = 11 } }]
+  [[sequences.run_stop.frames]]
+    wait = 3
+    sprite = { sheet = 0, index = 11 }
+    body = [{ box = { x = 18, y = 16, w = 29, h = 63 } }]
 
 [sequences.dodge]
   frames = [
@@ -296,6 +299,33 @@
     sprite = { sheet = 3, index = 26 }
     body = [{ box = { x = 20, y = 17, w = 31, h = 62 } }]
 
+# Hit until stunned / dazed.
+[sequences.dazed]
+  [[sequences.dazed.frames]]
+    wait = 6
+    sprite = { sheet = 3, index = 21 }
+    body = [{ box = { x = 16, y = 25, w = 35, h = 54 } }]
+
+  [[sequences.dazed.frames]]
+    wait = 6
+    sprite = { sheet = 3, index = 22 }
+    body = [{ box = { x = 16, y = 25, w = 35, h = 54 } }]
+
+  [[sequences.dazed.frames]]
+    wait = 6
+    sprite = { sheet = 3, index = 23 }
+    body = [{ box = { x = 16, y = 25, w = 35, h = 54 } }]
+
+  [[sequences.dazed.frames]]
+    wait = 6
+    sprite = { sheet = 3, index = 22 }
+    body = [{ box = { x = 16, y = 25, w = 35, h = 54 } }]
+
+  [[sequences.dazed.frames]]
+    wait = 6
+    sprite = { sheet = 3, index = 21 }
+    body = [{ box = { x = 16, y = 25, w = 35, h = 54 } }]
+
 # Fall when knocked down.
 [sequences.fall_forward_ascend]
   [[sequences.fall_forward_ascend.frames]]
@@ -347,7 +377,7 @@
 
 [sequences.lie_face_down]
   [[sequences.lie_face_down.frames]]
-    wait = 30
+    wait = 120
     sprite = { sheet = 3, index = 10 }
     # body = [
     #   { box = { x = 13, y = 57, w = 31, h = 20 } },
