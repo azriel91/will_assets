@@ -148,34 +148,48 @@
   [[sequences.jump.frames]]
     wait = 2
     sprite = { sheet = 0, index = 12 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
 
   [[sequences.jump.frames]]
     wait = 1
     sprite = { sheet = 0, index = 13 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
 
 [sequences.jump_off]
   [[sequences.jump_off.frames]]
     wait = 1
     sprite = { sheet = 0, index = 14 }
+    body = [{ box = { x = 17, y = 14, w = 27, h = 58 } }]
 
 [sequences.jump_ascend]
   [[sequences.jump_ascend.frames]]
     wait = 1
     sprite = { sheet = 0, index = 14 }
     transitions = { hold_attack = "jump_attack" }
+    body = [{ box = { x = 17, y = 14, w = 27, h = 58 } }]
 
 [sequences.jump_descend]
   [[sequences.jump_descend.frames]]
     wait = 1
     sprite = { sheet = 0, index = 14 }
     transitions = { hold_attack = "jump_attack" }
+    body = [{ box = { x = 17, y = 14, w = 27, h = 58 } }]
 
 [sequences.jump_descend_land]
-  frames = [
-    { wait = 0, sprite = { sheet = 0, index = 12 } },
-    { wait = 0, sprite = { sheet = 0, index = 13 } },
-    { wait = 1, sprite = { sheet = 0, index = 12 } },
-  ]
+  [[sequences.jump_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 12 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
+
+  [[sequences.jump_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 13 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
+
+  [[sequences.jump_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 12 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
 
 [sequences.jump_attack]
   [[sequences.jump_attack.frames]]
@@ -219,20 +233,47 @@
     transitions = { press_attack = "dash_attack" }
 
 [sequences.dash_back]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 18 } }]
+  [[sequences.dash_back.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 18 }
+    body = [
+      { box = { x = 20, y = 12, w = 26, h = 43 } },
+      { box = { x = 35, y = 40, w = 20, h = 26 } },
+    ]
 
 [sequences.dash_back_ascend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 18 } }]
+  [[sequences.dash_back_ascend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 18 }
+    body = [
+      { box = { x = 20, y = 12, w = 26, h = 43 } },
+      { box = { x = 35, y = 40, w = 20, h = 26 } },
+    ]
 
 [sequences.dash_back_descend]
-  frames = [{ wait = 1, sprite = { sheet = 0, index = 19 } }]
+  [[sequences.dash_back_descend.frames]]
+    wait = 1
+    sprite = { sheet = 0, index = 19 }
+    body = [
+      { box = { x = 20, y = 12, w = 26, h = 43 } },
+      { box = { x = 35, y = 40, w = 20, h = 26 } },
+    ]
 
 [sequences.dash_descend_land]
-  frames = [
-    { wait = 0, sprite = { sheet = 0, index = 12 } },
-    { wait = 0, sprite = { sheet = 0, index = 13 } },
-    { wait = 1, sprite = { sheet = 0, index = 12 } },
-  ]
+  [[sequences.dash_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 12 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
+
+  [[sequences.dash_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 13 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
+
+  [[sequences.dash_descend_land.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 12 }
+    body = [{ box = { x = 24, y = 28, w = 30, h = 51 } }]
 
 [sequences.dash_attack]
   [[sequences.dash_attack.frames]]
