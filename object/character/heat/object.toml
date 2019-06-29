@@ -59,6 +59,11 @@
     sprite = { sheet = 2, index = 4 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
 
+    [[sequences.stand_attack_1.frames.spawns]]
+      object = "default/fireball"
+      position = [45, 35, 0]
+      velocity = [6, 0, 0]
+
     [[sequences.stand_attack_1.frames.interactions]]
       hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 27, y = 35, w = 25, h = 13 } }]

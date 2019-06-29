@@ -1,0 +1,15 @@
+[[sheets]]
+  # 0
+  path         = "fireball.png"
+  sprite_w     = 63
+  sprite_h     = 31
+  row_count    = 3
+  column_count = 2
+  offsets = [
+    { x =  43, y = 16 }, # 0
+    { x = 107, y = 16 }, # 1
+    { x =  43, y = 48 }, # 2
+    { x = 107, y = 48 }, # 3
+    { x =  43, y = 80 }, # 4
+    { x = 107, y = 80 }, # 5
+  ]
