@@ -1,27 +1,40 @@
+# Hold attack to charge.
+charge_limit = 10 # Max charge points to store.
+charge_delay = 10 # Number of ticks per charge increment.
+charge_use_mode = "exact"
+
+# charge_retention_mode = "forever"
+# charge_retention_mode = "never"
+charge_retention_mode = { lossy = { delay = 20 } }
+# charge_retention_mode = { reset = { delay = 60 } }
+
 [sequences.stand]
+  [[sequences.stand.transitions.press_attack]]
+    next = "stand_attack_1"
+    requirements = [{ charge = 2 }]
+
+  [[sequences.stand.transitions.press_attack]]
+    next = "stand_attack_0"
+
   [[sequences.stand.frames]]
     wait = 8
     sprite = { sheet = 0, index = 0 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.stand.frames]]
     wait = 8
     sprite = { sheet = 0, index = 1 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.stand.frames]]
     wait = 8
     sprite = { sheet = 0, index = 2 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.stand.frames]]
     wait = 8
     sprite = { sheet = 0, index = 3 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
 [sequences.stand_attack_0]
   [[sequences.stand_attack_0.frames]]
@@ -42,7 +55,6 @@
     wait = 3
     sprite = { sheet = 2, index = 2 }
     body = [{ box = { x = 25, y = 11, w = 31, h = 68 } }]
-    transitions = { press_attack = "stand_attack_1" }
 
     [[sequences.stand_attack_0.frames.interactions]]
       hit = { repeat_delay = 10, hp_damage = 5 }
@@ -77,42 +89,40 @@
       hit = { repeat_delay = 10, hp_damage = 5 }
       bounds = [{ box = { x = 31, y = 34, w = 23, h = 16 } }]
 
+    [sequences.stand_attack_1.frames.transitions.press_attack]
+      next = "stand_attack_1"
+      requirements = [{ charge = 2 }]
+
 [sequences.walk]
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 4 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 5 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 6 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 7 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 6 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
   [[sequences.walk.frames]]
     wait = 3
     sprite = { sheet = 0, index = 5 }
     body = [{ box = { x = 25, y = 13, w = 35, h = 66 } }]
-    transitions = { press_attack = "stand_attack_0", press_jump = "jump" }
 
 [sequences.run]
   [[sequences.run.frames]]

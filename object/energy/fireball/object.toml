@@ -1,4 +1,6 @@
 [sequences.hover]
+  next = "repeat"
+
   [[sequences.hover.frames]]
     wait = 4
     sprite = { sheet = 0, index = 0 }

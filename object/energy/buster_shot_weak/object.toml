@@ -1,0 +1,78 @@
+[sequences.hover]
+  [[sequences.hover.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 0 }
+
+  [[sequences.hover.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 1 }
+    body = [{ box = { x = 14, y = 12, w = 6, h = 8 } }]
+
+    [[sequences.hover.frames.interactions]]
+      hit = { repeat_delay = 20, hp_damage = 2, stun = 5 }
+      bounds = [{ box = { x = 14, y = 12, w = 6, h = 8 } }]
+
+  [[sequences.hover.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 2 }
+    body = [{ box = { x = 13, y = 12, w = 9, h = 8 } }]
+
+    [[sequences.hover.frames.interactions]]
+      hit = { repeat_delay = 20, hp_damage = 2, stun = 5 }
+      bounds = [{ box = { x = 13, y = 12, w = 9, h = 8 } }]
+
+  [[sequences.hover.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 3 }
+    body = [{ box = { x = 12, y = 12, w = 10, h = 8 } }]
+
+    [[sequences.hover.frames.interactions]]
+      hit = { repeat_delay = 20, hp_damage = 2, stun = 5 }
+      bounds = [{ box = { x = 12, y = 12, w = 10, h = 8 } }]
+
+  [[sequences.hover.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 4 }
+    body = [{ box = { x = 12, y = 12, w = 10, h = 8 } }]
+
+    [[sequences.hover.frames.interactions]]
+      hit = { repeat_delay = 20, hp_damage = 2, stun = 5 }
+      bounds = [{ box = { x = 12, y = 12, w = 10, h = 8 } }]
+
+[sequences.hit]
+  next = "delete"
+
+  [[sequences.hit.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 5 }
+
+  [[sequences.hit.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 6 }
+
+  [[sequences.hit.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 7 }
+
+  [[sequences.hit.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 8 }
+
+[sequences.hitting]
+  next = "delete"
+
+  [[sequences.hitting.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 5 }
+
+  [[sequences.hitting.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 6 }
+
+  [[sequences.hitting.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 7 }
+
+  [[sequences.hitting.frames]]
+    wait = 2
+    sprite = { sheet = 0, index = 8 }

@@ -1,0 +1,15 @@
+[[sheets]]
+  # 0
+  path         = "rox.png"
+  sprite_w     = 63
+  sprite_h     = 63
+  row_count    = 1
+  column_count = 6
+  offsets = [
+    { x =  32, y = 64 }, #  0
+    { x =  96, y = 64 }, #  1
+    { x = 160, y = 64 }, #  2
+    { x = 224, y = 64 }, #  3
+    { x = 288, y = 64 }, #  4
+    { x = 352, y = 64 }, #  5
+  ]
