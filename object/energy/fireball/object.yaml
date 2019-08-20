@@ -1,0 +1,56 @@
+sequences:
+  hover:
+    next: "repeat"
+
+    frames:
+      - wait: 4
+        sprite: { sheet: 0, index: 0 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+        interactions:
+        - hit: { repeat_delay: 20, hp_damage: 15, stun: 90 }
+          bounds: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+      - wait: 4
+        sprite: { sheet: 0, index: 1 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+        interactions:
+        - hit: { repeat_delay: 20, hp_damage: 15, stun: 90 }
+          bounds: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+  hit:
+    next: "delete"
+
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 2 }
+
+      - wait: 1
+        sprite: { sheet: 0, index: 3 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+  hitting:
+    next: "delete"
+
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 2 }
+
+      - wait: 1
+        sprite: { sheet: 0, index: 3 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 15, y: 6, w: 39, h: 21 } }]

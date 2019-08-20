@@ -1,0 +1,16 @@
+header:
+  name  : "Eruption"
+  bounds: { x: 150, y: 80, z: 15, width: 450, height: 800, depth: 50 }
+
+layer:
+  - # Sky
+    position: { x: 0, y: 134, z: 0 }
+    frames:
+      - { wait: 10, sprite: { sheet: 1, index: 0 } }
+
+  - # Ground
+    position: { x: 0, y: 0, z: 1 }
+    frames:
+      - { wait: 10, sprite: { sheet: 0, index: 0 } }
+      - { wait: 10, sprite: { sheet: 0, index: 1 } }
+      - { wait: 10, sprite: { sheet: 0, index: 2 } }

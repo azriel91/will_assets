@@ -1,0 +1,401 @@
+# Hold attack to charge.
+charge_limit: 10 # Max charge points to store.
+charge_delay: 10 # Number of ticks per charge increment.
+charge_use_mode: "exact"
+
+# charge_retention_mode: "forever"
+# charge_retention_mode: "never"
+charge_retention_mode: { lossy: { delay: 20 } }
+# charge_retention_mode: { reset: { delay: 60 } }
+
+sequences:
+  stand:
+    transitions:
+      press_attack:
+        - next: "stand_attack_1"
+          requirements: [{ charge: 2 }]
+        - next: "stand_attack_0"
+
+    frames:
+      - wait: 8
+        sprite: { sheet: 0, index: 0 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+      - wait: 8
+        sprite: { sheet: 0, index: 1 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+      - wait: 8
+        sprite: { sheet: 0, index: 2 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+      - wait: 8
+        sprite: { sheet: 0, index: 3 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+  stand_attack_0:
+    frames:
+      - wait: 2
+        sprite: { sheet: 2, index: 0 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+      - wait: 2
+        sprite: { sheet: 2, index: 1 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+        interactions:
+          - hit: { repeat_delay: 10, hp_damage: 5 }
+            bounds: [{ box: { x: 50, y: 32, w: 17, h: 18 } }]
+
+      - wait: 3
+        sprite: { sheet: 2, index: 2 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+        interactions:
+          - hit: { repeat_delay: 10, hp_damage: 5 }
+            bounds: [{ box: { x: 50, y: 30, w: 22, h: 18 } }]
+
+  stand_attack_1:
+    frames:
+      - wait: 2
+        sprite: { sheet: 2, index: 3 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+      - wait: 2
+        sprite: { sheet: 2, index: 4 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+        spawns:
+          - object: "default/fireball"
+            position: [45, 35, 0]
+            velocity: [6, 0, 0]
+
+        interactions:
+          - hit: { repeat_delay: 10, hp_damage: 5 }
+            bounds: [{ box: { x: 27, y: 35, w: 25, h: 13 } }]
+
+      - wait: 3
+        sprite: { sheet: 2, index: 5 }
+        body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+
+        interactions:
+          - hit: { repeat_delay: 10, hp_damage: 5 }
+            bounds: [{ box: { x: 31, y: 34, w: 23, h: 16 } }]
+
+        transitions:
+          press_attack:
+            next: "stand_attack_1"
+            requirements: [{ charge: 2 }]
+
+  walk:
+    frames:
+      - wait: 3
+        sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 6 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 7 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 6 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
+
+  run:
+    frames:
+      - wait: 6
+        sprite: { sheet: 0, index:  8 }
+        body: [{ box: { x: 25, y: 17, w: 31, h: 62 } }]
+
+      - wait: 6
+        sprite: { sheet: 0, index:  9 }
+        body: [{ box: { x: 25, y: 17, w: 31, h: 62 } }]
+
+      - wait: 6
+        sprite: { sheet: 0, index: 10 }
+        body: [{ box: { x: 25, y: 17, w: 31, h: 62 } }]
+
+      - wait: 6
+        sprite: { sheet: 0, index:  9 }
+        body: [{ box: { x: 25, y: 17, w: 31, h: 62 } }]
+
+  run_stop:
+    frames:
+      - wait: 3
+        sprite: { sheet: 0, index: 11 }
+        body: [{ box: { x: 18, y: 16, w: 29, h: 63 } }]
+
+  dodge:
+    frames:
+      - wait: 4
+        sprite: { sheet: 0, index: 20 }
+      - wait: 4
+        sprite: { sheet: 0, index: 21 }
+      - wait: 4
+        sprite: { sheet: 0, index: 22 }
+      - wait: 4
+        sprite: { sheet: 0, index: 20 }
+
+  jump:
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 13 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+  jump_off:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 14 }
+        body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
+
+  jump_ascend:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 14 }
+        body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
+        transitions: { hold_attack: "jump_attack" }
+
+  jump_descend:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 14 }
+        body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
+        transitions: { hold_attack: "jump_attack" }
+
+  jump_descend_land:
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 13 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+  jump_attack:
+    frames:
+      - wait: 5
+        sprite: { sheet: 2, index: 6 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }]
+
+        interactions:
+          - hit: { repeat_delay: 17, hp_damage: 10 }
+            bounds: [{ box: { x: 37, y: 46, w: 21, h: 24 } }]
+
+      - wait: 11
+        sprite: { sheet: 2, index: 7 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }]
+
+        interactions:
+          - hit: { repeat_delay: 17, hp_damage: 10 }
+            bounds: [{ box: { x: 37, y: 46, w: 21, h: 24 } }]
+
+  # Dashing
+  dash_forward:
+    transitions: { press_attack: "dash_attack" }
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 16 }
+        body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
+
+  dash_forward_ascend:
+    transitions: { press_attack: "dash_attack" }
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 16 }
+        body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
+
+  dash_forward_descend:
+    transitions: { press_attack: "dash_attack" }
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 17 }
+        body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
+
+  dash_back:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 18 }
+        body:
+          - { box: { x: 20, y: 12, w: 26, h: 43 } }
+          - { box: { x: 35, y: 40, w: 20, h: 26 } }
+
+  dash_back_ascend:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 18 }
+        body:
+          - { box: { x: 20, y: 12, w: 26, h: 43 } }
+          - { box: { x: 35, y: 40, w: 20, h: 26 } }
+
+  dash_back_descend:
+    frames:
+      - wait: 1
+        sprite: { sheet: 0, index: 19 }
+        body:
+          - { box: { x: 20, y: 12, w: 26, h: 43 } }
+          - { box: { x: 35, y: 40, w: 20, h: 26 } }
+
+  dash_descend_land:
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 13 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 24, y: 28, w: 30, h: 51 } }]
+
+  dash_attack:
+    frames:
+      - wait: 3
+        sprite: { sheet: 2, index: 8 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }  ]
+
+      - wait: 3
+        sprite: { sheet: 2, index: 9 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }]
+
+      - wait: 3
+        sprite: { sheet: 2, index: 10 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }]
+
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 10 }
+            bounds: [{ box: { x: 38, y: 31, w: 25, h: 20 } }]
+
+      - wait: 9
+        sprite: { sheet: 2, index: 11 }
+        body: [{ box: { x: 16, y: 10, w: 31, h: 61 } }]
+
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 10 }
+            bounds: [{ box: { x: 38, y: 31, w: 25, h: 20 } }]
+
+  # Flinch when character is hit.
+  #
+  # * `flinch_0`: Got hit when on ground.
+  # * `flinch_1`: Got hit when on ground - alternate sequence.
+  flinch_0:
+    frames:
+      - wait: 2
+        sprite: { sheet: 3, index: 24 }
+        body: [{ box: { x: 22, y: 22, w: 32, h: 57 } }]
+
+      - wait: 2
+        sprite: { sheet: 3, index: 25 }
+        body: [{ box: { x: 22, y: 23, w: 29, h: 56 } }]
+
+      - wait: 2
+        sprite: { sheet: 3, index: 24 }
+        body: [{ box: { x: 22, y: 22, w: 32, h: 57 } }]
+
+  flinch_1:
+    frames:
+      - wait: 2
+        sprite: { sheet: 3, index: 26 }
+        body: [{ box: { x: 20, y: 17, w: 31, h: 62 } }]
+
+      - wait: 2
+        sprite: { sheet: 3, index: 27 }
+        body: [{ box: { x: 26, y: 19, w: 32, h: 60 } }]
+
+      - wait: 2
+        sprite: { sheet: 3, index: 26 }
+        body: [{ box: { x: 20, y: 17, w: 31, h: 62 } }]
+
+  # Hit until stunned / dazed.
+  dazed:
+    frames:
+      - wait: 6
+        sprite: { sheet: 3, index: 21 }
+        body: [{ box: { x: 16, y: 25, w: 35, h: 54 } }]
+
+      - wait: 6
+        sprite: { sheet: 3, index: 22 }
+        body: [{ box: { x: 16, y: 25, w: 35, h: 54 } }]
+
+      - wait: 6
+        sprite: { sheet: 3, index: 23 }
+        body: [{ box: { x: 16, y: 25, w: 35, h: 54 } }]
+
+      - wait: 6
+        sprite: { sheet: 3, index: 22 }
+        body: [{ box: { x: 16, y: 25, w: 35, h: 54 } }]
+
+      - wait: 6
+        sprite: { sheet: 3, index: 21 }
+        body: [{ box: { x: 16, y: 25, w: 35, h: 54 } }]
+
+  # Fall when knocked down.
+  fall_forward_ascend:
+    frames:
+      - wait: 2
+        sprite: { sheet: 3, index: 6 }
+        # body:
+        #   - { box: { x: 21, y: 92, w: 21, h: 28 } }
+        #   - { box: { x: 38, y: 32, w: 23, h: 27 } }
+
+  fall_forward_descend:
+    frames:
+      - wait: 3
+        sprite: { sheet: 3, index: 7 }
+        # body:
+        #   - { box: { x: 26, y: 89, w: 27, h: 27 } }
+        #   - { box: { x: 98, y: 36, w: 25, h: 23 } }
+
+      - wait: 4
+        sprite: { sheet: 3, index: 8 }
+        # body:
+        #   - { box: { x: 30, y: 92, w: 21, h: 19 } }
+        #   - { box: { x: 18, y: 29, w: 36, h: 22 } }
+
+      - wait: 2
+        sprite: { sheet: 3, index: 9 }
+        # body: [{ box: { x: 17, y: 30, w: 45, h: 28 } }]
+
+  fall_forward_land:
+    frames:
+      - wait: 2
+        sprite: { sheet: 3, index: 10 }
+        # body:
+        #   - { box: { x: 13, y: 57, w: 31, h: 20 } }
+        #   - { box: { x: 44, y: 40, w: 21, h: 27 } }
+
+      - wait: 2
+        sprite: { sheet: 3, index: 11 }
+        # body:
+        #   - { box: { x: 13, y: 43, w: 26, h: 32 } }
+        #   - { box: { x: 39, y: 54, w: 22, h: 37 } }
+
+  lie_face_down:
+    frames:
+      - wait: 120
+        sprite: { sheet: 3, index: 10 }
+        # body:
+        #   - { box: { x: 13, y: 57, w: 31, h: 20 } }
+        #   - { box: { x: 44, y: 40, w: 21, h: 27 } }

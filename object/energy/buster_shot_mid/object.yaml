@@ -1,0 +1,86 @@
+sequences:
+  hover:
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 0 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 1 }
+        body: [{ box: { x: 25, y: 10, w: 16, h: 11 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 25, y: 10, w: 16, h: 11 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 2 }
+        body: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 3 }
+        body: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 21, y: 8, w: 23, h: 16 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 6 }
+        body: [{ box: { x: 20, y: 10, w: 26, h: 13 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 20, y: 10, w: 26, h: 13 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 7 }
+        body: [{ box: { x: 20, y: 10, w: 26, h: 13 } }]
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 20, stun: 100 }
+            bounds: [{ box: { x: 20, y: 10, w: 26, h: 13 } }]
+
+  hit:
+    next: "delete"
+
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 8 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 9 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 10 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 11 }
+
+  hitting:
+    next: "delete"
+
+    frames:
+      - wait: 2
+        sprite: { sheet: 0, index: 8 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 9 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 10 }
+
+      - wait: 2
+        sprite: { sheet: 0, index: 11 }
