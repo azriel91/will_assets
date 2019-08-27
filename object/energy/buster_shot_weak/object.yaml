@@ -1,5 +1,6 @@
 sequences:
   hover:
+    next: "fly"
     frames:
       - wait: 2
         sprite: { sheet: 0, index: 0 }
@@ -11,6 +12,9 @@ sequences:
           - hit: { repeat_delay: 20, hp_damage: 2, stun: 5 }
             bounds: [{ box: { x: 14, y: 12, w: 6, h: 8 } }]
 
+  fly:
+    next: "repeat"
+    frames:
       - wait: 2
         sprite: { sheet: 0, index: 2 }
         body: [{ box: { x: 13, y: 12, w: 9, h: 8 } }]

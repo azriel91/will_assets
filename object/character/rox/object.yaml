@@ -14,7 +14,7 @@ sequences:
       press_attack: { next: "stand_attack_0" }
       press_jump: { next: "jump" }
       release_attack:
-        - next: "dazed" # placeholder for strong blast
+        - next: "buster_shot_strong"
           requirements: [{ charge: 40 }]
         - next: "stand_attack_1"
           requirements: [{ charge: 13 }]
@@ -105,7 +105,8 @@ sequences:
         sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-  dazed:
+  buster_shot_strong:
+    next: "stand"
     frames:
       - wait: 2
         sprite: { sheet: 0, index: 1 }
@@ -379,6 +380,12 @@ sequences:
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
+        sprite: { sheet: 0, index: 0 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+  dazed:
+    frames:
+      - wait: 30
         sprite: { sheet: 0, index: 0 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 

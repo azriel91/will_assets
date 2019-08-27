@@ -1,7 +1,7 @@
 sequences:
   # Startup sequence, pending arbitrary sequence IDs
   hover:
-    next: "hit"
+    next: "fly"
 
     frames:
       - wait: 3
@@ -20,7 +20,7 @@ sequences:
             bounds: [{ box: { x: 21, y: 18, w: 24, h: 27 } }]
 
   # Hijacking the `hit` sequence as flying
-  hit:
+  fly:
     next: "repeat"
 
     frames:
@@ -43,7 +43,17 @@ sequences:
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
 
   hitting:
-    next: "hit"
+    next: "fly"
+
+    frames:
+      - wait: 3
+        sprite: { sheet: 0, index: 5 }
+        interactions:
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+            bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
+
+  hit:
+    next: "fly"
 
     frames:
       - wait: 3
