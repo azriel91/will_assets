@@ -15,6 +15,7 @@ sequences:
         - next: "stand_attack_1"
           requirements: [{ charge: 2 }]
         - next: "stand_attack_0"
+      press_jump: jump
 
     frames:
       - wait: 8
@@ -38,6 +39,10 @@ sequences:
       - wait: 2
         sprite: { sheet: 2, index: 0 }
         body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+        acceleration:
+          kind: "once"
+          x: { multiplier: "x_axis", value: 2.5 }
+          z: { multiplier: "z_axis", value: 1.5 }
 
       - wait: 2
         sprite: { sheet: 2, index: 1 }
@@ -60,6 +65,10 @@ sequences:
       - wait: 2
         sprite: { sheet: 2, index: 3 }
         body: [{ box: { x: 25, y: 11, w: 31, h: 68 } }]
+        acceleration:
+          kind: "once"
+          x: { multiplier: "x_axis", value: 2.5 }
+          z: { multiplier: "z_axis", value: 1.5 }
 
       - wait: 2
         sprite: { sheet: 2, index: 4 }
@@ -88,6 +97,10 @@ sequences:
             requirements: [{ charge: 2 }]
 
   walk:
+    acceleration:
+      kind: "continuous"
+      x: { multiplier: "x_axis", value: 3.5 }
+      z: { multiplier: "z_axis", value: 2.0 }
     frames:
       - wait: 3
         sprite: { sheet: 0, index: 4 }
@@ -114,6 +127,10 @@ sequences:
         body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
 
   run:
+    acceleration:
+      kind: "continuous"
+      x: { multiplier: "x_axis", value: 6.0 }
+      z: { multiplier: "z_axis", value: 1.5 }
     frames:
       - wait: 6
         sprite: { sheet: 0, index:  8 }
@@ -132,19 +149,30 @@ sequences:
         body: [{ box: { x: 25, y: 17, w: 31, h: 62 } }]
 
   run_stop:
+    acceleration:
+      kind: "continuous"
+      x: { multiplier: "x_axis", value: 2.0 }
+      z: { multiplier: "z_axis", value: 0.5 }
     frames:
       - wait: 3
         sprite: { sheet: 0, index: 11 }
         body: [{ box: { x: 18, y: 16, w: 29, h: 63 } }]
 
   dodge:
+    acceleration:
+      kind: "continuous"
+      x: 3.0
+      z: { multiplier: "z_axis", value: 1.0 }
     frames:
       - wait: 4
         sprite: { sheet: 0, index: 20 }
+
       - wait: 4
         sprite: { sheet: 0, index: 21 }
+
       - wait: 4
         sprite: { sheet: 0, index: 22 }
+
       - wait: 4
         sprite: { sheet: 0, index: 20 }
 
@@ -163,6 +191,11 @@ sequences:
       - wait: 1
         sprite: { sheet: 0, index: 14 }
         body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
+        acceleration:
+          kind: "once"
+          x: { multiplier: "x_axis", value: 5.0 }
+          y: 10.5
+          z: { multiplier: "z_axis", value: 2.0 }
 
   jump_ascend:
     frames:
@@ -216,6 +249,11 @@ sequences:
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 16 }
+        acceleration:
+          kind: "once"
+          x: 8.0
+          y: 7.5
+          z: { multiplier: "z_axis", value: 2.5 }
         body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
 
   dash_forward_ascend:
@@ -236,6 +274,11 @@ sequences:
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 18 }
+        acceleration:
+          kind: "once"
+          x: -8.0
+          y: 7.5
+          z: { multiplier: "z_axis", value: 2.5 }
         body:
           - { box: { x: 20, y: 12, w: 26, h: 43 } }
           - { box: { x: 35, y: 40, w: 20, h: 26 } }
