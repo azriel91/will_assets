@@ -157,6 +157,11 @@ sequences:
         - next: "stand_attack_1"
           requirements: [{ charge: 13 }]
 
+    acceleration:
+      kind: "continuous"
+      x: { multiplier: "x_axis", value: 3.5 }
+      z: { multiplier: "z_axis", value: 2.0 }
+
     frames:
       - wait: 3
         sprite: { sheet: 0, index: 0 }
@@ -183,6 +188,11 @@ sequences:
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   run:
+    acceleration:
+      kind: "continuous"
+      x: { multiplier: "x_axis", value: 6.0 }
+      z: { multiplier: "z_axis", value: 1.5 }
+
     frames:
       - wait: 6
         sprite: { sheet: 0, index: 0 }
