@@ -10,6 +10,7 @@ charge_retention_mode: "never"
 
 sequences:
   stand:
+    next: "repeat"
     transitions:
       press_attack: { next: "stand_attack_0" }
       press_jump: { next: "jump" }
@@ -164,56 +165,67 @@ sequences:
 
     frames:
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 6 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 7 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 8 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 9 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 8 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 7 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   run:
+    next: "none"
     acceleration:
       kind: "continuous"
-      x: { multiplier: "x_axis", value: 6.0 }
+      x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
     frames:
-      - wait: 6
-        sprite: { sheet: 0, index: 0 }
+      - wait: 2
+        sprite: { sheet: 0, index: 10 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-      - wait: 6
-        sprite: { sheet: 0, index: 0 }
+      - wait: 2
+        sprite: { sheet: 0, index: 11 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-      - wait: 6
-        sprite: { sheet: 0, index: 0 }
+      - wait: 2
+        sprite: { sheet: 0, index: 12 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-      - wait: 6
-        sprite: { sheet: 0, index: 0 }
+      - wait: 2
+        sprite: { sheet: 0, index: 13 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   run_stop:
+    next: "stand"
+
     frames:
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 11 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 10 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   dodge:
