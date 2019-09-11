@@ -197,6 +197,7 @@ sequences:
 
     frames:
       - wait: 2
+        sound: "default/object/character/rox/rox_run.wav"
         sprite: { sheet: 0, index: 10 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
@@ -235,47 +236,54 @@ sequences:
 
   jump:
     frames:
-      - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 1
+        sprite: { sheet: 0, index: 14 }
+        body: [{ box: { x: 15, y: 13, w: 28, h: 50 } }]
 
       - wait: 1
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 15 }
+        body: [{ box: { x: 15, y: 9, w: 28, h: 54 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 16 }
+        body: [{ box: { x: 17, y: 6, w: 27, h: 57 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 17 }
+        body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_off:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 18 }
+        body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
+        acceleration:
+          kind: "once"
+          x: { multiplier: "x_axis", value: 5.0 }
+          y: 10.5
+          z: { multiplier: "z_axis", value: 2.0 }
 
   jump_ascend:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 0 }
-        transitions: { hold_attack: "jump_attack" }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 18 }
+        body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_descend:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 0 }
-        transitions: { hold_attack: "jump_attack" }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 18 }
+        body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_descend_land:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 15 }
+        body: [{ box: { x: 15, y: 9, w: 28, h: 54 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 14 }
+        body: [{ box: { x: 15, y: 13, w: 28, h: 50 } }]
 
   jump_attack:
     frames:

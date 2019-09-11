@@ -3,7 +3,7 @@ sheets:
     path        : "rox.png"
     sprite_w    : 63
     sprite_h    : 63
-    row_count   : 3
+    row_count   : 4
     column_count: 6
     offsets:
       - { x:  32, y:  64 } #  0
@@ -26,3 +26,10 @@ sheets:
       - { x: 224, y: 192 } # 15
       - { x: 288, y: 192 } # 16
       - { x: 352, y: 192 } # 17
+
+      - { x:  32, y: 256 } # 18
+      - { x:  96, y: 256 } # 19
+      - { x: 160, y: 256 } # 20
+      - { x: 224, y: 256 } # 21
+      - { x: 288, y: 256 } # 22
+      - { x: 352, y: 256 } # 23
