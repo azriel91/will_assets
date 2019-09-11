@@ -3,6 +3,7 @@ sequences:
     next: "fly"
     frames:
       - wait: 2
+        sound: "default/object/energy/buster_shot_weak/buster_shot_weak.wav"
         sprite: { sheet: 0, index: 0 }
 
       - wait: 2

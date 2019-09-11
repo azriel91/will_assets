@@ -5,6 +5,7 @@ sequences:
 
     frames:
       - wait: 3
+        sound: "default/object/energy/buster_shot_strong/buster_shot_strong.wav"
         sprite: { sheet: 0, index: 0 }
 
       - wait: 3
