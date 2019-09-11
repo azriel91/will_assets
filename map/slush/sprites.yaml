@@ -1,0 +1,8 @@
+sheets:
+  - # 0
+    path        : "ground.png"
+    sprite_w    : 1280
+    sprite_h    : 158
+    row_count   : 1
+    column_count: 1
+    border      : false
