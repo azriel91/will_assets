@@ -76,8 +76,8 @@ sequences:
 
         spawns:
           - object: "default/fireball"
-            position: [45, 35, 0]
-            velocity: [6, 0, 0]
+            position: { x: 45, y: 35 }
+            velocity: { x: 6, y: 0 }
 
         interactions:
           - hit: { repeat_delay: 10, hp_damage: 5 }
