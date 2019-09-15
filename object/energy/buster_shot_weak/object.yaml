@@ -10,7 +10,7 @@ sequences:
         sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 14, y: 12, w: 6, h: 8 } }]
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5 }
+          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5, acceleration: { x: 7 } }
             bounds: [{ box: { x: 14, y: 12, w: 6, h: 8 } }]
 
   fly:
@@ -20,21 +20,21 @@ sequences:
         sprite: { sheet: 0, index: 2 }
         body: [{ box: { x: 13, y: 12, w: 9, h: 8 } }]
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5 }
+          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5, acceleration: { x: 7 } }
             bounds: [{ box: { x: 13, y: 12, w: 9, h: 8 } }]
 
       - wait: 2
         sprite: { sheet: 0, index: 3 }
         body: [{ box: { x: 12, y: 12, w: 10, h: 8 } }]
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5 }
+          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5, acceleration: { x: 7 } }
             bounds: [{ box: { x: 12, y: 12, w: 10, h: 8 } }]
 
       - wait: 2
         sprite: { sheet: 0, index: 4 }
         body: [{ box: { x: 12, y: 12, w: 10, h: 8 } }]
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5 }
+          - hit: { repeat_delay: 20, hp_damage: 2, stun: 5, acceleration: { x: 7 } }
             bounds: [{ box: { x: 12, y: 12, w: 10, h: 8 } }]
 
   hit:

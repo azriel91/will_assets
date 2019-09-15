@@ -11,13 +11,13 @@ sequences:
       - wait: 3
         sprite: { sheet: 0, index: 1 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 26, y: 23, w: 13, h: 18 } }]
 
       - wait: 3
         sprite: { sheet: 0, index: 2 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 21, y: 18, w: 24, h: 27 } }]
 
   # Hijacking the `hit` sequence as flying
@@ -28,19 +28,19 @@ sequences:
       - wait: 4
         sprite: { sheet: 0, index: 3 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
 
       - wait: 4
         sprite: { sheet: 0, index: 4 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
 
       - wait: 4
         sprite: { sheet: 0, index: 5 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
 
   hitting:
@@ -50,7 +50,7 @@ sequences:
       - wait: 3
         sprite: { sheet: 0, index: 5 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
 
   hit:
@@ -60,5 +60,5 @@ sequences:
       - wait: 3
         sprite: { sheet: 0, index: 5 }
         interactions:
-          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120 }
+          - hit: { repeat_delay: 20, hp_damage: 40, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
