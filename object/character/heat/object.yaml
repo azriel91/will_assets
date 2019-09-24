@@ -127,6 +127,7 @@ sequences:
         body: [{ box: { x: 25, y: 13, w: 35, h: 66 } }]
 
   run:
+    next: "repeat"
     acceleration:
       kind: "continuous"
       x: { multiplier: "x_axis", value: 6.0 }
