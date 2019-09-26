@@ -20,7 +20,6 @@ sequences:
           - hit: { repeat_delay: 20, hp_damage: 30, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 21, y: 18, w: 24, h: 27 } }]
 
-  # Hijacking the `hit` sequence as flying
   fly:
     next: "repeat"
 
@@ -30,6 +29,26 @@ sequences:
         interactions:
           - hit: { repeat_delay: 20, hp_damage: 30, stun: 120, acceleration: { x: 15, y: 7 } }
             bounds: [{ box: { x: 17, y: 15, w: 30, h: 31 } }]
+        spawns:
+          - object: "default/buster_shot_weak"
+            position: { x: -20, y: 0, z: -30 }
+            velocity: { x: -2 }
+            sequence: "fly"
+
+          - object: "default/buster_shot_weak"
+            position: { x: -10, y: 0, z: -15 }
+            velocity: { x: -2 }
+            sequence: "fly"
+
+          - object: "default/buster_shot_weak"
+            position: { x: -10, y: 0, z: 15 }
+            velocity: { x: -2 }
+            sequence: "fly"
+
+          - object: "default/buster_shot_weak"
+            position: { x: -20, y: 0, z: 30 }
+            velocity: { x: -2 }
+            sequence: "fly"
 
       - wait: 4
         sprite: { sheet: 0, index: 4 }
