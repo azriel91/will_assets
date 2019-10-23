@@ -2,7 +2,7 @@ header:
   name  : "Slush"
   bounds: { x: 0, y: 0, z: 0, width: 1280, height: 800, depth: 150 }
 
-layer:
+layers:
   - # Ground
     position: { x: 0, y: 0, z: 0 }
     frames:
