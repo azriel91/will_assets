@@ -378,7 +378,7 @@ sequences:
             velocity: { x: 10, y: 0 }
 
   run_clone:
-    next: "run_clone_shoot"
+    next: "delete"
     acceleration:
       kind: "continuous"
       x: 8.0
@@ -386,14 +386,6 @@ sequences:
     frames:
       - wait: 20
         sprite: { sheet: 0, index: 13 }
-
-  run_clone_shoot:
-    next: "delete"
-    acceleration:
-      kind: "continuous"
-      x: 8.0
-
-    frames:
       - wait: 10
         sprite: { sheet: 0, index: 13 }
         spawns:
