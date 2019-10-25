@@ -1,0 +1,5 @@
+layers:
+  - # Logo
+    position: { x: 100, y: 200, z: 10 }
+    frames:
+      - { wait: 10, sprite: { sheet: 0, index: 0 } }

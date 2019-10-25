@@ -1,0 +1,8 @@
+sheets:
+  - # 0
+    path        : "will.png"
+    sprite_w    : 600
+    sprite_h    : 400
+    row_count   : 1
+    column_count: 1
+    has_border  : false
