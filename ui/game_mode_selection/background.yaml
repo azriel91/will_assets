@@ -4,7 +4,17 @@ layers:
     frames:
       - { wait: 10, sprite: { sheet: 0, index: 0 } }
 
-  - # Glow
-    position: { x: 267, y: 400, z: 9 }
+  # - # Glow
+  #   position: { x: 267, y: 400, z: 9 }
+  #   frames:
+  #     - { wait: 10, sprite: { sheet: 1, index: 0 } }
+
+  - # Heat
+    position: { x: 0, y: 0, z: 9 }
     frames:
-      - { wait: 10, sprite: { sheet: 1, index: 0 } }
+      - { wait: 10, sprite: { sheet: 2, index: 0 } }
+
+  - # Clouds
+    position: { x: 0, y: 0, z: 0 }
+    frames:
+      - { wait: 10, sprite: { sheet: 3, index: 0 } }

@@ -1,16 +1,28 @@
 sheets:
-  - # 0
-    path        : "will_800x600.png"
+  - path        : "will_800x600.png"
     sprite_w    : 267
     sprite_h    : 200
     row_count   : 1
     column_count: 1
     has_border  : false
 
-  - # 1
-    path        : "glow.png"
+  - path        : "glow.png"
     sprite_w    : 267
     sprite_h    : 200
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - path        : "heat_artwork.png"
+    sprite_w    : 313
+    sprite_h    : 376
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - path        : "clouds.png"
+    sprite_w    : 800
+    sprite_h    : 600
     row_count   : 1
     column_count: 1
     has_border  : false
