@@ -1,5 +1,10 @@
 layers:
   - # Logo
-    position: { x: 100, y: 200, z: 10 }
+    position: { x: 267, y: 400, z: 10 }
     frames:
       - { wait: 10, sprite: { sheet: 0, index: 0 } }
+
+  - # Glow
+    position: { x: 267, y: 400, z: 9 }
+    frames:
+      - { wait: 10, sprite: { sheet: 1, index: 0 } }

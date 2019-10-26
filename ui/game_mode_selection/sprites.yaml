@@ -1,8 +1,16 @@
 sheets:
   - # 0
-    path        : "will.png"
-    sprite_w    : 600
-    sprite_h    : 400
+    path        : "will_800x600.png"
+    sprite_w    : 267
+    sprite_h    : 200
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - # 1
+    path        : "glow.png"
+    sprite_w    : 267
+    sprite_h    : 200
     row_count   : 1
     column_count: 1
     has_border  : false
