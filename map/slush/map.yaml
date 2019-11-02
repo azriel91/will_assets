@@ -3,7 +3,8 @@ header:
   bounds: { x: 0, y: 0, z: 0, width: 1280, height: 800, depth: 150 }
 
 layers:
-  - # Ground
+  ground:
     position: { x: 0, y: 0, z: 0 }
+    next: "repeat"
     frames:
       - { wait: 10, sprite: { sheet: 0, index: 0 } }

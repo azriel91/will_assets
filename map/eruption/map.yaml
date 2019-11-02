@@ -3,13 +3,14 @@ header:
   bounds: { x: 150, y: 80, z: 15, width: 450, height: 800, depth: 50 }
 
 layers:
-  - # Sky
+  sky:
     position: { x: 0, y: 134, z: 0 }
     frames:
       - { wait: 10, sprite: { sheet: 1, index: 0 } }
 
-  - # Ground
+  ground:
     position: { x: 0, y: 0, z: 1 }
+    next: "repeat"
     frames:
       - { wait: 10, sprite: { sheet: 0, index: 0 } }
       - { wait: 10, sprite: { sheet: 0, index: 1 } }
