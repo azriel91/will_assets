@@ -17,7 +17,9 @@ sequences:
   start_game_active:
     next: "repeat"
     frames:
-      - { wait: 2, sprite: { sheet: 0, index: 0 } }
+      - { wait: 2, sprite: { sheet: 4, index: 2 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 } }
+      - { wait: 2, sprite: { sheet: 4, index: 4 } }
 
   start_game_selected:
     next: "none"
