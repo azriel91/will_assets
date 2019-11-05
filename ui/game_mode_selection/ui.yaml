@@ -16,6 +16,7 @@ sequences:
 
   start_game_active:
     next: "repeat"
+    position: { x: 290, y: 370, z: 10 }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
@@ -23,14 +24,18 @@ sequences:
 
   start_game_selected:
     next: "none"
+    position: { x: 200, y: 300, z: 10 }
     frames:
       - wait: 2
         sprite: { sheet: 0, index: 0 }
 
   exit_inactive:
-    next: "none"
+    next: "repeat"
+    position: { x: 290, y: 300, z: 10 }
     frames:
-      - { wait: 2, sprite: { sheet: 0, index: 0 } }
+      - { wait: 2, sprite: { sheet: 4, index: 2 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 } }
+      - { wait: 2, sprite: { sheet: 4, index: 4 } }
 
   exit_active:
     next: "repeat"
