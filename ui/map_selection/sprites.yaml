@@ -1,0 +1,7 @@
+sheets:
+  - path        : "../game_mode_selection/clouds.png"
+    sprite_w    : 800
+    sprite_h    : 600
+    row_count   : 1
+    column_count: 1
+    has_border  : false
