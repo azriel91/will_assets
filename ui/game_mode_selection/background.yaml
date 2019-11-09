@@ -53,15 +53,15 @@ layers:
   "key_arrow_left":
     position: { x: 330, y: 100, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 117 } }
+      - { wait: 4, sprite: { sheet: 5, index: 117 }, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
   "key_arrow_down":
     position: { x: 346, y: 100, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 118 } }
+      - { wait: 4, sprite: { sheet: 5, index: 118 }, tint: *p2_color }
   "key_arrow_right":
     position: { x: 362, y: 100, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 119 } }
+      - { wait: 4, sprite: { sheet: 5, index: 119 }, tint: *p2_color }
 
   # --- Second row --- #
 
@@ -117,7 +117,7 @@ layers:
   "key_arrow_up":
     position: { x: 346, y: 116, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 102 } }
+      - { wait: 4, sprite: { sheet: 5, index: 102 }, tint: *p2_color }
 
   # --- Third row --- #
 
@@ -128,15 +128,15 @@ layers:
   "key_a":
     position: { x: 122, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 0 } }
+      - { wait: 4, sprite: { sheet: 5, index: 0 }, tint: &p0_color { r: 1.0, g: 0.15, b: 0.15 } }
   "key_s":
     position: { x: 138, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 34 } }
+      - { wait: 4, sprite: { sheet: 5, index: 34 }, tint: *p0_color }
   "key_d":
     position: { x: 154, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 3 } }
+      - { wait: 4, sprite: { sheet: 5, index: 3 }, tint: *p0_color }
   "key_f":
     position: { x: 170, y: 132, z: 10 }
     frames:
@@ -144,15 +144,15 @@ layers:
   "key_g":
     position: { x: 186, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 6 } }
+      - { wait: 4, sprite: { sheet: 5, index: 6 }, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
   "key_h":
     position: { x: 200, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 7 } }
+      - { wait: 4, sprite: { sheet: 5, index: 7 }, tint: *p1_color }
   "key_j":
     position: { x: 216, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 17 } }
+      - { wait: 4, sprite: { sheet: 5, index: 17 }, tint: *p1_color }
   "key_k":
     position: { x: 232, y: 132, z: 10 }
     frames:
@@ -187,7 +187,7 @@ layers:
   "key_w":
     position: { x: 136, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 38 } }
+      - { wait: 4, sprite: { sheet: 5, index: 38 }, tint: *p0_color }
   "key_e":
     position: { x: 152, y: 148, z: 10 }
     frames:
@@ -203,7 +203,7 @@ layers:
   "key_y":
     position: { x: 200, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 48 } }
+      - { wait: 4, sprite: { sheet: 5, index: 48 }, tint: *p1_color }
   "key_u":
     position: { x: 216, y: 148, z: 10 }
     frames:
@@ -215,19 +215,19 @@ layers:
   "key_o":
     position: { x: 248, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 22 } }
+      - { wait: 4, sprite: { sheet: 5, index: 22 }, tint: *p2_color }
   "key_p":
     position: { x: 264, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 23 } }
+      - { wait: 4, sprite: { sheet: 5, index: 23 }, tint: *p2_color }
   "key_[":
     position: { x: 280, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 113 } }
+      - { wait: 4, sprite: { sheet: 5, index: 113 }, tint: *p2_color }
   "key_]":
     position: { x: 296, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 114 } }
+      - { wait: 4, sprite: { sheet: 5, index: 114 }, tint: *p2_color }
   'key_\':
     position: { x: 312, y: 148, z: 10 }
     frames:
@@ -242,35 +242,35 @@ layers:
   "key_1":
     position: { x: 116, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 51 } }
+      - { wait: 4, sprite: { sheet: 5, index: 51 }, tint: *p0_color }
   "key_2":
     position: { x: 132, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 52 } }
+      - { wait: 4, sprite: { sheet: 5, index: 52 }, tint: *p0_color }
   "key_3":
     position: { x: 148, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 53 } }
+      - { wait: 4, sprite: { sheet: 5, index: 53 }, tint: *p0_color }
   "key_4":
     position: { x: 164, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 54 } }
+      - { wait: 4, sprite: { sheet: 5, index: 54 }, tint: *p0_color }
   "key_5":
     position: { x: 180, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 55 } }
+      - { wait: 4, sprite: { sheet: 5, index: 55 }, tint: *p1_color }
   "key_6":
     position: { x: 196, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 64 } }
+      - { wait: 4, sprite: { sheet: 5, index: 64 }, tint: *p1_color }
   "key_7":
     position: { x: 212, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 65 } }
+      - { wait: 4, sprite: { sheet: 5, index: 65 }, tint: *p1_color }
   "key_8":
     position: { x: 228, y: 164, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 66 } }
+      - { wait: 4, sprite: { sheet: 5, index: 66 }, tint: *p1_color }
   "key_9":
     position: { x: 244, y: 164, z: 10 }
     frames:
