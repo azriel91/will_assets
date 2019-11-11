@@ -2,14 +2,17 @@ menu:
   # First item is active by default. The sequence here should correspond to the active status.
   - index: "start_game"
     text: "Start Game"
+    position: { x: 290, y: 370, z: 10 }
     sequence: "start_game_active"
 
   - index: "control_settings"
     text: "Control Settings"
+    position: { x: 290, y: 300, z: 10 }
     sequence: "control_settings_inactive"
 
   - index: "exit"
     text: "Exit"
+    position: { x: 290, y: 230, z: 10 }
     sequence: "exit_inactive"
 
 sequences:
@@ -20,7 +23,6 @@ sequences:
 
   start_game_active:
     next: "repeat"
-    position: { x: 290, y: 370, z: 10 }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
@@ -28,14 +30,12 @@ sequences:
 
   start_game_selected:
     next: "none"
-    position: { x: 200, y: 300, z: 10 }
     frames:
       - wait: 2
         sprite: { sheet: 0, index: 0 }
 
   control_settings_inactive: &control_settings_inactive
     next: "repeat"
-    position: { x: 290, y: 300, z: 10 }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
