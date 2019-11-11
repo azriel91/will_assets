@@ -4,6 +4,10 @@ menu:
     text: "Start Game"
     sequence: "start_game_active"
 
+  - index: "control_settings"
+    text: "Control Settings"
+    sequence: "control_settings_inactive"
+
   - index: "exit"
     text: "Exit"
     sequence: "exit_inactive"
@@ -29,13 +33,15 @@ sequences:
       - wait: 2
         sprite: { sheet: 0, index: 0 }
 
-  exit_inactive:
+  control_settings_inactive: &control_settings_inactive
     next: "repeat"
     position: { x: 290, y: 300, z: 10 }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
       - { wait: 2, sprite: { sheet: 4, index: 4 } }
+
+  exit_inactive: *control_settings_inactive
 
   exit_active:
     next: "repeat"
