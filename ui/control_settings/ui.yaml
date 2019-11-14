@@ -135,43 +135,43 @@ control_settings:
           position: { x: 0, y: 96 }
         Q:
           sequence: "key_q"
-          position: { x: 40, y: 96 }
+          position: { x: 38, y: 96 }
         W:
           sequence: "key_w"
-          position: { x: 72, y: 96 }
+          position: { x: 70, y: 96 }
         E:
           sequence: "key_e"
-          position: { x: 104, y: 96 }
+          position: { x: 102, y: 96 }
         R:
           sequence: "key_r"
-          position: { x: 136, y: 96 }
+          position: { x: 134, y: 96 }
         T:
           sequence: "key_t"
-          position: { x: 168, y: 96 }
+          position: { x: 166, y: 96 }
         Y:
           sequence: "key_y"
-          position: { x: 200, y: 96 }
+          position: { x: 198, y: 96 }
         U:
           sequence: "key_u"
-          position: { x: 232, y: 96 }
+          position: { x: 230, y: 96 }
         I:
           sequence: "key_i"
-          position: { x: 264, y: 96 }
+          position: { x: 262, y: 96 }
         O:
           sequence: "key_o"
-          position: { x: 296, y: 96 }
+          position: { x: 294, y: 96 }
         P:
           sequence: "key_p"
-          position: { x: 328, y: 96 }
+          position: { x: 326, y: 96 }
         LBracket:
           sequence: "key_["
-          position: { x: 360, y: 96 }
+          position: { x: 358, y: 96 }
         RBracket:
           sequence: "key_]"
-          position: { x: 392, y: 96 }
+          position: { x: 390, y: 96 }
         Backslash:
           sequence: 'key_\'
-          position: { x: 424, y: 96 }
+          position: { x: 422, y: 96 }
         # End:
         # Delete:
         # PageDown:
@@ -400,7 +400,7 @@ sequences:
 
   "key_tab":
     frames:
-      - { wait: 4, sprite: { sheet: 3, index: 1 }, scale: 2.0 }
+      - { wait: 4, sprite: { sheet: 2, index: 12 }, scale: 2.0 }
   "key_q":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }

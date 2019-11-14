@@ -16,20 +16,20 @@ sheets:
     has_border  : false
 
   - # 2
-    # f10, f11, f12, del, back, alt
+    # f10, f11, f12, del, back, alt, tab
     path        : "../common/keyboard/keys_19x16.png"
     sprite_w    : 19
     sprite_h    : 16
-    row_count   : 4
+    row_count   : 6
     column_count: 6
     has_border  : false
 
   - # 3
-    # control, tab
+    # control
     path        : "../common/keyboard/keys_20x16.png"
     sprite_w    : 20
     sprite_h    : 16
-    row_count   : 4
+    row_count   : 2
     column_count: 2
     has_border  : false
 

@@ -53,20 +53,20 @@ sheets:
     has_border  : false
 
   - # 6
-    # F10, F11, F12, Del, Back, Alt
+    # F10, F11, F12, Del, Back, Alt, Tab
     path        : "../common/keyboard/keys_19x16.png"
     sprite_w    : 19
     sprite_h    : 16
-    row_count   : 4
+    row_count   : 6
     column_count: 6
     has_border  : false
 
   - # 7
-    # Control, Tab
+    # Control
     path        : "../common/keyboard/keys_20x16.png"
     sprite_w    : 20
     sprite_h    : 16
-    row_count   : 4
+    row_count   : 2
     column_count: 2
     has_border  : false
 

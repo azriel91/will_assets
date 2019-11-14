@@ -179,57 +179,57 @@ layers:
   "key_tab":
     position: { x: 100, y: 148, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 7, index: 1 } }
+      - { wait: 4, sprite: { sheet: 6, index: 12 } }
   "key_q":
-    position: { x: 120, y: 148, z: 10 }
+    position: { x: 119, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 32 } }
   "key_w":
-    position: { x: 136, y: 148, z: 10 }
+    position: { x: 135, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 38 }, tint: *p0_color }
   "key_e":
-    position: { x: 152, y: 148, z: 10 }
+    position: { x: 151, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 4 } }
   "key_r":
-    position: { x: 168, y: 148, z: 10 }
+    position: { x: 167, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 33 } }
   "key_t":
-    position: { x: 184, y: 148, z: 10 }
+    position: { x: 183, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 35 } }
   "key_y":
-    position: { x: 200, y: 148, z: 10 }
+    position: { x: 199, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 48 }, tint: *p1_color }
   "key_u":
-    position: { x: 216, y: 148, z: 10 }
+    position: { x: 215, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 36 } }
   "key_i":
-    position: { x: 232, y: 148, z: 10 }
+    position: { x: 231, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 16 } }
   "key_o":
-    position: { x: 248, y: 148, z: 10 }
+    position: { x: 247, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 22 }, tint: *p2_color }
   "key_p":
-    position: { x: 264, y: 148, z: 10 }
+    position: { x: 263, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 23 }, tint: *p2_color }
   "key_[":
-    position: { x: 280, y: 148, z: 10 }
+    position: { x: 279, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 113 }, tint: *p2_color }
   "key_]":
-    position: { x: 296, y: 148, z: 10 }
+    position: { x: 295, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 114 }, tint: *p2_color }
   'key_\':
-    position: { x: 312, y: 148, z: 10 }
+    position: { x: 311, y: 148, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 69 } }
 
