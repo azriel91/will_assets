@@ -1,0 +1,604 @@
+control_settings:
+  title: { position: { x: 100, y: 700, z: 10 }, text: "Control Settings" }
+  keyboard:
+    position: { x: 200, y: 300, z: 10 }
+    layout: "us"
+    layout_positions:
+      us:
+        # --- Bottom row --- #
+        LControl:
+          sequence: "key_ctrl_left"
+          position: { x: 0, y: 100 }
+        # LWin:
+        # ..
+        #   sequence: "key_fn"
+        #   position: { x: 20, y: 100 }
+        LAlt:
+          sequence: "key_alt_left"
+          position: { x: 52, y: 100 }
+        Space:
+          sequence: "key_space"
+          position: { x: 71, y: 100 }
+        RAlt:
+          sequence: "key_alt_right"
+          position: { x: 151, y: 100 }
+        # RWin:
+        # Apps:
+        RControl:
+          sequence: "key_ctrl_right"
+          position: { x: 188, y: 100 }
+        Left:
+          sequence: "key_arrow_left"
+          position: { x: 230, y: 100 }
+        Down:
+          sequence: "key_arrow_down"
+          position: { x: 246, y: 100 }
+        Right:
+          sequence: "key_arrow_right"
+          position: { x: 262, y: 100 }
+        # Numpad0:
+        # NumpadComma:
+        # NumpadEnter:
+
+        # --- Second row --- #
+        LShift:
+          sequence: "key_shift_left"
+          position: { x: 0, y: 116 }
+        Z:
+          sequence: "key_z"
+          position: { x: 24, y: 116 }
+        X:
+          sequence: "key_x"
+          position: { x: 40, y: 116 }
+        C:
+          sequence: "key_c"
+          position: { x: 56, y: 116 }
+        V:
+          sequence: "key_v"
+          position: { x: 72, y: 116 }
+        B:
+          sequence: "key_b"
+          position: { x: 88, y: 116 }
+        N:
+          sequence: "key_n"
+          position: { x: 104, y: 116 }
+        M:
+          sequence: "key_m"
+          position: { x: 120, y: 116 }
+        Comma:
+          sequence: "key_<"
+          position: { x: 136, y: 116 }
+        Period:
+          sequence: "key_>"
+          position: { x: 152, y: 116 }
+        Slash:
+          sequence: "key_?"
+          position: { x: 168, y: 116 }
+        RShift:
+          sequence: "key_shift_right"
+          position: { x: 184, y: 116 }
+        Up:
+          sequence: "key_arrow_up"
+          position: { x: 246, y: 116 }
+        # Numpad1:
+        # Numpad2:
+        # Numpad3:
+
+        # --- Third row --- #
+        Capital: # capslock
+          sequence: "key_caps"
+          position: { x: 0, y: 132 }
+        A:
+          sequence: "key_a"
+          position: { x: 22, y: 132 }
+        S:
+          sequence: "key_s"
+          position: { x: 38, y: 132 }
+        D:
+          sequence: "key_d"
+          position: { x: 54, y: 132 }
+        F:
+          sequence: "key_f"
+          position: { x: 70, y: 132 }
+        G:
+          sequence: "key_g"
+          position: { x: 86, y: 132 }
+        H:
+          sequence: "key_h"
+          position: { x: 100, y: 132 }
+        J:
+          sequence: "key_j"
+          position: { x: 116, y: 132 }
+        K:
+          sequence: "key_k"
+          position: { x: 132, y: 132 }
+        L:
+          sequence: "key_l"
+          position: { x: 148, y: 132 }
+        Semicolon:
+          sequence: "key_dot"
+          position: { x: 164, y: 132 }
+        Apostrophe:
+          sequence: 'key_"'
+          position: { x: 180, y: 132 }
+        Return:
+          sequence: "key_enter"
+          position: { x: 196, y: 132 }
+        # Numpad4:
+        # Numpad5:
+        # Numpad6:
+        # Add: # numpad +
+
+        # --- Fourth row --- #
+        Tab:
+          sequence: "key_tab"
+          position: { x: 0, y: 148 }
+        Q:
+          sequence: "key_q"
+          position: { x: 20, y: 148 }
+        W:
+          sequence: "key_w"
+          position: { x: 36, y: 148 }
+        E:
+          sequence: "key_e"
+          position: { x: 52, y: 148 }
+        R:
+          sequence: "key_r"
+          position: { x: 68, y: 148 }
+        T:
+          sequence: "key_t"
+          position: { x: 84, y: 148 }
+        Y:
+          sequence: "key_y"
+          position: { x: 100, y: 148 }
+        U:
+          sequence: "key_u"
+          position: { x: 116, y: 148 }
+        I:
+          sequence: "key_i"
+          position: { x: 132, y: 148 }
+        O:
+          sequence: "key_o"
+          position: { x: 148, y: 148 }
+        P:
+          sequence: "key_p"
+          position: { x: 164, y: 148 }
+        LBracket:
+          sequence: "key_["
+          position: { x: 180, y: 148 }
+        RBracket:
+          sequence: "key_]"
+          position: { x: 196, y: 148 }
+        Backslash:
+          sequence: 'key_\'
+          position: { x: 212, y: 148 }
+        # End:
+        # Delete:
+        # PageDown:
+        # Numpad7:
+        # Numpad8:
+        # Numpad9:
+
+        # --- Fifth row --- #
+        Grave: # backtick / tilde
+          sequence: "key_`"
+          position: { x: 0, y: 164 }
+        Key1:
+          sequence: "key_1"
+          position: { x: 16, y: 164 }
+        Key2:
+          sequence: "key_2"
+          position: { x: 32, y: 164 }
+        Key3:
+          sequence: "key_3"
+          position: { x: 48, y: 164 }
+        Key4:
+          sequence: "key_4"
+          position: { x: 64, y: 164 }
+        Key5:
+          sequence: "key_5"
+          position: { x: 80, y: 164 }
+        Key6:
+          sequence: "key_6"
+          position: { x: 96, y: 164 }
+        Key7:
+          sequence: "key_7"
+          position: { x: 112, y: 164 }
+        Key8:
+          sequence: "key_8"
+          position: { x: 128, y: 164 }
+        Key9:
+          sequence: "key_9"
+          position: { x: 144, y: 164 }
+        Key0:
+          sequence: "key_0"
+          position: { x: 160, y: 164 }
+        Minus:
+          sequence: "key_-"
+          position: { x: 176, y: 164 }
+        Equals:
+          sequence: "key_+"
+          position: { x: 192, y: 164 }
+        Back:
+          sequence: "key_back"
+          position: { x: 208, y: 164 }
+        # Insert:
+        # Home:
+        # PageUp:
+        # Numlock:
+        # Divide:
+        # Multiply:
+        # Subtract:
+
+        # --- Top row --- #
+        Escape:
+          sequence: "key_esc"
+          position: { x: 0, y: 190 }
+        F1:
+          sequence: "key_f1"
+          position: { x: 26, y: 190 }
+        F2:
+          sequence: "key_f2"
+          position: { x: 42, y: 190 }
+        F3:
+          sequence: "key_f3"
+          position: { x: 58, y: 190 }
+        F4:
+          sequence: "key_f4"
+          position: { x: 74, y: 190 }
+        F5:
+          sequence: "key_f5"
+          position: { x: 100, y: 190 }
+        F6:
+          sequence: "key_f6"
+          position: { x: 116, y: 190 }
+        F7:
+          sequence: "key_f7"
+          position: { x: 132, y: 190 }
+        F8:
+          sequence: "key_f8"
+          position: { x: 148, y: 190 }
+        F9:
+          sequence: "key_f9"
+          position: { x: 174, y: 190 }
+        F10:
+          sequence: "key_f10"
+          position: { x: 190, y: 190 }
+        F11:
+          sequence: "key_f11"
+          position: { x: 209, y: 190 }
+        F12:
+          sequence: "key_f12"
+          position: { x: 228, y: 190 }
+        # Snapshot:
+        # Sysrq:
+        # Scroll:
+        # Pause:
+
+sequences:
+  # ========
+  # Keyboard
+  # ========
+
+  # --- Bottom row --- #
+  "key_ctrl_left":
+    frames:
+      - { wait: 4, sprite: { sheet: 3, index: 0 } }
+  "key_fn":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 134 } }
+  # key_super
+  "key_alt_left":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 8 } }
+  "key_space":
+    frames:
+      - { wait: 4, sprite: { sheet: 8, index: 0 } }
+  "key_alt_right":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 8 } }
+  "key_ctrl_right":
+    frames:
+      - { wait: 4, sprite: { sheet: 3, index: 0 } }
+
+  "key_arrow_left":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 117 }, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
+  "key_arrow_down":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 118 }, tint: *p2_color }
+  "key_arrow_right":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 119 }, tint: *p2_color }
+
+  # --- Second row --- #
+
+  "key_shift_left":
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 2 } }
+  "key_z":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 49 } }
+  "key_x":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 39 } }
+  "key_c":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 2 } }
+  "key_v":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 37 } }
+  "key_b":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 1 } }
+  "key_n":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 21 } }
+  "key_m":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 20 } }
+  "key_<":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 132 } }
+  "key_>":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 133 } }
+  "key_?":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 130 } }
+  "key_shift_right":
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 2 } }
+
+  "key_arrow_up":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 102 }, tint: *p2_color }
+
+  # --- Third row --- #
+
+  "key_caps":
+    frames:
+      - { wait: 4, sprite: { sheet: 4, index: 0 } }
+  "key_a":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 0 }, tint: &p0_color { r: 1.0, g: 0.15, b: 0.15 } }
+  "key_s":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 34 }, tint: *p0_color }
+  "key_d":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 3 }, tint: *p0_color }
+  "key_f":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 5 } }
+  "key_g":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 6 }, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
+  "key_h":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 7 }, tint: *p1_color }
+  "key_j":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 17 }, tint: *p1_color }
+  "key_k":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 18 } }
+  "key_l":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 19 } }
+  "key_dot":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 112 } }
+  'key_"':
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 129 } }
+  "key_enter":
+    frames:
+      - { wait: 4, sprite: { sheet: 6, index: 0 } }
+
+  # --- Fourth row --- #
+
+  "key_tab":
+    frames:
+      - { wait: 4, sprite: { sheet: 3, index: 1 } }
+  "key_q":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 32 } }
+  "key_w":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 38 }, tint: *p0_color }
+  "key_e":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 4 } }
+  "key_r":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 33 } }
+  "key_t":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 35 } }
+  "key_y":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 48 }, tint: *p1_color }
+  "key_u":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 36 } }
+  "key_i":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 16 } }
+  "key_o":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 22 }, tint: *p2_color }
+  "key_p":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 23 }, tint: *p2_color }
+  "key_[":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 113 }, tint: *p2_color }
+  "key_]":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 114 }, tint: *p2_color }
+  'key_\':
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 69 } }
+
+  # --- Fifth row --- #
+
+  "key_`":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 128 } }
+  "key_1":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 51 }, tint: *p0_color }
+  "key_2":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 52 }, tint: *p0_color }
+  "key_3":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 53 }, tint: *p0_color }
+  "key_4":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 54 }, tint: *p0_color }
+  "key_5":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 55 }, tint: *p1_color }
+  "key_6":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 64 }, tint: *p1_color }
+  "key_7":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 65 }, tint: *p1_color }
+  "key_8":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 66 }, tint: *p1_color }
+  "key_9":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 67 } }
+  "key_0":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 68 } }
+  "key_-":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 70 } }
+  "key_+":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 71 } }
+  "key_back":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 6 } }
+
+  # --- Top row --- #
+
+  "key_esc":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 50 } }
+  "key_f1":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 80 } }
+  "key_f2":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 81 } }
+  "key_f3":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 82 } }
+  "key_f4":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 83 } }
+  "key_f5":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 84 } }
+  "key_f6":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 85 } }
+  "key_f7":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 86 } }
+  "key_f8":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 87 } }
+  "key_f9":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 96 } }
+  "key_f10":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 0 } }
+  "key_f11":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 1 } }
+  "key_f12":
+    frames:
+      - { wait: 4, sprite: { sheet: 2, index: 2 } }
+
+  # --- Remainder --- #
+
+  # "key_multiply":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 101 } }
+  # "key_percent":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 103 } }
+  # "key_{":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 115 } }
+  # "key_}":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 116 } }
+  # "key_?_mirrored":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 131 } }
+  # "key_n_with_tilde":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 135 } }
+  # "key_!":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 144 } }
+  # "key_@":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 145 } }
+  # "key_#":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 146 } }
+  # "key_$":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 147 } }
+  # "key_%":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 148 } }
+  # "key_^":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 149 } }
+  # "key_&":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 150 } }
+  # "key_*":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 151 } }
+  # "key_(":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 160 } }
+  # "key_)":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 161 } }
+  # "key_underscore":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 162 } }
+  # "key_=":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 163 } }
+  # "key_/":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 164 } }
+  # "key_~":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 1, index: 165 } }
+
+  # "key_del":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 2, index: 7 } }
+
+  # "key_enter_icon":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 5, index: 0 } }
+
+  # "key_enter_big":
+  #   frames:
+  #     - { wait: 4, sprite: { sheet: 7, index: 0 } }

@@ -1,0 +1,79 @@
+sheets:
+  - # 0
+    path        : "../game_mode_selection/clouds.png"
+    sprite_w    : 800
+    sprite_h    : 600
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - # 1
+    path        : "../common/keyboard/keys_16x16.png"
+    sprite_w    : 16
+    sprite_h    : 16
+    row_count   : 22
+    column_count: 16
+    has_border  : false
+
+  - # 2
+    # f10, f11, f12, del, back, alt
+    path        : "../common/keyboard/keys_19x16.png"
+    sprite_w    : 19
+    sprite_h    : 16
+    row_count   : 4
+    column_count: 6
+    has_border  : false
+
+  - # 3
+    # control, tab
+    path        : "../common/keyboard/keys_20x16.png"
+    sprite_w    : 20
+    sprite_h    : 16
+    row_count   : 4
+    column_count: 2
+    has_border  : false
+
+  - # 4
+    # caps
+    path        : "../common/keyboard/keys_22x16.png"
+    sprite_w    : 22
+    sprite_h    : 16
+    row_count   : 2
+    column_count: 2
+    has_border  : false
+
+  - # 5
+    # enter (icon), shift
+    path        : "../common/keyboard/keys_24x16.png"
+    sprite_w    : 24
+    sprite_h    : 16
+    row_count   : 4
+    column_count: 2
+    has_border  : false
+
+  - # 6
+    # enter
+    path        : "../common/keyboard/keys_27x16.png"
+    sprite_w    : 27
+    sprite_h    : 16
+    row_count   : 2
+    column_count: 2
+    has_border  : false
+
+  - # 7
+    # enter (big)
+    path        : "../common/keyboard/keys_32x32.png"
+    sprite_w    : 32
+    sprite_h    : 32
+    row_count   : 2
+    column_count: 2
+    has_border  : false
+
+  - # 8
+    # space
+    path        : "../common/keyboard/keys_80x16.png"
+    sprite_w    : 80
+    sprite_h    : 16
+    row_count   : 4
+    column_count: 1
+    has_border  : false
