@@ -146,31 +146,31 @@ layers:
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 6 }, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
   "key_h":
-    position: { x: 200, y: 132, z: 10 }
+    position: { x: 202, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 7 }, tint: *p1_color }
   "key_j":
-    position: { x: 216, y: 132, z: 10 }
+    position: { x: 218, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 17 }, tint: *p1_color }
   "key_k":
-    position: { x: 232, y: 132, z: 10 }
+    position: { x: 234, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 18 } }
   "key_l":
-    position: { x: 248, y: 132, z: 10 }
+    position: { x: 250, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 19 } }
   "key_dot":
-    position: { x: 264, y: 132, z: 10 }
+    position: { x: 266, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 112 } }
   'key_"':
-    position: { x: 280, y: 132, z: 10 }
+    position: { x: 282, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 129 } }
   "key_enter":
-    position: { x: 296, y: 132, z: 10 }
+    position: { x: 298, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 10, index: 0 } }
 

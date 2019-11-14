@@ -1,41 +1,41 @@
 control_settings:
   title: { position: { x: 100, y: 700, z: 10 }, text: "Control Settings" }
   keyboard:
-    position: { x: 200, y: 300, z: 10 }
+    position: { x: 150, y: 200, z: 10 }
     layout: "us"
     layout_positions:
       us:
         # --- Bottom row --- #
         LControl:
           sequence: "key_ctrl_left"
-          position: { x: 0, y: 100 }
+          position: { x: 0, y: 0 }
         # LWin:
         # ..
-        #   sequence: "key_fn"
-        #   position: { x: 20, y: 100 }
+          # sequence: "key_fn"
+          # position: { x: 40, y: 100 }
         LAlt:
           sequence: "key_alt_left"
-          position: { x: 52, y: 100 }
+          position: { x: 104, y: 0 }
         Space:
           sequence: "key_space"
-          position: { x: 71, y: 100 }
+          position: { x: 142, y: 0 }
         RAlt:
           sequence: "key_alt_right"
-          position: { x: 151, y: 100 }
+          position: { x: 302, y: 0 }
         # RWin:
         # Apps:
         RControl:
           sequence: "key_ctrl_right"
-          position: { x: 188, y: 100 }
+          position: { x: 376, y: 0 }
         Left:
           sequence: "key_arrow_left"
-          position: { x: 230, y: 100 }
+          position: { x: 460, y: 0 }
         Down:
           sequence: "key_arrow_down"
-          position: { x: 246, y: 100 }
+          position: { x: 492, y: 0 }
         Right:
           sequence: "key_arrow_right"
-          position: { x: 262, y: 100 }
+          position: { x: 524, y: 0 }
         # Numpad0:
         # NumpadComma:
         # NumpadEnter:
@@ -43,43 +43,43 @@ control_settings:
         # --- Second row --- #
         LShift:
           sequence: "key_shift_left"
-          position: { x: 0, y: 116 }
+          position: { x: 0, y: 32 }
         Z:
           sequence: "key_z"
-          position: { x: 24, y: 116 }
+          position: { x: 48, y: 32 }
         X:
           sequence: "key_x"
-          position: { x: 40, y: 116 }
+          position: { x: 80, y: 32 }
         C:
           sequence: "key_c"
-          position: { x: 56, y: 116 }
+          position: { x: 112, y: 32 }
         V:
           sequence: "key_v"
-          position: { x: 72, y: 116 }
+          position: { x: 144, y: 32 }
         B:
           sequence: "key_b"
-          position: { x: 88, y: 116 }
+          position: { x: 176, y: 32 }
         N:
           sequence: "key_n"
-          position: { x: 104, y: 116 }
+          position: { x: 208, y: 32 }
         M:
           sequence: "key_m"
-          position: { x: 120, y: 116 }
+          position: { x: 240, y: 32 }
         Comma:
           sequence: "key_<"
-          position: { x: 136, y: 116 }
+          position: { x: 272, y: 32 }
         Period:
           sequence: "key_>"
-          position: { x: 152, y: 116 }
+          position: { x: 304, y: 32 }
         Slash:
           sequence: "key_?"
-          position: { x: 168, y: 116 }
+          position: { x: 336, y: 32 }
         RShift:
           sequence: "key_shift_right"
-          position: { x: 184, y: 116 }
+          position: { x: 368, y: 32 }
         Up:
           sequence: "key_arrow_up"
-          position: { x: 246, y: 116 }
+          position: { x: 492, y: 32 }
         # Numpad1:
         # Numpad2:
         # Numpad3:
@@ -87,43 +87,43 @@ control_settings:
         # --- Third row --- #
         Capital: # capslock
           sequence: "key_caps"
-          position: { x: 0, y: 132 }
+          position: { x: 0, y: 64 }
         A:
           sequence: "key_a"
-          position: { x: 22, y: 132 }
+          position: { x: 44, y: 64 }
         S:
           sequence: "key_s"
-          position: { x: 38, y: 132 }
+          position: { x: 76, y: 64 }
         D:
           sequence: "key_d"
-          position: { x: 54, y: 132 }
+          position: { x: 108, y: 64 }
         F:
           sequence: "key_f"
-          position: { x: 70, y: 132 }
+          position: { x: 140, y: 64 }
         G:
           sequence: "key_g"
-          position: { x: 86, y: 132 }
+          position: { x: 172, y: 64 }
         H:
           sequence: "key_h"
-          position: { x: 100, y: 132 }
+          position: { x: 204, y: 64 }
         J:
           sequence: "key_j"
-          position: { x: 116, y: 132 }
+          position: { x: 236, y: 64 }
         K:
           sequence: "key_k"
-          position: { x: 132, y: 132 }
+          position: { x: 268, y: 64 }
         L:
           sequence: "key_l"
-          position: { x: 148, y: 132 }
+          position: { x: 300, y: 64 }
         Semicolon:
           sequence: "key_dot"
-          position: { x: 164, y: 132 }
+          position: { x: 332, y: 64 }
         Apostrophe:
           sequence: 'key_"'
-          position: { x: 180, y: 132 }
+          position: { x: 364, y: 64 }
         Return:
           sequence: "key_enter"
-          position: { x: 196, y: 132 }
+          position: { x: 396, y: 64 }
         # Numpad4:
         # Numpad5:
         # Numpad6:
@@ -132,46 +132,46 @@ control_settings:
         # --- Fourth row --- #
         Tab:
           sequence: "key_tab"
-          position: { x: 0, y: 148 }
+          position: { x: 0, y: 96 }
         Q:
           sequence: "key_q"
-          position: { x: 20, y: 148 }
+          position: { x: 40, y: 96 }
         W:
           sequence: "key_w"
-          position: { x: 36, y: 148 }
+          position: { x: 72, y: 96 }
         E:
           sequence: "key_e"
-          position: { x: 52, y: 148 }
+          position: { x: 104, y: 96 }
         R:
           sequence: "key_r"
-          position: { x: 68, y: 148 }
+          position: { x: 136, y: 96 }
         T:
           sequence: "key_t"
-          position: { x: 84, y: 148 }
+          position: { x: 168, y: 96 }
         Y:
           sequence: "key_y"
-          position: { x: 100, y: 148 }
+          position: { x: 200, y: 96 }
         U:
           sequence: "key_u"
-          position: { x: 116, y: 148 }
+          position: { x: 232, y: 96 }
         I:
           sequence: "key_i"
-          position: { x: 132, y: 148 }
+          position: { x: 264, y: 96 }
         O:
           sequence: "key_o"
-          position: { x: 148, y: 148 }
+          position: { x: 296, y: 96 }
         P:
           sequence: "key_p"
-          position: { x: 164, y: 148 }
+          position: { x: 328, y: 96 }
         LBracket:
           sequence: "key_["
-          position: { x: 180, y: 148 }
+          position: { x: 360, y: 96 }
         RBracket:
           sequence: "key_]"
-          position: { x: 196, y: 148 }
+          position: { x: 392, y: 96 }
         Backslash:
           sequence: 'key_\'
-          position: { x: 212, y: 148 }
+          position: { x: 424, y: 96 }
         # End:
         # Delete:
         # PageDown:
@@ -182,46 +182,46 @@ control_settings:
         # --- Fifth row --- #
         Grave: # backtick / tilde
           sequence: "key_`"
-          position: { x: 0, y: 164 }
+          position: { x: 0, y: 128 }
         Key1:
           sequence: "key_1"
-          position: { x: 16, y: 164 }
+          position: { x: 32, y: 128 }
         Key2:
           sequence: "key_2"
-          position: { x: 32, y: 164 }
+          position: { x: 64, y: 128 }
         Key3:
           sequence: "key_3"
-          position: { x: 48, y: 164 }
+          position: { x: 96, y: 128 }
         Key4:
           sequence: "key_4"
-          position: { x: 64, y: 164 }
+          position: { x: 128, y: 128 }
         Key5:
           sequence: "key_5"
-          position: { x: 80, y: 164 }
+          position: { x: 160, y: 128 }
         Key6:
           sequence: "key_6"
-          position: { x: 96, y: 164 }
+          position: { x: 192, y: 128 }
         Key7:
           sequence: "key_7"
-          position: { x: 112, y: 164 }
+          position: { x: 224, y: 128 }
         Key8:
           sequence: "key_8"
-          position: { x: 128, y: 164 }
+          position: { x: 256, y: 128 }
         Key9:
           sequence: "key_9"
-          position: { x: 144, y: 164 }
+          position: { x: 288, y: 128 }
         Key0:
           sequence: "key_0"
-          position: { x: 160, y: 164 }
+          position: { x: 320, y: 128 }
         Minus:
           sequence: "key_-"
-          position: { x: 176, y: 164 }
+          position: { x: 352, y: 128 }
         Equals:
           sequence: "key_+"
-          position: { x: 192, y: 164 }
+          position: { x: 384, y: 128 }
         Back:
           sequence: "key_back"
-          position: { x: 208, y: 164 }
+          position: { x: 416, y: 128 }
         # Insert:
         # Home:
         # PageUp:
@@ -233,43 +233,43 @@ control_settings:
         # --- Top row --- #
         Escape:
           sequence: "key_esc"
-          position: { x: 0, y: 190 }
+          position: { x: 0, y: 180 }
         F1:
           sequence: "key_f1"
-          position: { x: 26, y: 190 }
+          position: { x: 52, y: 180 }
         F2:
           sequence: "key_f2"
-          position: { x: 42, y: 190 }
+          position: { x: 84, y: 180 }
         F3:
           sequence: "key_f3"
-          position: { x: 58, y: 190 }
+          position: { x: 116, y: 180 }
         F4:
           sequence: "key_f4"
-          position: { x: 74, y: 190 }
+          position: { x: 148, y: 180 }
         F5:
           sequence: "key_f5"
-          position: { x: 100, y: 190 }
+          position: { x: 200, y: 180 }
         F6:
           sequence: "key_f6"
-          position: { x: 116, y: 190 }
+          position: { x: 232, y: 180 }
         F7:
           sequence: "key_f7"
-          position: { x: 132, y: 190 }
+          position: { x: 264, y: 180 }
         F8:
           sequence: "key_f8"
-          position: { x: 148, y: 190 }
+          position: { x: 296, y: 180 }
         F9:
           sequence: "key_f9"
-          position: { x: 174, y: 190 }
+          position: { x: 348, y: 180 }
         F10:
           sequence: "key_f10"
-          position: { x: 190, y: 190 }
+          position: { x: 380, y: 180 }
         F11:
           sequence: "key_f11"
-          position: { x: 209, y: 190 }
+          position: { x: 418, y: 180 }
         F12:
           sequence: "key_f12"
-          position: { x: 228, y: 190 }
+          position: { x: 456, y: 180 }
         # Snapshot:
         # Sysrq:
         # Scroll:
@@ -283,322 +283,322 @@ sequences:
   # --- Bottom row --- #
   "key_ctrl_left":
     frames:
-      - { wait: 4, sprite: { sheet: 3, index: 0 } }
+      - { wait: 4, sprite: { sheet: 3, index: 0 }, scale: 2.0 }
   "key_fn":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 134 } }
+      - { wait: 4, sprite: { sheet: 1, index: 134 }, scale: 2.0 }
   # key_super
   "key_alt_left":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 8 } }
+      - { wait: 4, sprite: { sheet: 2, index: 8 }, scale: 2.0 }
   "key_space":
     frames:
-      - { wait: 4, sprite: { sheet: 8, index: 0 } }
+      - { wait: 4, sprite: { sheet: 8, index: 0 }, scale: 2.0 }
   "key_alt_right":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 8 } }
+      - { wait: 4, sprite: { sheet: 2, index: 8 }, scale: 2.0 }
   "key_ctrl_right":
     frames:
-      - { wait: 4, sprite: { sheet: 3, index: 0 } }
+      - { wait: 4, sprite: { sheet: 3, index: 0 }, scale: 2.0 }
 
   "key_arrow_left":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 117 }, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
+      - { wait: 4, sprite: { sheet: 1, index: 117 }, scale: 2.0, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
   "key_arrow_down":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 118 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 118 }, scale: 2.0, tint: *p2_color }
   "key_arrow_right":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 119 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 119 }, scale: 2.0, tint: *p2_color }
 
   # --- Second row --- #
 
   "key_shift_left":
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 2 } }
+      - { wait: 4, sprite: { sheet: 5, index: 2 }, scale: 2.0 }
   "key_z":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 49 } }
+      - { wait: 4, sprite: { sheet: 1, index: 49 }, scale: 2.0 }
   "key_x":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 39 } }
+      - { wait: 4, sprite: { sheet: 1, index: 39 }, scale: 2.0 }
   "key_c":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 2 } }
+      - { wait: 4, sprite: { sheet: 1, index: 2 }, scale: 2.0 }
   "key_v":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 37 } }
+      - { wait: 4, sprite: { sheet: 1, index: 37 }, scale: 2.0 }
   "key_b":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 1 } }
+      - { wait: 4, sprite: { sheet: 1, index: 1 }, scale: 2.0 }
   "key_n":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 21 } }
+      - { wait: 4, sprite: { sheet: 1, index: 21 }, scale: 2.0 }
   "key_m":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 20 } }
+      - { wait: 4, sprite: { sheet: 1, index: 20 }, scale: 2.0 }
   "key_<":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 132 } }
+      - { wait: 4, sprite: { sheet: 1, index: 132 }, scale: 2.0 }
   "key_>":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 133 } }
+      - { wait: 4, sprite: { sheet: 1, index: 133 }, scale: 2.0 }
   "key_?":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 130 } }
+      - { wait: 4, sprite: { sheet: 1, index: 130 }, scale: 2.0 }
   "key_shift_right":
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 2 } }
+      - { wait: 4, sprite: { sheet: 5, index: 2 }, scale: 2.0 }
 
   "key_arrow_up":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 102 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 102 }, scale: 2.0, tint: *p2_color }
 
   # --- Third row --- #
 
   "key_caps":
     frames:
-      - { wait: 4, sprite: { sheet: 4, index: 0 } }
+      - { wait: 4, sprite: { sheet: 4, index: 0 }, scale: 2.0 }
   "key_a":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 0 }, tint: &p0_color { r: 1.0, g: 0.15, b: 0.15 } }
+      - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0, tint: &p0_color { r: 1.0, g: 0.15, b: 0.15 } }
   "key_s":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 34 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0, tint: *p0_color }
   "key_d":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 3 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0, tint: *p0_color }
   "key_f":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 5 } }
+      - { wait: 4, sprite: { sheet: 1, index: 5 }, scale: 2.0 }
   "key_g":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 6 }, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
+      - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
   "key_h":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 7 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0, tint: *p1_color }
   "key_j":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 17 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0, tint: *p1_color }
   "key_k":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 18 } }
+      - { wait: 4, sprite: { sheet: 1, index: 18 }, scale: 2.0 }
   "key_l":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 19 } }
+      - { wait: 4, sprite: { sheet: 1, index: 19 }, scale: 2.0 }
   "key_dot":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 112 } }
+      - { wait: 4, sprite: { sheet: 1, index: 112 }, scale: 2.0 }
   'key_"':
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 129 } }
+      - { wait: 4, sprite: { sheet: 1, index: 129 }, scale: 2.0 }
   "key_enter":
     frames:
-      - { wait: 4, sprite: { sheet: 6, index: 0 } }
+      - { wait: 4, sprite: { sheet: 6, index: 0 }, scale: 2.0 }
 
   # --- Fourth row --- #
 
   "key_tab":
     frames:
-      - { wait: 4, sprite: { sheet: 3, index: 1 } }
+      - { wait: 4, sprite: { sheet: 3, index: 1 }, scale: 2.0 }
   "key_q":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 32 } }
+      - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }
   "key_w":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 38 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0, tint: *p0_color }
   "key_e":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 4 } }
+      - { wait: 4, sprite: { sheet: 1, index: 4 }, scale: 2.0 }
   "key_r":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 33 } }
+      - { wait: 4, sprite: { sheet: 1, index: 33 }, scale: 2.0 }
   "key_t":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 35 } }
+      - { wait: 4, sprite: { sheet: 1, index: 35 }, scale: 2.0 }
   "key_y":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 48 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0, tint: *p1_color }
   "key_u":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 36 } }
+      - { wait: 4, sprite: { sheet: 1, index: 36 }, scale: 2.0 }
   "key_i":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 16 } }
+      - { wait: 4, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
   "key_o":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 22 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 22 }, scale: 2.0, tint: *p2_color }
   "key_p":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 23 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 23 }, scale: 2.0, tint: *p2_color }
   "key_[":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 113 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 113 }, scale: 2.0, tint: *p2_color }
   "key_]":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 114 }, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 114 }, scale: 2.0, tint: *p2_color }
   'key_\':
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 69 } }
+      - { wait: 4, sprite: { sheet: 1, index: 69 }, scale: 2.0 }
 
   # --- Fifth row --- #
 
   "key_`":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 128 } }
+      - { wait: 4, sprite: { sheet: 1, index: 128 }, scale: 2.0 }
   "key_1":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 51 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0, tint: *p0_color }
   "key_2":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 52 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0, tint: *p0_color }
   "key_3":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 53 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0, tint: *p0_color }
   "key_4":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 54 }, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0, tint: *p0_color }
   "key_5":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 55 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0, tint: *p1_color }
   "key_6":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 64 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0, tint: *p1_color }
   "key_7":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 65 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0, tint: *p1_color }
   "key_8":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 66 }, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0, tint: *p1_color }
   "key_9":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 67 } }
+      - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
   "key_0":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 68 } }
+      - { wait: 4, sprite: { sheet: 1, index: 68 }, scale: 2.0 }
   "key_-":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 70 } }
+      - { wait: 4, sprite: { sheet: 1, index: 70 }, scale: 2.0 }
   "key_+":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 71 } }
+      - { wait: 4, sprite: { sheet: 1, index: 71 }, scale: 2.0 }
   "key_back":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 6 } }
+      - { wait: 4, sprite: { sheet: 2, index: 6 }, scale: 2.0 }
 
   # --- Top row --- #
 
   "key_esc":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 50 } }
+      - { wait: 4, sprite: { sheet: 1, index: 50 }, scale: 2.0 }
   "key_f1":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 80 } }
+      - { wait: 4, sprite: { sheet: 1, index: 80 }, scale: 2.0 }
   "key_f2":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 81 } }
+      - { wait: 4, sprite: { sheet: 1, index: 81 }, scale: 2.0 }
   "key_f3":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 82 } }
+      - { wait: 4, sprite: { sheet: 1, index: 82 }, scale: 2.0 }
   "key_f4":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 83 } }
+      - { wait: 4, sprite: { sheet: 1, index: 83 }, scale: 2.0 }
   "key_f5":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 84 } }
+      - { wait: 4, sprite: { sheet: 1, index: 84 }, scale: 2.0 }
   "key_f6":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 85 } }
+      - { wait: 4, sprite: { sheet: 1, index: 85 }, scale: 2.0 }
   "key_f7":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 86 } }
+      - { wait: 4, sprite: { sheet: 1, index: 86 }, scale: 2.0 }
   "key_f8":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 87 } }
+      - { wait: 4, sprite: { sheet: 1, index: 87 }, scale: 2.0 }
   "key_f9":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 96 } }
+      - { wait: 4, sprite: { sheet: 1, index: 96 }, scale: 2.0 }
   "key_f10":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 0 } }
+      - { wait: 4, sprite: { sheet: 2, index: 0 }, scale: 2.0 }
   "key_f11":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 1 } }
+      - { wait: 4, sprite: { sheet: 2, index: 1 }, scale: 2.0 }
   "key_f12":
     frames:
-      - { wait: 4, sprite: { sheet: 2, index: 2 } }
+      - { wait: 4, sprite: { sheet: 2, index: 2 }, scale: 2.0 }
 
   # --- Remainder --- #
 
   # "key_multiply":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 101 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 101 }, scale: 2.0 }
   # "key_percent":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 103 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 103 }, scale: 2.0 }
   # "key_{":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 115 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 115 }, scale: 2.0 }
   # "key_}":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 116 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 116 }, scale: 2.0 }
   # "key_?_mirrored":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 131 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 131 }, scale: 2.0 }
   # "key_n_with_tilde":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 135 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 135 }, scale: 2.0 }
   # "key_!":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 144 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 144 }, scale: 2.0 }
   # "key_@":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 145 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 145 }, scale: 2.0 }
   # "key_#":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 146 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 146 }, scale: 2.0 }
   # "key_$":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 147 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 147 }, scale: 2.0 }
   # "key_%":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 148 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 148 }, scale: 2.0 }
   # "key_^":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 149 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 149 }, scale: 2.0 }
   # "key_&":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 150 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 150 }, scale: 2.0 }
   # "key_*":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 151 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 151 }, scale: 2.0 }
   # "key_(":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 160 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 160 }, scale: 2.0 }
   # "key_)":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 161 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 161 }, scale: 2.0 }
   # "key_underscore":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 162 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 162 }, scale: 2.0 }
   # "key_=":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 163 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 163 }, scale: 2.0 }
   # "key_/":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 164 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 164 }, scale: 2.0 }
   # "key_~":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 165 } }
+  #     - { wait: 4, sprite: { sheet: 1, index: 165 }, scale: 2.0 }
 
   # "key_del":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 2, index: 7 } }
+  #     - { wait: 4, sprite: { sheet: 2, index: 7 }, scale: 2.0 }
 
   # "key_enter_icon":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 5, index: 0 } }
+  #     - { wait: 4, sprite: { sheet: 5, index: 0 }, scale: 2.0 }
 
   # "key_enter_big":
   #   frames:
-  #     - { wait: 4, sprite: { sheet: 7, index: 0 } }
+  #     - { wait: 4, sprite: { sheet: 7, index: 0 }, scale: 2.0 }
