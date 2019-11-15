@@ -51,17 +51,26 @@ layers:
       - { wait: 4, sprite: { sheet: 7, index: 0 } }
 
   "key_arrow_left":
-    position: { x: 330, y: 100, z: 10 }
+    position: { x: 335, y: 100, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 117 }, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
   "key_arrow_down":
-    position: { x: 346, y: 100, z: 10 }
+    position: { x: 351, y: 100, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 118 }, tint: *p2_color }
   "key_arrow_right":
-    position: { x: 362, y: 100, z: 10 }
+    position: { x: 367, y: 100, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 119 }, tint: *p2_color }
+
+  "key_numpad_0":
+    position: { x: 406, y: 100, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 68 } }
+  "key_numpad_dot":
+    position: { x: 422, y: 100, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 112 } }
 
   # --- Second row --- #
 
@@ -115,9 +124,22 @@ layers:
       - { wait: 4, sprite: { sheet: 9, index: 2 } }
 
   "key_arrow_up":
-    position: { x: 346, y: 116, z: 10 }
+    position: { x: 351, y: 116, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 102 }, tint: *p2_color }
+
+  "key_numpad_1":
+    position: { x: 390, y: 116, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 51 } }
+  "key_numpad_2":
+    position: { x: 406, y: 116, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 52 } }
+  "key_numpad_3":
+    position: { x: 422, y: 116, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 53 } }
 
   # --- Third row --- #
 
@@ -161,10 +183,10 @@ layers:
     position: { x: 250, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 19 } }
-  "key_dot":
+  "key_:":
     position: { x: 266, y: 132, z: 10 }
     frames:
-      - { wait: 4, sprite: { sheet: 5, index: 112 } }
+      - { wait: 4, sprite: { sheet: 5, index: 97 } }
   'key_"':
     position: { x: 282, y: 132, z: 10 }
     frames:
@@ -173,6 +195,19 @@ layers:
     position: { x: 298, y: 132, z: 10 }
     frames:
       - { wait: 4, sprite: { sheet: 10, index: 0 } }
+
+  "key_numpad_4":
+    position: { x: 390, y: 132, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 54 } }
+  "key_numpad_5":
+    position: { x: 406, y: 132, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 55 } }
+  "key_numpad_6":
+    position: { x: 422, y: 132, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 64 } }
 
   # --- Fourth row --- #
 
@@ -233,6 +268,32 @@ layers:
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 69 } }
 
+  "key_del":
+    position: { x: 335, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 179 } }
+  "key_end":
+    position: { x: 351, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 177 } }
+  "key_page_down":
+    position: { x: 367, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 181 } }
+
+  "key_numpad_7":
+    position: { x: 390, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 65 } }
+  "key_numpad_8":
+    position: { x: 406, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 66 } }
+  "key_numpad_9":
+    position: { x: 422, y: 148, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 67 } }
+
   # --- Fifth row --- #
 
   "key_`":
@@ -292,6 +353,36 @@ layers:
     frames:
       - { wait: 4, sprite: { sheet: 6, index: 6 } }
 
+  "key_insert":
+    position: { x: 335, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 178 } }
+  "key_home":
+    position: { x: 351, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 176 } }
+  "key_page_up":
+    position: { x: 367, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 180 } }
+
+  "key_numlock":
+    position: { x: 390, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 167 } }
+  "key_numpad_/":
+    position: { x: 406, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 164 } }
+  "key_numpad_multiply":
+    position: { x: 422, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 101 } }
+  "key_numpad_-":
+    position: { x: 438, y: 164, z: 10 }
+    frames:
+      - { wait: 4, sprite: { sheet: 5, index: 70 } }
+
   # --- Top row --- #
 
   "key_esc":
@@ -349,10 +440,6 @@ layers:
 
   # --- Remainder --- #
 
-  # "key_multiply":
-  #   position: { x: 100, y: 100, z: 10 }
-  #   frames:
-  #     - { wait: 4, sprite: { sheet: 5, index: 101 } }
   # "key_percent":
   #   position: { x: 100, y: 100, z: 10 }
   #   frames:
@@ -421,16 +508,12 @@ layers:
   #   position: { x: 100, y: 100, z: 10 }
   #   frames:
   #     - { wait: 4, sprite: { sheet: 5, index: 163 } }
-  # "key_/":
-  #   position: { x: 100, y: 100, z: 10 }
-  #   frames:
-  #     - { wait: 4, sprite: { sheet: 5, index: 164 } }
   # "key_~":
   #   position: { x: 100, y: 100, z: 10 }
   #   frames:
   #     - { wait: 4, sprite: { sheet: 5, index: 165 } }
 
-  # "key_del":
+  # "key_del_wide":
   #   position: { x: 100, y: 100, z: 10 }
   #   frames:
   #     - { wait: 4, sprite: { sheet: 6, index: 7 } }

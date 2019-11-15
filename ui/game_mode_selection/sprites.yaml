@@ -48,12 +48,12 @@ sheets:
     path        : "../common/keyboard/keys_16x16.png"
     sprite_w    : 16
     sprite_h    : 16
-    row_count   : 22
+    row_count   : 24
     column_count: 16
     has_border  : false
 
   - # 6
-    # F10, F11, F12, Del, Back, Alt, Tab
+    # f10, f11, f12, del (wide), back, alt, tab
     path        : "../common/keyboard/keys_19x16.png"
     sprite_w    : 19
     sprite_h    : 16
@@ -62,7 +62,7 @@ sheets:
     has_border  : false
 
   - # 7
-    # Control
+    # control
     path        : "../common/keyboard/keys_20x16.png"
     sprite_w    : 20
     sprite_h    : 16
@@ -71,7 +71,7 @@ sheets:
     has_border  : false
 
   - # 8
-    # Caps
+    # caps
     path        : "../common/keyboard/keys_22x16.png"
     sprite_w    : 22
     sprite_h    : 16
@@ -80,7 +80,7 @@ sheets:
     has_border  : false
 
   - # 9
-    # Enter (Icon), Shift
+    # enter (icon), shift
     path        : "../common/keyboard/keys_24x16.png"
     sprite_w    : 24
     sprite_h    : 16
@@ -89,7 +89,7 @@ sheets:
     has_border  : false
 
   - # 10
-    # Enter
+    # enter
     path        : "../common/keyboard/keys_27x16.png"
     sprite_w    : 27
     sprite_h    : 16
@@ -98,7 +98,7 @@ sheets:
     has_border  : false
 
   - # 11
-    # Enter (Big)
+    # enter (big)
     path        : "../common/keyboard/keys_32x32.png"
     sprite_w    : 32
     sprite_h    : 32
@@ -107,11 +107,10 @@ sheets:
     has_border  : false
 
   - # 12
-    # Space
+    # space
     path        : "../common/keyboard/keys_80x16.png"
     sprite_w    : 80
     sprite_h    : 16
     row_count   : 4
     column_count: 1
     has_border  : false
-

@@ -1,7 +1,7 @@
 control_settings:
   title: { position: { x: 100, y: 700, z: 10 }, text: "Control Settings" }
   keyboard:
-    position: { x: 150, y: 200, z: 10 }
+    position: { x: 50, y: 200, z: 10 }
     layout: "us"
     layout_positions:
       us:
@@ -36,8 +36,12 @@ control_settings:
         Right:
           sequence: "key_arrow_right"
           position: { x: 524, y: 0 }
-        # Numpad0:
-        # NumpadComma:
+        Numpad0:
+          sequence: "key_numpad_0"
+          position: { x: 612, y: 0 }
+        NumpadComma:
+          sequence: "key_numpad_dot"
+          position: { x: 644, y: 0 }
         # NumpadEnter:
 
         # --- Second row --- #
@@ -80,9 +84,15 @@ control_settings:
         Up:
           sequence: "key_arrow_up"
           position: { x: 492, y: 32 }
-        # Numpad1:
-        # Numpad2:
-        # Numpad3:
+        Numpad1:
+          sequence: "key_numpad_1"
+          position: { x: 580, y: 32 }
+        Numpad2:
+          sequence: "key_numpad_2"
+          position: { x: 612, y: 32 }
+        Numpad3:
+          sequence: "key_numpad_3"
+          position: { x: 644, y: 32 }
 
         # --- Third row --- #
         Capital: # capslock
@@ -116,7 +126,7 @@ control_settings:
           sequence: "key_l"
           position: { x: 300, y: 64 }
         Semicolon:
-          sequence: "key_dot"
+          sequence: "key_:"
           position: { x: 332, y: 64 }
         Apostrophe:
           sequence: 'key_"'
@@ -124,9 +134,15 @@ control_settings:
         Return:
           sequence: "key_enter"
           position: { x: 396, y: 64 }
-        # Numpad4:
-        # Numpad5:
-        # Numpad6:
+        Numpad4:
+          sequence: "key_numpad_4"
+          position: { x: 580, y: 64 }
+        Numpad5:
+          sequence: "key_numpad_5"
+          position: { x: 612, y: 64 }
+        Numpad6:
+          sequence: "key_numpad_6"
+          position: { x: 644, y: 64 }
         # Add: # numpad +
 
         # --- Fourth row --- #
@@ -172,12 +188,24 @@ control_settings:
         Backslash:
           sequence: 'key_\'
           position: { x: 422, y: 96 }
-        # End:
-        # Delete:
-        # PageDown:
-        # Numpad7:
-        # Numpad8:
-        # Numpad9:
+        Delete:
+          sequence: "key_del"
+          position: { x: 470, y: 96 }
+        End:
+          sequence: "key_end"
+          position: { x: 502, y: 96 }
+        PageDown:
+          sequence: "key_page_down"
+          position: { x: 534, y: 96 }
+        Numpad7:
+          sequence: "key_numpad_7"
+          position: { x: 580, y: 96 }
+        Numpad8:
+          sequence: "key_numpad_8"
+          position: { x: 612, y: 96 }
+        Numpad9:
+          sequence: "key_numpad_9"
+          position: { x: 644, y: 96 }
 
         # --- Fifth row --- #
         Grave: # backtick / tilde
@@ -222,13 +250,27 @@ control_settings:
         Back:
           sequence: "key_back"
           position: { x: 416, y: 128 }
-        # Insert:
-        # Home:
-        # PageUp:
-        # Numlock:
-        # Divide:
-        # Multiply:
-        # Subtract:
+        Insert:
+          sequence: "key_insert"
+          position: { x: 470, y: 128 }
+        Home:
+          sequence: "key_home"
+          position: { x: 502, y: 128 }
+        PageUp:
+          sequence: "key_page_up"
+          position: { x: 534, y: 128 }
+        Numlock:
+          sequence: "key_numlock"
+          position: { x: 580, y: 128 }
+        Divide:
+          sequence: "key_numpad_/"
+          position: { x: 612, y: 128 }
+        Multiply:
+          sequence: "key_numpad_multiply"
+          position: { x: 644, y: 128 }
+        Subtract:
+          sequence: "key_numpad_-"
+          position: { x: 676, y: 128 }
 
         # --- Top row --- #
         Escape:
@@ -311,6 +353,13 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 119 }, scale: 2.0, tint: *p2_color }
 
+  "key_numpad_0":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 68 }, scale: 2.0 }
+  "key_numpad_dot":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 112 }, scale: 2.0 }
+
   # --- Second row --- #
 
   "key_shift_left":
@@ -354,6 +403,16 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 102 }, scale: 2.0, tint: *p2_color }
 
+  "key_numpad_1":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0 }
+  "key_numpad_2":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0 }
+  "key_numpad_3":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0 }
+
   # --- Third row --- #
 
   "key_caps":
@@ -386,15 +445,25 @@ sequences:
   "key_l":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 19 }, scale: 2.0 }
-  "key_dot":
+  "key_:":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 112 }, scale: 2.0 }
+      - { wait: 4, sprite: { sheet: 1, index: 97 }, scale: 2.0 }
   'key_"':
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 129 }, scale: 2.0 }
   "key_enter":
     frames:
       - { wait: 4, sprite: { sheet: 6, index: 0 }, scale: 2.0 }
+
+  "key_numpad_4":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0 }
+  "key_numpad_5":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0 }
+  "key_numpad_6":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0 }
 
   # --- Fourth row --- #
 
@@ -441,6 +510,26 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 69 }, scale: 2.0 }
 
+  "key_del":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 179 }, scale: 2.0 }
+  "key_end":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 177 }, scale: 2.0 }
+  "key_page_down":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 181 }, scale: 2.0 }
+
+  "key_numpad_7":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0 }
+  "key_numpad_8":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0 }
+  "key_numpad_9":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
+
   # --- Fifth row --- #
 
   "key_`":
@@ -486,6 +575,29 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 6 }, scale: 2.0 }
 
+  "key_insert":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 178 }, scale: 2.0 }
+  "key_home":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 176 }, scale: 2.0 }
+  "key_page_up":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 180 }, scale: 2.0 }
+
+  "key_numlock":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 167 }, scale: 2.0 }
+  "key_numpad_/":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 164 }, scale: 2.0 }
+  "key_numpad_multiply":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 101 }, scale: 2.0 }
+  "key_numpad_-":
+    frames:
+      - { wait: 4, sprite: { sheet: 1, index: 70 }, scale: 2.0 }
+
   # --- Top row --- #
 
   "key_esc":
@@ -530,9 +642,6 @@ sequences:
 
   # --- Remainder --- #
 
-  # "key_multiply":
-  #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 101 }, scale: 2.0 }
   # "key_percent":
   #   frames:
   #     - { wait: 4, sprite: { sheet: 1, index: 103 }, scale: 2.0 }
@@ -584,9 +693,6 @@ sequences:
   # "key_=":
   #   frames:
   #     - { wait: 4, sprite: { sheet: 1, index: 163 }, scale: 2.0 }
-  # "key_/":
-  #   frames:
-  #     - { wait: 4, sprite: { sheet: 1, index: 164 }, scale: 2.0 }
   # "key_~":
   #   frames:
   #     - { wait: 4, sprite: { sheet: 1, index: 165 }, scale: 2.0 }

@@ -11,12 +11,12 @@ sheets:
     path        : "../common/keyboard/keys_16x16.png"
     sprite_w    : 16
     sprite_h    : 16
-    row_count   : 22
+    row_count   : 24
     column_count: 16
     has_border  : false
 
   - # 2
-    # f10, f11, f12, del, back, alt, tab
+    # f10, f11, f12, del (wide), back, alt, tab
     path        : "../common/keyboard/keys_19x16.png"
     sprite_w    : 19
     sprite_h    : 16
