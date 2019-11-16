@@ -2,6 +2,11 @@ control_settings:
   title: { position: { x: 100, y: 700, z: 10 }, text: "Control Settings" }
   keyboard:
     position: { x: 50, y: 200, z: 10 }
+    controller_tints:
+    - { r: 1.0, g: 0.15, b: 0.15 }
+    - { r: 0.15, g: 1.0, b: 0.3 }
+    - { r: 0.2, g: 0.4, b: 1.0 }
+
     layout: "us"
     layout_positions:
       us:
@@ -345,13 +350,13 @@ sequences:
 
   "key_arrow_left":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 117 }, scale: 2.0, tint: &p2_color { r: 0.2, g: 0.4, b: 1.0 } }
+      - { wait: 4, sprite: { sheet: 1, index: 117 }, scale: 2.0 }
   "key_arrow_down":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 118 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 118 }, scale: 2.0 }
   "key_arrow_right":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 119 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 119 }, scale: 2.0 }
 
   "key_numpad_0":
     frames:
@@ -401,7 +406,7 @@ sequences:
 
   "key_arrow_up":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 102 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 102 }, scale: 2.0 }
 
   "key_numpad_1":
     frames:
@@ -420,25 +425,25 @@ sequences:
       - { wait: 4, sprite: { sheet: 4, index: 0 }, scale: 2.0 }
   "key_a":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0, tint: &p0_color { r: 1.0, g: 0.15, b: 0.15 } }
+      - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0 }
   "key_s":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0 }
   "key_d":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0 }
   "key_f":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 5 }, scale: 2.0 }
   "key_g":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0, tint: &p1_color { r: 0.15, g: 1.0, b: 0.3 } }
+      - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0 }
   "key_h":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0 }
   "key_j":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0 }
   "key_k":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 18 }, scale: 2.0 }
@@ -475,7 +480,7 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }
   "key_w":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0 }
   "key_e":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 4 }, scale: 2.0 }
@@ -487,7 +492,7 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 35 }, scale: 2.0 }
   "key_y":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0 }
   "key_u":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 36 }, scale: 2.0 }
@@ -496,16 +501,16 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
   "key_o":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 22 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 22 }, scale: 2.0 }
   "key_p":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 23 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 23 }, scale: 2.0 }
   "key_[":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 113 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 113 }, scale: 2.0 }
   "key_]":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 114 }, scale: 2.0, tint: *p2_color }
+      - { wait: 4, sprite: { sheet: 1, index: 114 }, scale: 2.0 }
   'key_\':
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 69 }, scale: 2.0 }
@@ -537,28 +542,28 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 128 }, scale: 2.0 }
   "key_1":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0 }
   "key_2":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0 }
   "key_3":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0 }
   "key_4":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0, tint: *p0_color }
+      - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0 }
   "key_5":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0 }
   "key_6":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0 }
   "key_7":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0 }
   "key_8":
     frames:
-      - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0, tint: *p1_color }
+      - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0 }
   "key_9":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
