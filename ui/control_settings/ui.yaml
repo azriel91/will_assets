@@ -322,7 +322,16 @@ control_settings:
         # Scroll:
         # Pause:
 
+buttons:
+  - position: { x: 10, y: 0, z: 10 }
+    label: { position: { x: 20, y: 20, z: 0 }, text: "Back" }
+    sprite: { position: { x: 20, y: 20, z: 0 }, sequence: "back_active" }
+
 sequences:
+  back_active:
+    frames:
+      - { wait: 1, sprite: { sheet: 9, index: 0 } }
+
   # ========
   # Keyboard
   # ========

@@ -77,3 +77,11 @@ sheets:
     row_count   : 4
     column_count: 1
     has_border  : false
+
+  - # 9
+    path        : "back.png"
+    sprite_w    : 64
+    sprite_h    : 32
+    row_count   : 1
+    column_count: 1
+    has_border  : false
