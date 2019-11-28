@@ -1,5 +1,5 @@
 control_settings:
-  title: { position: { x: 100, y: 700, z: 10 }, text: "Control Settings" }
+  title: { position: { x: 0, y: 500, z: 10 }, text: "Control Settings" }
   keyboard:
     position: { x: 50, y: 200, z: 10 }
     controller_tints:
@@ -324,13 +324,13 @@ control_settings:
 
 buttons:
   - position: { x: 10, y: 0, z: 10 }
-    label: { position: { x: 20, y: 20, z: 0 }, text: "Back" }
-    sprite: { position: { x: 20, y: 20, z: 0 }, sequence: "back_active" }
+    label: { position: { x: -90, y: 15, z: 0 }, text: "Back" }
+    sprite: { position: { x: 50, y: 30, z: 0 }, sequence: "back_active" }
 
 sequences:
   back_active:
     frames:
-      - { wait: 1, sprite: { sheet: 9, index: 0 } }
+      - { wait: 1, sprite: { sheet: 9, index: 0 }, scale: 1.5 }
 
   # ========
   # Keyboard

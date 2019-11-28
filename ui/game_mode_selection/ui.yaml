@@ -1,19 +1,19 @@
 menu:
   # First item is active by default. The sequence here should correspond to the active status.
   - index: "start_game"
-    position: { x: 290, y: 370, z: 10 }
-    label: { position: { x: 20, y: 20, z: 0 }, text: "Start Game" }
-    sprite: { sequence: "start_game_active" }
+    position: { x: 250, y: 320, z: 10 }
+    label: { position: { x: 0, y: 20, z: 0 }, text: "Start Game" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "start_game_active" }
 
   - index: "control_settings"
-    position: { x: 290, y: 300, z: 10 }
-    label: { position: { x: 20, y: 20, z: 0 }, text: "Control Settings" }
-    sprite: { sequence: "control_settings_inactive" }
+    position: { x: 250, y: 250, z: 10 }
+    label: { position: { x: 0, y: 20, z: 0 }, text: "Control Settings" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "control_settings_inactive" }
 
   - index: "exit"
-    position: { x: 290, y: 230, z: 10 }
-    label: { position: { x: 20, y: 20, z: 0 }, text: "Exit" }
-    sprite: { sequence: "exit_inactive" }
+    position: { x: 250, y: 180, z: 10 }
+    label: { position: { x: 0, y: 20, z: 0 }, text: "Exit" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "exit_inactive" }
 
 sequences:
   start_game_inactive:
