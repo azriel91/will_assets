@@ -11,7 +11,7 @@ charge_retention_mode: "never"
 sequences:
   stand:
     next: "repeat"
-    transitions:
+    input_reactions:
       press_attack: { next: "stand_attack_weak" }
       press_jump: { next: "jump" }
       release_attack:
@@ -52,21 +52,21 @@ sequences:
         sprite: { sheet: 0, index: 4 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-        transitions:
+        input_reactions:
           press_attack: "stand_attack_weak"
 
       - wait: 1
         sprite: { sheet: 0, index: 2 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-        transitions:
+        input_reactions:
           press_attack: "stand_attack_weak"
 
       - wait: 1
         sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
-        transitions:
+        input_reactions:
           press_attack: "stand_attack_weak"
 
   stand_attack_mid:
@@ -148,7 +148,7 @@ sequences:
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   walk:
-    transitions:
+    input_reactions:
       press_attack: { next: "stand_attack_weak" }
       press_jump: { next: "jump" }
       fallback:
@@ -197,7 +197,7 @@ sequences:
       x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
-    transitions:
+    input_reactions:
       press_attack: "run_attack_weak"
       press_jump: "dash_forward"
       press_defend: "dodge"
@@ -232,7 +232,7 @@ sequences:
       x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
-    transitions:
+    input_reactions:
       press_attack: "run_attack_weak"
       press_jump: "dash_forward"
       press_defend: "dodge"
@@ -262,7 +262,7 @@ sequences:
       x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
-    transitions:
+    input_reactions:
       fallback:
         next: "run_stop"
         requirements:
@@ -287,7 +287,7 @@ sequences:
       x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
-    transitions:
+    input_reactions:
       fallback:
         next: "run_stop"
         requirements:
@@ -312,7 +312,7 @@ sequences:
       x: { multiplier: "x_axis", value: 8.0 }
       z: { multiplier: "z_axis", value: 1.5 }
 
-    transitions:
+    input_reactions:
       fallback:
         next: "run_stop"
         requirements:
@@ -487,21 +487,21 @@ sequences:
       - wait: 1
         sprite: { sheet: 0, index: 0 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-        transitions: { press_attack: "dash_attack" }
+        input_reactions: { press_attack: "dash_attack" }
 
   dash_forward_ascend:
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 0 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-        transitions: { press_attack: "dash_attack" }
+        input_reactions: { press_attack: "dash_attack" }
 
   dash_forward_descend:
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 0 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-        transitions: { press_attack: "dash_attack" }
+        input_reactions: { press_attack: "dash_attack" }
 
   dash_back:
     frames:

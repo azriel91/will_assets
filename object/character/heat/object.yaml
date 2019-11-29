@@ -10,7 +10,7 @@ charge_retention_mode: { lossy: { delay: 20 } }
 
 sequences:
   stand:
-    transitions:
+    input_reactions:
       press_attack:
         - next: "stand_attack_1"
           requirements: [{ charge: 2 }]
@@ -91,7 +91,7 @@ sequences:
           - hit: { repeat_delay: 10, hp_damage: 5 }
             bounds: [{ box: { x: 31, y: 34, w: 23, h: 16 } }]
 
-        transitions:
+        input_reactions:
           press_attack:
             next: "stand_attack_1"
             requirements: [{ charge: 2 }]
@@ -203,14 +203,14 @@ sequences:
       - wait: 1
         sprite: { sheet: 0, index: 14 }
         body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
-        transitions: { hold_attack: "jump_attack" }
+        input_reactions: { hold_attack: "jump_attack" }
 
   jump_descend:
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 14 }
         body: [{ box: { x: 17, y: 14, w: 27, h: 58 } }]
-        transitions: { hold_attack: "jump_attack" }
+        input_reactions: { hold_attack: "jump_attack" }
 
   jump_descend_land:
     frames:
@@ -246,7 +246,7 @@ sequences:
 
   # Dashing
   dash_forward:
-    transitions: { press_attack: "dash_attack" }
+    input_reactions: { press_attack: "dash_attack" }
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 16 }
@@ -258,14 +258,14 @@ sequences:
         body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
 
   dash_forward_ascend:
-    transitions: { press_attack: "dash_attack" }
+    input_reactions: { press_attack: "dash_attack" }
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 16 }
         body: [{ box: { x: 27, y: 10, w: 31, h: 60 } }]
 
   dash_forward_descend:
-    transitions: { press_attack: "dash_attack" }
+    input_reactions: { press_attack: "dash_attack" }
     frames:
       - wait: 1
         sprite: { sheet: 0, index: 17 }
