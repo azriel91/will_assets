@@ -488,8 +488,20 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }
   "key_w":
+    input_reactions:
+      press_z: "key_w_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0 }
+  "key_w_press":
+    next: "key_w"
+    input_reactions:
+      press_z: "key_w_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 238 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
   "key_e":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 4 }, scale: 2.0 }
