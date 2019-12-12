@@ -13,7 +13,7 @@ sequences:
     input_reactions:
       press_attack:
         - next: "stand_attack_1"
-          requirements: [{ charge: 2 }]
+          requirement: [{ charge: 2 }]
         - next: "stand_attack_0"
       press_jump: jump
 
@@ -94,7 +94,7 @@ sequences:
         input_reactions:
           press_attack:
             next: "stand_attack_1"
-            requirements: [{ charge: 2 }]
+            requirement: [{ charge: 2 }]
 
   walk:
     acceleration:
