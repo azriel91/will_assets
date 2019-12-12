@@ -433,26 +433,98 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 4, index: 0 }, scale: 2.0 }
   "key_a":
+    input_reactions:
+      press_x: "key_a_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0 }
+  "key_a_press":
+    next: "key_a"
+    input_reactions:
+      press_x: "key_a_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_s":
+    input_reactions:
+      press_z: "key_s_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0 }
+  "key_s_press":
+    next: "key_s"
+    input_reactions:
+      press_z: "key_s_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 234 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
   "key_d":
+    input_reactions:
+      press_x: "key_d_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0 }
+  "key_d_press":
+    next: "key_d"
+    input_reactions:
+      press_x: "key_d_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 203 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
   "key_f":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 5 }, scale: 2.0 }
   "key_g":
+    input_reactions:
+      press_x: "key_g_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0 }
+  "key_g_press":
+    next: "key_g"
+    input_reactions:
+      press_x: "key_g_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 206 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
   "key_h":
+    input_reactions:
+      press_z: "key_h_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0 }
+  "key_h_press":
+    next: "key_h"
+    input_reactions:
+      press_z: "key_h_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 207 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
   "key_j":
+    input_reactions:
+      press_x: "key_j_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0 }
+  "key_j_press":
+    next: "key_j"
+    input_reactions:
+      press_x: "key_j_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 217 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
   "key_k":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 18 }, scale: 2.0 }
@@ -497,11 +569,11 @@ sequences:
     input_reactions:
       press_z: "key_w_press"
     frames:
-      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
-      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
-      - { wait: 1, sprite: { sheet: 1, index: 238 }, scale: 2.0 }
-      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
-      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 238 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
   "key_e":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 4 }, scale: 2.0 }
@@ -512,8 +584,20 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 35 }, scale: 2.0 }
   "key_y":
+    input_reactions:
+      press_z: "key_y_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0 }
+  "key_y_press":
+    next: "key_y"
+    input_reactions:
+      press_z: "key_y_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 248 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
   "key_u":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 36 }, scale: 2.0 }
@@ -562,29 +646,125 @@ sequences:
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 128 }, scale: 2.0 }
   "key_1":
+    input_reactions:
+      press_defend: "key_1_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0 }
+  "key_1_press":
+    next: "key_1"
+    input_reactions:
+      press_defend: "key_1_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 251 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
   "key_2":
+    input_reactions:
+      press_jump: "key_2_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0 }
+  "key_2_press":
+    next: "key_2"
+    input_reactions:
+      press_jump: "key_2_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 252 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
   "key_3":
+    input_reactions:
+      press_attack: "key_3_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0 }
+  "key_3_press":
+    next: "key_3"
+    input_reactions:
+      press_attack: "key_3_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 253 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
   "key_4":
+    input_reactions:
+      press_special: "key_4_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0 }
+  "key_4_press":
+    next: "key_4"
+    input_reactions:
+      press_special: "key_4_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 254 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
   "key_5":
+    input_reactions:
+      press_defend: "key_5_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0 }
+  "key_5_press":
+    next: "key_5"
+    input_reactions:
+      press_defend: "key_5_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 255 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
   "key_6":
+    input_reactions:
+      press_jump: "key_6_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0 }
+  "key_6_press":
+    next: "key_6"
+    input_reactions:
+      press_jump: "key_6_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 264 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
   "key_7":
+    input_reactions:
+      press_attack: "key_7_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0 }
+  "key_7_press":
+    next: "key_7"
+    input_reactions:
+      press_attack: "key_7_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 265 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
   "key_8":
+    input_reactions:
+      press_special: "key_8_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0 }
+  "key_8_press":
+    next: "key_8"
+    input_reactions:
+      press_special: "key_8_press"
+    frames:
+    - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 266 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+    - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
   "key_9":
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
