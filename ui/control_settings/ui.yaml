@@ -434,13 +434,17 @@ sequences:
       - { wait: 4, sprite: { sheet: 4, index: 0 }, scale: 2.0 }
   "key_a":
     input_reactions:
-      press_x: "key_a_press"
+      press_x:
+        next: "key_a_press"
+        requirement: [{ input_dir_x: "left" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0 }
   "key_a_press":
     next: "key_a"
     input_reactions:
-      press_x: "key_a_press"
+      press_x:
+        next: "key_a_press"
+        requirement: [{ input_dir_x: "left" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
@@ -449,13 +453,17 @@ sequences:
     - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_s":
     input_reactions:
-      press_z: "key_s_press"
+      press_z:
+        next: "key_s_press"
+        requirement: [{ input_dir_z: "down" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0 }
   "key_s_press":
     next: "key_s"
     input_reactions:
-      press_z: "key_s_press"
+      press_z:
+        next: "key_s_press"
+        requirement: [{ input_dir_z: "down" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
@@ -464,13 +472,17 @@ sequences:
     - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
   "key_d":
     input_reactions:
-      press_x: "key_d_press"
+      press_x:
+        next: "key_d_press"
+        requirement: [{ input_dir_x: "right" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0 }
   "key_d_press":
     next: "key_d"
     input_reactions:
-      press_x: "key_d_press"
+      press_x:
+        next: "key_d_press"
+        requirement: [{ input_dir_x: "right" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
@@ -482,13 +494,17 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 5 }, scale: 2.0 }
   "key_g":
     input_reactions:
-      press_x: "key_g_press"
+      press_x:
+        next: "key_g_press"
+        requirement: [{ input_dir_x: "left" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0 }
   "key_g_press":
     next: "key_g"
     input_reactions:
-      press_x: "key_g_press"
+      press_x:
+        next: "key_g_press"
+        requirement: [{ input_dir_x: "left" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
@@ -497,13 +513,17 @@ sequences:
     - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
   "key_h":
     input_reactions:
-      press_z: "key_h_press"
+      press_z:
+        next: "key_h_press"
+        requirement: [{ input_dir_z: "down" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0 }
   "key_h_press":
     next: "key_h"
     input_reactions:
-      press_z: "key_h_press"
+      press_z:
+        next: "key_h_press"
+        requirement: [{ input_dir_z: "down" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
@@ -512,13 +532,17 @@ sequences:
     - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
   "key_j":
     input_reactions:
-      press_x: "key_j_press"
+      press_x:
+        next: "key_j_press"
+        requirement: [{ input_dir_x: "right" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0 }
   "key_j_press":
     next: "key_j"
     input_reactions:
-      press_x: "key_j_press"
+      press_x:
+        next: "key_j_press"
+        requirement: [{ input_dir_x: "right" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
@@ -561,13 +585,17 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }
   "key_w":
     input_reactions:
-      press_z: "key_w_press"
+      press_z:
+        next: "key_w_press"
+        requirement: [{ input_dir_z: "up" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0 }
   "key_w_press":
     next: "key_w"
     input_reactions:
-      press_z: "key_w_press"
+      press_z:
+        next: "key_w_press"
+        requirement: [{ input_dir_z: "up" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
@@ -585,13 +613,17 @@ sequences:
       - { wait: 4, sprite: { sheet: 1, index: 35 }, scale: 2.0 }
   "key_y":
     input_reactions:
-      press_z: "key_y_press"
+      press_z:
+        next: "key_y_press"
+        requirement: [{ input_dir_z: "up" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0 }
   "key_y_press":
     next: "key_y"
     input_reactions:
-      press_z: "key_y_press"
+      press_z:
+        next: "key_y_press"
+        requirement: [{ input_dir_z: "up" }]
     frames:
     - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
     - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
