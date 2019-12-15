@@ -3,9 +3,9 @@ control_settings:
   keyboard:
     position: { x: 50, y: 200, z: 10 }
     controller_tints:
-    - { r: 1.0, g: 0.15, b: 0.15 }
-    - { r: 0.15, g: 1.0, b: 0.3 }
-    - { r: 0.2, g: 0.4, b: 1.0 }
+      - { r: 1.0, g: 0.15, b: 0.15 }
+      - { r: 0.15, g: 1.0, b: 0.3 }
+      - { r: 0.2, g: 0.4, b: 1.0 }
 
     layout: "us"
     layout_positions:
@@ -338,545 +338,1874 @@ sequences:
 
   # --- Bottom row --- #
   "key_ctrl_left":
+    input_reactions:
+      press_button:
+        button: { Key: LControl }
+        next: "key_ctrl_left_press"
     frames:
       - { wait: 4, sprite: { sheet: 3, index: 0 }, scale: 2.0 }
+  "key_ctrl_left_press":
+    next: "key_ctrl_left"
+    input_reactions:
+      press_button:
+        button: { Key: "LControl" }
+        next: "key_ctrl_left_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_fn":
+    # input_reactions:
+    #   press_button:
+    #     button: { Key: '' } # TODO: Need winit support
+    #     next: "key_fn_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 134 }, scale: 2.0 }
+  "key_fn_press":
+    next: "key_fn"
+    # input_reactions:
+    #   press_button:
+    #     button: { Key: '' } # TODO: Need winit support
+    #     next: "key_fn_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 142 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 326 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 334 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 326 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 142 }, scale: 2.0 }
   # key_super
   "key_alt_left":
+    input_reactions:
+      press_button:
+        button: { Key: LAlt }
+        next: "key_alt_left_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 8 }, scale: 2.0 }
+  "key_alt_left_press":
+    next: "key_alt_left"
+    input_reactions:
+      press_button:
+        button: { Key: "LAlt" }
+        next: "key_alt_left_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 208 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
   "key_space":
+    input_reactions:
+      press_button:
+        button: { Key: Space }
+        next: "key_space_press"
     frames:
       - { wait: 4, sprite: { sheet: 8, index: 0 }, scale: 2.0 }
+  "key_space_press":
+    next: "key_space"
+    input_reactions:
+      press_button:
+        button: { Key: "Space" }
+        next: "key_space_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_alt_right":
+    input_reactions:
+      press_button:
+        button: { Key: RAlt }
+        next: "key_alt_right_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 8 }, scale: 2.0 }
+  "key_alt_right_press":
+    next: "key_alt_right"
+    input_reactions:
+      press_button:
+        button: { Key: "RAlt" }
+        next: "key_alt_right_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 208 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
   "key_ctrl_right":
+    input_reactions:
+      press_button:
+        button: { Key: RControl }
+        next: "key_ctrl_right_press"
     frames:
       - { wait: 4, sprite: { sheet: 3, index: 0 }, scale: 2.0 }
+  "key_ctrl_right_press":
+    next: "key_ctrl_right"
+    input_reactions:
+      press_button:
+        button: { Key: "RControl" }
+        next: "key_ctrl_right_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
 
   "key_arrow_left":
+    input_reactions:
+      press_button:
+        button: { Key: Left }
+        next: "key_arrow_left_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 117 }, scale: 2.0 }
+  "key_arrow_left_press":
+    next: "key_arrow_left"
+    input_reactions:
+      press_button:
+        button: { Key: "Left" }
+        next: "key_arrow_left_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 125 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 309 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 317 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 309 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 125 }, scale: 2.0 }
   "key_arrow_down":
+    input_reactions:
+      press_button:
+        button: { Key: Down }
+        next: "key_arrow_down_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 118 }, scale: 2.0 }
+  "key_arrow_down_press":
+    next: "key_arrow_down"
+    input_reactions:
+      press_button:
+        button: { Key: "Down" }
+        next: "key_arrow_down_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 126 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 310 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 318 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 310 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 126 }, scale: 2.0 }
   "key_arrow_right":
+    input_reactions:
+      press_button:
+        button: { Key: Right }
+        next: "key_arrow_right_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 119 }, scale: 2.0 }
+  "key_arrow_right_press":
+    next: "key_arrow_right"
+    input_reactions:
+      press_button:
+        button: { Key: "Right" }
+        next: "key_arrow_right_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 127 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 311 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 319 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 311 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 127 }, scale: 2.0 }
 
   "key_numpad_0":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad0 }
+        next: "key_numpad_0_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 68 }, scale: 2.0 }
+  "key_numpad_0_press":
+    next: "key_numpad_0"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad0" }
+        next: "key_numpad_0_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 76 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 260 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 268 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 260 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 76 }, scale: 2.0 }
   "key_numpad_dot":
+    input_reactions:
+      press_button:
+        button: { Key: NumpadComma }
+        next: "key_numpad_dot_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 112 }, scale: 2.0 }
+  "key_numpad_dot_press":
+    next: "key_numpad_dot"
+    input_reactions:
+      press_button:
+        button: { Key: "NumpadComma" }
+        next: "key_numpad_dot_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 120 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 304 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 312 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 304 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 120 }, scale: 2.0 }
 
   # --- Second row --- #
 
   "key_shift_left":
+    input_reactions:
+      press_button:
+        button: { Key: LShift }
+        next: "key_shift_left_press"
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 2 }, scale: 2.0 }
+  "key_shift_left_press":
+    next: "key_shift_left"
+    input_reactions:
+      press_button:
+        button: { Key: "LShift" }
+        next: "key_shift_left_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 202 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
   "key_z":
+    input_reactions:
+      press_button:
+        button: { Key: Z }
+        next: "key_z_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 49 }, scale: 2.0 }
+  "key_z_press":
+    next: "key_z"
+    input_reactions:
+      press_button:
+        button: { Key: "Z" }
+        next: "key_z_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 57 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 241 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 249 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 241 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 57 }, scale: 2.0 }
   "key_x":
+    input_reactions:
+      press_button:
+        button: { Key: X }
+        next: "key_x_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 39 }, scale: 2.0 }
+  "key_x_press":
+    next: "key_x"
+    input_reactions:
+      press_button:
+        button: { Key: "X" }
+        next: "key_x_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 47 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 231 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 239 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 231 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 47 }, scale: 2.0 }
   "key_c":
+    input_reactions:
+      press_button:
+        button: { Key: C }
+        next: "key_c_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 2 }, scale: 2.0 }
+  "key_c_press":
+    next: "key_c"
+    input_reactions:
+      press_button:
+        button: { Key: "C" }
+        next: "key_c_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 202 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
   "key_v":
+    input_reactions:
+      press_button:
+        button: { Key: V }
+        next: "key_v_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 37 }, scale: 2.0 }
+  "key_v_press":
+    next: "key_v"
+    input_reactions:
+      press_button:
+        button: { Key: "V" }
+        next: "key_v_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 45 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 229 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 237 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 229 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 45 }, scale: 2.0 }
   "key_b":
+    input_reactions:
+      press_button:
+        button: { Key: B }
+        next: "key_b_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 1 }, scale: 2.0 }
+  "key_b_press":
+    next: "key_b"
+    input_reactions:
+      press_button:
+        button: { Key: "B" }
+        next: "key_b_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 9 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 193 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 201 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 193 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 9 }, scale: 2.0 }
   "key_n":
+    input_reactions:
+      press_button:
+        button: { Key: N }
+        next: "key_n_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 21 }, scale: 2.0 }
+  "key_n_press":
+    next: "key_n"
+    input_reactions:
+      press_button:
+        button: { Key: "N" }
+        next: "key_n_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 29 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 213 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 221 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 213 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 29 }, scale: 2.0 }
   "key_m":
+    input_reactions:
+      press_button:
+        button: { Key: M }
+        next: "key_m_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 20 }, scale: 2.0 }
+  "key_m_press":
+    next: "key_m"
+    input_reactions:
+      press_button:
+        button: { Key: "M" }
+        next: "key_m_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 28 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 212 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 220 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 212 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 28 }, scale: 2.0 }
   "key_<":
+    input_reactions:
+      press_button:
+        button: { Key: Comma }
+        next: "key_<_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 132 }, scale: 2.0 }
+  "key_<_press":
+    next: "key_<"
+    input_reactions:
+      press_button:
+        button: { Key: Comma }
+        next: "key_<_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 140 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 324 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 332 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 324 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 140 }, scale: 2.0 }
   "key_>":
+    input_reactions:
+      press_button:
+        button: { Key: Period }
+        next: "key_>_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 133 }, scale: 2.0 }
+  "key_>_press":
+    next: "key_>"
+    input_reactions:
+      press_button:
+        button: { Key: Period }
+        next: "key_>_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 141 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 325 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 333 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 325 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 141 }, scale: 2.0 }
   "key_?":
+    input_reactions:
+      press_button:
+        button: { Key: Slash }
+        next: "key_?_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 130 }, scale: 2.0 }
+  "key_?_press":
+    next: "key_?"
+    input_reactions:
+      press_button:
+        button: { Key: Slash }
+        next: "key_?_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 138 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 322 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 330 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 322 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 138 }, scale: 2.0 }
   "key_shift_right":
+    input_reactions:
+      press_button:
+        button: { Key: RShift }
+        next: "key_shift_right_press"
     frames:
       - { wait: 4, sprite: { sheet: 5, index: 2 }, scale: 2.0 }
+  "key_shift_right_press":
+    next: "key_shift_right"
+    input_reactions:
+      press_button:
+        button: { Key: "RShift" }
+        next: "key_shift_right_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 202 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
 
   "key_arrow_up":
+    input_reactions:
+      press_button:
+        button: { Key: Up }
+        next: "key_arrow_up_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 102 }, scale: 2.0 }
+  "key_arrow_up_press":
+    next: "key_arrow_up"
+    input_reactions:
+      press_button:
+        button: { Key: "Up" }
+        next: "key_arrow_up_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 110 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 294 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 302 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 294 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 110 }, scale: 2.0 }
 
   "key_numpad_1":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad1 }
+        next: "key_numpad_1_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0 }
+  "key_numpad_1_press":
+    next: "key_numpad_1"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad1" }
+        next: "key_numpad_1_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 251 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
   "key_numpad_2":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad2 }
+        next: "key_numpad_2_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0 }
+  "key_numpad_2_press":
+    next: "key_numpad_2"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad2" }
+        next: "key_numpad_2_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 252 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
   "key_numpad_3":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad3 }
+        next: "key_numpad_3_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0 }
+  "key_numpad_3_press":
+    next: "key_numpad_3"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad3" }
+        next: "key_numpad_3_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 253 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
 
   # --- Third row --- #
 
   "key_caps":
+    input_reactions:
+      press_button:
+        button: { Key: Capital }
+        next: "key_caps_press"
     frames:
       - { wait: 4, sprite: { sheet: 4, index: 0 }, scale: 2.0 }
+  "key_caps_press":
+    next: "key_caps"
+    input_reactions:
+      press_button:
+        button: { Key: "Capital" }
+        next: "key_caps_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_a":
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: A }
         next: "key_a_press"
-        requirement: [{ input_dir_x: "left" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 0 }, scale: 2.0 }
   "key_a_press":
     next: "key_a"
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: "A" }
         next: "key_a_press"
-        requirement: [{ input_dir_x: "left" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_s":
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: S }
         next: "key_s_press"
-        requirement: [{ input_dir_z: "down" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 34 }, scale: 2.0 }
   "key_s_press":
     next: "key_s"
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: "S" }
         next: "key_s_press"
-        requirement: [{ input_dir_z: "down" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 234 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 234 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 226 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 42 }, scale: 2.0 }
   "key_d":
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: D }
         next: "key_d_press"
-        requirement: [{ input_dir_x: "right" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 3 }, scale: 2.0 }
   "key_d_press":
     next: "key_d"
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: "D" }
         next: "key_d_press"
-        requirement: [{ input_dir_x: "right" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 203 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 203 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 195 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 11 }, scale: 2.0 }
   "key_f":
+    input_reactions:
+      press_button:
+        button: { Key: F }
+        next: "key_f_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 5 }, scale: 2.0 }
+  "key_f_press":
+    next: "key_f"
+    input_reactions:
+      press_button:
+        button: { Key: "F" }
+        next: "key_f_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 13 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 197 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 205 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 197 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 13 }, scale: 2.0 }
   "key_g":
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: G }
         next: "key_g_press"
-        requirement: [{ input_dir_x: "left" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 6 }, scale: 2.0 }
   "key_g_press":
     next: "key_g"
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: "G" }
         next: "key_g_press"
-        requirement: [{ input_dir_x: "left" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 206 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 206 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
   "key_h":
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: H }
         next: "key_h_press"
-        requirement: [{ input_dir_z: "down" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 7 }, scale: 2.0 }
   "key_h_press":
     next: "key_h"
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: "H" }
         next: "key_h_press"
-        requirement: [{ input_dir_z: "down" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 207 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 207 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 199 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 15 }, scale: 2.0 }
   "key_j":
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: J }
         next: "key_j_press"
-        requirement: [{ input_dir_x: "right" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 17 }, scale: 2.0 }
   "key_j_press":
     next: "key_j"
     input_reactions:
-      press_x:
+      press_button:
+        button: { Key: J }
         next: "key_j_press"
-        requirement: [{ input_dir_x: "right" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 217 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 217 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 209 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 25 }, scale: 2.0 }
   "key_k":
+    input_reactions:
+      press_button:
+        button: { Key: K }
+        next: "key_k_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 18 }, scale: 2.0 }
+  "key_k_press":
+    next: "key_k"
+    input_reactions:
+      press_button:
+        button: { Key: K }
+        next: "key_k_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 26 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 210 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 218 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 210 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 26 }, scale: 2.0 }
   "key_l":
+    input_reactions:
+      press_button:
+        button: { Key: L }
+        next: "key_l_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 19 }, scale: 2.0 }
+  "key_l_press":
+    next: "key_l"
+    input_reactions:
+      press_button:
+        button: { Key: "L" }
+        next: "key_l_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 27 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 211 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 219 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 211 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 27 }, scale: 2.0 }
   "key_:":
+    input_reactions:
+      press_button:
+        button: { Key: "Semicolon" }
+        next: "key_:_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 97 }, scale: 2.0 }
+  "key_:_press":
+    next: "key_:"
+    input_reactions:
+      press_button:
+        button: { Key: "Semicolon"}
+        next: "key_:_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 105 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 289 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 297 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 289 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 105 }, scale: 2.0 }
   'key_"':
+    input_reactions:
+      press_button:
+        button: { Key: "Apostrophe" }
+        next: '"key__press'
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 129 }, scale: 2.0 }
+  '"key__press':
+    next: 'key_"'
+    input_reactions:
+      press_button:
+        button: { Key: "Apostrophe" }
+        next: '"key__press'
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 137 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 321 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 329 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 321 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 137 }, scale: 2.0 }
   "key_enter":
+    input_reactions:
+      press_button:
+        button: { Key: Return }
+        next: "key_enter_press"
     frames:
       - { wait: 4, sprite: { sheet: 6, index: 0 }, scale: 2.0 }
+  "key_enter_press":
+    next: "key_enter"
+    input_reactions:
+      press_button:
+        button: { Key: "Return" }
+        next: "key_enter_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
 
   "key_numpad_4":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad4 }
+        next: "key_numpad_4_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0 }
+  "key_numpad_4_press":
+    next: "key_numpad_4"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad4" }
+        next: "key_numpad_4_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 254 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
   "key_numpad_5":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad5 }
+        next: "key_numpad_5_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0 }
+  "key_numpad_5_press":
+    next: "key_numpad_5"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad5" }
+        next: "key_numpad_5_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 255 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
   "key_numpad_6":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad6 }
+        next: "key_numpad_6_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0 }
+  "key_numpad_6_press":
+    next: "key_numpad_6"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad6" }
+        next: "key_numpad_6_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 264 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
 
   # --- Fourth row --- #
 
   "key_tab":
+    input_reactions:
+      press_button:
+        button: { Key: Tab }
+        next: "key_tab_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 12 }, scale: 2.0 }
+  "key_tab_press":
+    next: "key_tab"
+    input_reactions:
+      press_button:
+        button: { Key: "Tab" }
+        next: "key_tab_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 20 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 204 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 212 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 204 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 20 }, scale: 2.0 }
   "key_q":
+    input_reactions:
+      press_button:
+        button: { Key: Q }
+        next: "key_q_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 32 }, scale: 2.0 }
+  "key_q_press":
+    next: "key_q"
+    input_reactions:
+      press_button:
+        button: { Key: "Q" }
+        next: "key_q_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 40 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 224 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 232 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 224 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 40 }, scale: 2.0 }
   "key_w":
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: W }
         next: "key_w_press"
-        requirement: [{ input_dir_z: "up" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 38 }, scale: 2.0 }
   "key_w_press":
     next: "key_w"
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: W }
         next: "key_w_press"
-        requirement: [{ input_dir_z: "up" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 238 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 238 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 230 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 46 }, scale: 2.0 }
   "key_e":
+    input_reactions:
+      press_button:
+        button: { Key: E }
+        next: "key_e_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 4 }, scale: 2.0 }
+  "key_e_press":
+    next: "key_e"
+    input_reactions:
+      press_button:
+        button: { Key: "E" }
+        next: "key_e_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 12 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 196 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 204 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 196 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 12 }, scale: 2.0 }
   "key_r":
+    input_reactions:
+      press_button:
+        button: { Key: R }
+        next: "key_r_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 33 }, scale: 2.0 }
+  "key_r_press":
+    next: "key_r"
+    input_reactions:
+      press_button:
+        button: { Key: "R" }
+        next: "key_r_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 41 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 225 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 233 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 225 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 41 }, scale: 2.0 }
   "key_t":
+    input_reactions:
+      press_button:
+        button: { Key: T }
+        next: "key_t_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 35 }, scale: 2.0 }
+  "key_t_press":
+    next: "key_t"
+    input_reactions:
+      press_button:
+        button: { Key: "T" }
+        next: "key_t_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 43 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 227 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 235 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 227 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 43 }, scale: 2.0 }
   "key_y":
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: Y }
         next: "key_y_press"
-        requirement: [{ input_dir_z: "up" }]
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 48 }, scale: 2.0 }
   "key_y_press":
     next: "key_y"
     input_reactions:
-      press_z:
+      press_button:
+        button: { Key: "Y" }
         next: "key_y_press"
-        requirement: [{ input_dir_z: "up" }]
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 248 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 248 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 240 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 56 }, scale: 2.0 }
   "key_u":
+    input_reactions:
+      press_button:
+        button: { Key: U }
+        next: "key_u_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 36 }, scale: 2.0 }
+  "key_u_press":
+    next: "key_u"
+    input_reactions:
+      press_button:
+        button: { Key: "U" }
+        next: "key_u_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 44 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 228 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 236 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 228 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 44 }, scale: 2.0 }
   "key_i":
+    input_reactions:
+      press_button:
+        button: { Key: I }
+        next: "key_i_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 16 }, scale: 2.0 }
+  "key_i_press":
+    next: "key_i"
+    input_reactions:
+      press_button:
+        button: { Key: "I" }
+        next: "key_i_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 24 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 208 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 216 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 208 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 24 }, scale: 2.0 }
   "key_o":
+    input_reactions:
+      press_button:
+        button: { Key: O }
+        next: "key_o_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 22 }, scale: 2.0 }
+  "key_o_press":
+    next: "key_o"
+    input_reactions:
+      press_button:
+        button: { Key: "O" }
+        next: "key_o_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 30 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 214 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 222 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 214 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 30 }, scale: 2.0 }
   "key_p":
+    input_reactions:
+      press_button:
+        button: { Key: P }
+        next: "key_p_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 23 }, scale: 2.0 }
+  "key_p_press":
+    next: "key_p"
+    input_reactions:
+      press_button:
+        button: { Key: "P" }
+        next: "key_p_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 31 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 215 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 223 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 215 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 31 }, scale: 2.0 }
   "key_[":
+    input_reactions:
+      press_button:
+        button: { Key: LBracket }
+        next: "key_[_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 113 }, scale: 2.0 }
+  "key_[_press":
+    next: "key_["
+    input_reactions:
+      press_button:
+        button: { Key: "LBracket" }
+        next: "key_[_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 121 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 305 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 313 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 305 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 121 }, scale: 2.0 }
   "key_]":
+    input_reactions:
+      press_button:
+        button: { Key: RBracket }
+        next: "key_]_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 114 }, scale: 2.0 }
-  'key_\':
+  "key_]_press":
+    next: "key_]"
+    input_reactions:
+      press_button:
+        button: { Key: "RBracket" }
+        next: "key_]_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 122 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 306 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 314 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 306 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 122 }, scale: 2.0 }
+  "key_\\":
+    input_reactions:
+      press_button:
+        button: { Key: Backslash }
+        next: "key_\\_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 69 }, scale: 2.0 }
+  "key_\\_press":
+    next: "key_\\"
+    input_reactions:
+      press_button:
+        button: { Key: "Backslash" }
+        next: "key_\\_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 77 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 261 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 269 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 261 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 77 }, scale: 2.0 }
 
   "key_del":
+    input_reactions:
+      press_button:
+        button: { Key: Delete }
+        next: "key_del_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 179 }, scale: 2.0 }
+  "key_del_press":
+    next: "key_del"
+    input_reactions:
+      press_button:
+        button: { Key: "Delete" }
+        next: "key_del_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 187 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 371 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 379 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 371 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 187 }, scale: 2.0 }
   "key_end":
+    input_reactions:
+      press_button:
+        button: { Key: End }
+        next: "key_end_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 177 }, scale: 2.0 }
+  "key_end_press":
+    next: "key_end"
+    input_reactions:
+      press_button:
+        button: { Key: "End" }
+        next: "key_end_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 185 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 369 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 377 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 369 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 185 }, scale: 2.0 }
   "key_page_down":
+    input_reactions:
+      press_button:
+        button: { Key: PageDown }
+        next: "key_page_down_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 181 }, scale: 2.0 }
+  "key_page_down_press":
+    next: "key_page_down"
+    input_reactions:
+      press_button:
+        button: { Key: "PageDown" }
+        next: "key_page_down_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 189 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 373 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 381 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 373 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 189 }, scale: 2.0 }
 
   "key_numpad_7":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad7 }
+        next: "key_numpad_7_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0 }
+  "key_numpad_7_press":
+    next: "key_numpad_7"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad7" }
+        next: "key_numpad_7_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 265 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
   "key_numpad_8":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad8 }
+        next: "key_numpad_8_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0 }
+  "key_numpad_8_press":
+    next: "key_numpad_8"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad8" }
+        next: "key_numpad_8_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 266 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
   "key_numpad_9":
+    input_reactions:
+      press_button:
+        button: { Key: Numpad9 }
+        next: "key_numpad_9_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
+  "key_numpad_9_press":
+    next: "key_numpad_9"
+    input_reactions:
+      press_button:
+        button: { Key: "Numpad9" }
+        next: "key_numpad_9_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 75 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 259 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 267 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 259 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 75 }, scale: 2.0 }
 
   # --- Fifth row --- #
 
   "key_`":
+    input_reactions:
+      press_button:
+        button: { Key: Grave }
+        next: "key_`_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 128 }, scale: 2.0 }
+  "key_`_press":
+    next: "key_`"
+    input_reactions:
+      press_button:
+        button: { Key: "Grave" }
+        next: "key_`_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 136 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 320 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 328 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 320 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 136 }, scale: 2.0 }
   "key_1":
     input_reactions:
-      press_defend: "key_1_press"
+      press_button:
+        button: { Key: Key1 }
+        next: "key_1_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 51 }, scale: 2.0 }
   "key_1_press":
     next: "key_1"
     input_reactions:
-      press_defend: "key_1_press"
+      press_button:
+        button: { Key: "Key1" }
+        next: "key_1_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 251 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 251 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 243 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 59 }, scale: 2.0 }
   "key_2":
     input_reactions:
-      press_jump: "key_2_press"
+      press_button:
+        button: { Key: Key2 }
+        next: "key_2_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 52 }, scale: 2.0 }
   "key_2_press":
     next: "key_2"
     input_reactions:
-      press_jump: "key_2_press"
+      press_button:
+        button: { Key: "Key2" }
+        next: "key_2_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 252 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 252 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 244 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 60 }, scale: 2.0 }
   "key_3":
     input_reactions:
-      press_attack: "key_3_press"
+      press_button:
+        button: { Key: Key3 }
+        next: "key_3_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 53 }, scale: 2.0 }
   "key_3_press":
     next: "key_3"
     input_reactions:
-      press_attack: "key_3_press"
+      press_button:
+        button: { Key: "Key3" }
+        next: "key_3_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 253 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 253 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 245 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 61 }, scale: 2.0 }
   "key_4":
     input_reactions:
-      press_special: "key_4_press"
+      press_button:
+        button: { Key: Key4 }
+        next: "key_4_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 54 }, scale: 2.0 }
   "key_4_press":
     next: "key_4"
     input_reactions:
-      press_special: "key_4_press"
+      press_button:
+        button: { Key: "Key4" }
+        next: "key_4_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 254 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 254 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 246 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 62 }, scale: 2.0 }
   "key_5":
     input_reactions:
-      press_defend: "key_5_press"
+      press_button:
+        button: { Key: Key5 }
+        next: "key_5_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 55 }, scale: 2.0 }
   "key_5_press":
     next: "key_5"
     input_reactions:
-      press_defend: "key_5_press"
+      press_button:
+        button: { Key: "Key5" }
+        next: "key_5_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 255 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 255 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 247 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 63 }, scale: 2.0 }
   "key_6":
     input_reactions:
-      press_jump: "key_6_press"
+      press_button:
+        button: { Key: Key6 }
+        next: "key_6_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 64 }, scale: 2.0 }
   "key_6_press":
     next: "key_6"
     input_reactions:
-      press_jump: "key_6_press"
+      press_button:
+        button: { Key: "Key6" }
+        next: "key_6_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 264 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 264 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 256 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 72 }, scale: 2.0 }
   "key_7":
     input_reactions:
-      press_attack: "key_7_press"
+      press_button:
+        button: { Key: Key7 }
+        next: "key_7_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 65 }, scale: 2.0 }
   "key_7_press":
     next: "key_7"
     input_reactions:
-      press_attack: "key_7_press"
+      press_button:
+        button: { Key: "Key7" }
+        next: "key_7_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 265 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 265 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 257 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 73 }, scale: 2.0 }
   "key_8":
     input_reactions:
-      press_special: "key_8_press"
+      press_button:
+        button: { Key: Key8 }
+        next: "key_8_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 66 }, scale: 2.0 }
   "key_8_press":
     next: "key_8"
     input_reactions:
-      press_special: "key_8_press"
+      press_button:
+        button: { Key: "Key8" }
+        next: "key_8_press"
     frames:
-    - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 266 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
-    - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 266 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 258 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 74 }, scale: 2.0 }
   "key_9":
+    input_reactions:
+      press_button:
+        button: { Key: Key9 }
+        next: "key_9_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 67 }, scale: 2.0 }
+  "key_9_press":
+    next: "key_9"
+    input_reactions:
+      press_button:
+        button: { Key: "Key9" }
+        next: "key_9_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 75 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 259 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 267 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 259 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 75 }, scale: 2.0 }
   "key_0":
+    input_reactions:
+      press_button:
+        button: { Key: Key0 }
+        next: "key_0_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 68 }, scale: 2.0 }
+  "key_0_press":
+    next: "key_0"
+    input_reactions:
+      press_button:
+        button: { Key: "Key0" }
+        next: "key_0_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 76 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 260 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 268 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 260 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 76 }, scale: 2.0 }
   "key_-":
+    input_reactions:
+      press_button:
+        button: { Key: Minus }
+        next: "key_-_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 70 }, scale: 2.0 }
+  "key_-_press":
+    next: "key_-"
+    input_reactions:
+      press_button:
+        button: { Key: "Minus" }
+        next: "key_-_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 78 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 262 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 270 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 262 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 78 }, scale: 2.0 }
   "key_+":
+    input_reactions:
+      press_button:
+        button: { Key: Equals }
+        next: "key_+_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 71 }, scale: 2.0 }
+  "key_+_press":
+    next: "key_+"
+    input_reactions:
+      press_button:
+        button: { Key: "Equals" }
+        next: "key_+_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 79 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 263 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 271 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 263 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 79 }, scale: 2.0 }
   "key_back":
+    input_reactions:
+      press_button:
+        button: { Key: Back }
+        next: "key_back_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 6 }, scale: 2.0 }
+  "key_back_press":
+    next: "key_back"
+    input_reactions:
+      press_button:
+        button: { Key: "Back" }
+        next: "key_back_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 206 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 198 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 14 }, scale: 2.0 }
 
   "key_insert":
+    input_reactions:
+      press_button:
+        button: { Key: Insert }
+        next: "key_insert_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 178 }, scale: 2.0 }
+  "key_insert_press":
+    next: "key_insert"
+    input_reactions:
+      press_button:
+        button: { Key: "Insert" }
+        next: "key_insert_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 186 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 370 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 378 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 370 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 186 }, scale: 2.0 }
   "key_home":
+    input_reactions:
+      press_button:
+        button: { Key: Home }
+        next: "key_home_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 176 }, scale: 2.0 }
+  "key_home_press":
+    next: "key_home"
+    input_reactions:
+      press_button:
+        button: { Key: "Home" }
+        next: "key_home_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 184 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 368 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 376 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 368 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 184 }, scale: 2.0 }
   "key_page_up":
+    input_reactions:
+      press_button:
+        button: { Key: PageUp }
+        next: "key_page_up_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 180 }, scale: 2.0 }
+  "key_page_up_press":
+    next: "key_page_up"
+    input_reactions:
+      press_button:
+        button: { Key: "PageUp" }
+        next: "key_page_up_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 188 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 372 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 380 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 372 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 188 }, scale: 2.0 }
 
   "key_numlock":
+    input_reactions:
+      press_button:
+        button: { Key: Numlock }
+        next: "key_numlock_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 167 }, scale: 2.0 }
+  "key_numlock_press":
+    next: "key_numlock"
+    input_reactions:
+      press_button:
+        button: { Key: "Numlock" }
+        next: "key_numlock_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 175 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 359 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 367 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 359 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 175 }, scale: 2.0 }
   "key_numpad_/":
+    input_reactions:
+      press_button:
+        button: { Key: Divide }
+        next: "key_numpad_/_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 164 }, scale: 2.0 }
+  "key_numpad_/_press":
+    next: "key_numpad_/"
+    input_reactions:
+      press_button:
+        button: { Key: Divide }
+        next: "key_numpad_/_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 172 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 356 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 364 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 356 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 172 }, scale: 2.0 }
   "key_numpad_multiply":
+    input_reactions:
+      press_button:
+        button: { Key: Multiply }
+        next: "key_numpad_multiply_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 101 }, scale: 2.0 }
+  "key_numpad_multiply_press":
+    next: "key_numpad_multiply"
+    input_reactions:
+      press_button:
+        button: { Key: "Multiply" }
+        next: "key_numpad_multiply_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 109 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 293 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 301 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 293 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 109 }, scale: 2.0 }
   "key_numpad_-":
+    input_reactions:
+      press_button:
+        button: { Key: Subtract }
+        next: "key_numpad_-_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 70 }, scale: 2.0 }
+  "key_numpad_-_press":
+    next: "key_numpad_-"
+    input_reactions:
+      press_button:
+        button: { Key: Subtract }
+        next: "key_numpad_-_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 78 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 262 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 270 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 262 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 78 }, scale: 2.0 }
 
   # --- Top row --- #
 
   "key_esc":
+    input_reactions:
+      press_button:
+        button: { Key: Escape }
+        next: "key_esc_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 50 }, scale: 2.0 }
+  "key_esc_press":
+    next: "key_esc"
+    input_reactions:
+      press_button:
+        button: { Key: "Escape" }
+        next: "key_esc_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 58 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 242 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 250 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 242 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 58 }, scale: 2.0 }
   "key_f1":
+    input_reactions:
+      press_button:
+        button: { Key: F1 }
+        next: "key_f1_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 80 }, scale: 2.0 }
+  "key_f1_press":
+    next: "key_f1"
+    input_reactions:
+      press_button:
+        button: { Key: "F1" }
+        next: "key_f1_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 88 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 272 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 280 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 272 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 88 }, scale: 2.0 }
   "key_f2":
+    input_reactions:
+      press_button:
+        button: { Key: F2 }
+        next: "key_f2_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 81 }, scale: 2.0 }
+  "key_f2_press":
+    next: "key_f2"
+    input_reactions:
+      press_button:
+        button: { Key: "F2" }
+        next: "key_f2_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 89 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 273 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 281 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 273 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 89 }, scale: 2.0 }
   "key_f3":
+    input_reactions:
+      press_button:
+        button: { Key: F3 }
+        next: "key_f3_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 82 }, scale: 2.0 }
+  "key_f3_press":
+    next: "key_f3"
+    input_reactions:
+      press_button:
+        button: { Key: "F3" }
+        next: "key_f3_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 90 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 274 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 282 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 274 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 90 }, scale: 2.0 }
   "key_f4":
+    input_reactions:
+      press_button:
+        button: { Key: F4 }
+        next: "key_f4_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 83 }, scale: 2.0 }
+  "key_f4_press":
+    next: "key_f4"
+    input_reactions:
+      press_button:
+        button: { Key: "F4" }
+        next: "key_f4_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 91 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 275 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 283 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 275 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 91 }, scale: 2.0 }
   "key_f5":
+    input_reactions:
+      press_button:
+        button: { Key: F5 }
+        next: "key_f5_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 84 }, scale: 2.0 }
+  "key_f5_press":
+    next: "key_f5"
+    input_reactions:
+      press_button:
+        button: { Key: "F5" }
+        next: "key_f5_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 92 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 276 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 284 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 276 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 92 }, scale: 2.0 }
   "key_f6":
+    input_reactions:
+      press_button:
+        button: { Key: F6 }
+        next: "key_f6_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 85 }, scale: 2.0 }
+  "key_f6_press":
+    next: "key_f6"
+    input_reactions:
+      press_button:
+        button: { Key: "F6" }
+        next: "key_f6_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 93 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 277 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 285 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 277 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 93 }, scale: 2.0 }
   "key_f7":
+    input_reactions:
+      press_button:
+        button: { Key: F7 }
+        next: "key_f7_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 86 }, scale: 2.0 }
+  "key_f7_press":
+    next: "key_f7"
+    input_reactions:
+      press_button:
+        button: { Key: "F7" }
+        next: "key_f7_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 94 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 278 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 286 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 278 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 94 }, scale: 2.0 }
   "key_f8":
+    input_reactions:
+      press_button:
+        button: { Key: F8 }
+        next: "key_f8_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 87 }, scale: 2.0 }
+  "key_f8_press":
+    next: "key_f8"
+    input_reactions:
+      press_button:
+        button: { Key: "F8" }
+        next: "key_f8_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 95 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 279 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 287 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 279 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 95 }, scale: 2.0 }
   "key_f9":
+    input_reactions:
+      press_button:
+        button: { Key: F9 }
+        next: "key_f9_press"
     frames:
       - { wait: 4, sprite: { sheet: 1, index: 96 }, scale: 2.0 }
+  "key_f9_press":
+    next: "key_f9"
+    input_reactions:
+      press_button:
+        button: { Key: "F9" }
+        next: "key_f9_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 104 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 288 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 296 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 288 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 104 }, scale: 2.0 }
   "key_f10":
+    input_reactions:
+      press_button:
+        button: { Key: F10 }
+        next: "key_f10_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 0 }, scale: 2.0 }
+  "key_f10_press":
+    next: "key_f10"
+    input_reactions:
+      press_button:
+        button: { Key: "F10" }
+        next: "key_f10_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 200 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 192 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 8 }, scale: 2.0 }
   "key_f11":
+    input_reactions:
+      press_button:
+        button: { Key: F11 }
+        next: "key_f11_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 1 }, scale: 2.0 }
+  "key_f11_press":
+    next: "key_f11"
+    input_reactions:
+      press_button:
+        button: { Key: "F11" }
+        next: "key_f11_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 9 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 193 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 201 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 193 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 9 }, scale: 2.0 }
   "key_f12":
+    input_reactions:
+      press_button:
+        button: { Key: F12 }
+        next: "key_f12_press"
     frames:
       - { wait: 4, sprite: { sheet: 2, index: 2 }, scale: 2.0 }
+  "key_f12_press":
+    next: "key_f12"
+    input_reactions:
+      press_button:
+        button: { Key: "F12" }
+        next: "key_f12_press"
+    frames:
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 202 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 194 }, scale: 2.0 }
+      - { wait: 1, sprite: { sheet: 1, index: 10 }, scale: 2.0 }
+
 
   # --- Remainder --- #
 
