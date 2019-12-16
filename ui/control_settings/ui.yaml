@@ -324,13 +324,23 @@ control_settings:
 
 buttons:
   - position: { x: 10, y: 0, z: 10 }
-    label: { position: { x: -90, y: 15, z: 0 }, text: "Back" }
+    label: { position: { x: -90, y: 15, z: 0 } }
     sprite: { position: { x: 50, y: 30, z: 0 }, sequence: "back_active" }
 
 sequences:
   back_active:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "back_active"
+        events: [{ control_settings: "return" }]
     frames:
-      - { wait: 1, sprite: { sheet: 9, index: 0 }, scale: 1.5 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.5 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.45 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.4 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.35 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.4 }
+      - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.45 }
 
   # ========
   # Keyboard
