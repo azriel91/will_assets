@@ -1,9 +1,9 @@
 character_selection:
   widgets:
-    - position: { x: 100, y: 300 } # p0
-    - position: { x: 400, y: 300 } # p1
-    - position: { x: 100, y: 100 } # p2
-    - position: { x: 400, y: 100 } # p3
+    - position: { x: 250, y: 300, z: 11 } # p0
+    - position: { x: 400, y: 300, z: 11 } # p1
+    - position: { x: 250, y: 100, z: 11 } # p2
+    - position: { x: 400, y: 100, z: 11 } # p3
 
   widget_template:
     portraits:
@@ -13,10 +13,10 @@ character_selection:
     layers:
       main:
         sequence: "widget_inactive"
-        position: { x: 0, y: 0 }
+        position: { z: 1 }
       portrait:
         sequence: "portrait_press_to_join"
-        position: { x: 0, y: 0 }
+        position: { z: 2 }
 
 sequences:
   widget_inactive:
