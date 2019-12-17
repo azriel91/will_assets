@@ -5,3 +5,24 @@ sheets:
     row_count   : 1
     column_count: 1
     has_border  : false
+
+  - path        : "widget_frame.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - path        : "widget_press_to_join.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 3
+    column_count: 3
+    has_border  : true
+
+  - path        : "widget_random.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 1
+    column_count: 1
+    has_border  : false
