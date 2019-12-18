@@ -1,9 +1,9 @@
 character_selection:
   widgets:
-    - position: { x: 250, y: 300, z: 11 } # p0
-    - position: { x: 400, y: 300, z: 11 } # p1
-    - position: { x: 250, y: 100, z: 11 } # p2
-    - position: { x: 400, y: 100, z: 11 } # p3
+    - position: { x: 200, y: 350, z: 11 } # p0
+    - position: { x: 500, y: 350, z: 11 } # p1
+    - position: { x: 200, y: 150, z: 11 } # p2
+    - position: { x: 500, y: 150, z: 11 } # p3
 
   widget_template:
     portraits:
