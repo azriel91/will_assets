@@ -25,6 +25,9 @@ sequences:
       press_attack:
         next: "widget_character_select"
         events: [{ character_selection: "join" }]
+      press_jump:
+        next: "widget_character_select"
+        events: [{ character_selection: "return" }]
     frames:
       - { wait: 3, sprite: { sheet: 1, index: 0 } }
 
