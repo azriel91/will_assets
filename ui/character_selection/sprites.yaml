@@ -26,3 +26,10 @@ sheets:
     row_count   : 1
     column_count: 1
     has_border  : false
+
+  - path        : "../common/1x1.png"
+    sprite_w    : 1
+    sprite_h    : 1
+    row_count   : 1
+    column_count: 1
+    has_border  : false

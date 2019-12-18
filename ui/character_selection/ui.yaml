@@ -89,4 +89,4 @@ sequences:
 
   portrait_select:
     frames:
-      - { wait: 2, sprite: { sheet: 1, index: 0 } }
+      - { wait: 2, sprite: { sheet: 4, index: 0 } }
