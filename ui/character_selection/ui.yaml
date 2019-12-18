@@ -9,6 +9,7 @@ character_selection:
     portraits:
       join: "portrait_press_to_join"
       random: "portrait_random"
+      select: "portrait_select"
 
     layers:
       main:
@@ -45,12 +46,12 @@ sequences:
           requirement: [{ input_dir_x: "right" }]
 
     frames:
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.2, g: 0.4, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.25, g: 0.5, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.3, g: 0.6, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.35, g: 0.7, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.3, g: 0.6, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.25, g: 0.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.3, g: 1.1, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.9, g: 1.4, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
 
   widget_confirmed:
     next: "repeat"
@@ -62,12 +63,12 @@ sequences:
         next: "widget_character_select"
         events: [{ character_selection: "deselect" }]
     frames:
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.6, g: 0.4, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.65, g: 0.5, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.7, g: 0.6, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.75, g: 0.7, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.7, g: 0.6, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.65, g: 0.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.6, g: 2.1, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.75, g: 2.7, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
 
   portrait_press_to_join:
     next: "repeat"
@@ -85,3 +86,7 @@ sequences:
   portrait_random:
     frames:
       - { wait: 2, sprite: { sheet: 3, index: 0 } }
+
+  portrait_select:
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 0 } }
