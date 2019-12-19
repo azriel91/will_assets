@@ -24,20 +24,29 @@ sequences:
       - wait: 8
         sprite: { sheet: 0, index: 0 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 8
+        sprite: { sheet: 0, index: 1 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 8
+        sprite: { sheet: 0, index: 2 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 8
+        sprite: { sheet: 0, index: 3 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   stand_attack_weak:
     next: "stand"
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 1 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 1
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 1
         sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 7 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
         spawns:
           - object: "default/buster_shot_weak"
@@ -45,25 +54,25 @@ sequences:
             velocity: { x: 5, y: 0 }
 
       - wait: 1
+        sprite: { sheet: 0, index: 8 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 1
+        sprite: { sheet: 0, index: 7 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+        input_reactions:
+          press_attack: "stand_attack_weak"
+
+      - wait: 1
         sprite: { sheet: 0, index: 5 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
+        input_reactions:
+          press_attack: "stand_attack_weak"
+
       - wait: 1
         sprite: { sheet: 0, index: 4 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-        input_reactions:
-          press_attack: "stand_attack_weak"
-
-      - wait: 1
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-        input_reactions:
-          press_attack: "stand_attack_weak"
-
-      - wait: 1
-        sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
         input_reactions:
@@ -73,19 +82,19 @@ sequences:
     next: "stand"
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 1 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 3 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
         sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 6 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 7 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
         spawns:
           - object: "default/buster_shot_mid"
@@ -93,38 +102,38 @@ sequences:
             velocity: { x: 6, y: 0 }
 
       - wait: 2
-        sprite: { sheet: 0, index: 5 }
+        sprite: { sheet: 0, index: 8 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 1
+        sprite: { sheet: 0, index: 7 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
         sprite: { sheet: 0, index: 4 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   stand_attack_strong:
     next: "stand"
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 1 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 3 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
         sprite: { sheet: 0, index: 4 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 6 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 7 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
         spawns:
           - object: "default/buster_shot_strong"
@@ -132,19 +141,19 @@ sequences:
             velocity: { x: 7, y: 0 }
 
       - wait: 2
-        sprite: { sheet: 0, index: 5 }
+        sprite: { sheet: 0, index: 8 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 1
+        sprite: { sheet: 0, index: 7 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
+        sprite: { sheet: 0, index: 5 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 2
         sprite: { sheet: 0, index: 4 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 2 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 2
-        sprite: { sheet: 0, index: 1 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   walk:
@@ -167,27 +176,27 @@ sequences:
 
     frames:
       - wait: 3
-        sprite: { sheet: 0, index: 6 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 3
-        sprite: { sheet: 0, index: 7 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 3
-        sprite: { sheet: 0, index: 8 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
-
-      - wait: 3
         sprite: { sheet: 0, index: 9 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 8 }
+        sprite: { sheet: 0, index: 10 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 7 }
+        sprite: { sheet: 0, index: 11 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 12 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 11 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+
+      - wait: 3
+        sprite: { sheet: 0, index: 10 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   run:
@@ -214,15 +223,15 @@ sequences:
     frames:
       - wait: 2
         sound: "default/object/character/rox/rox_run.wav"
-        sprite: { sheet: 0, index: 10 }
+        sprite: { sheet: 0, index: 13 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 11 }
+        sprite: { sheet: 0, index: 14 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 12 }
+        sprite: { sheet: 0, index: 15 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   run_end:
@@ -249,7 +258,7 @@ sequences:
 
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -270,7 +279,7 @@ sequences:
 
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -295,7 +304,7 @@ sequences:
 
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -320,7 +329,7 @@ sequences:
 
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -339,7 +348,7 @@ sequences:
 
     frames:
       - wait: 20
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -367,7 +376,7 @@ sequences:
             sequence: "run_clone"
 
       - wait: 10
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         body: [
           { box: { x: 22, y: 21, w: 29, h: 27 } },
           { box: { x: 3, y: 48, w: 35, h: 14 } },
@@ -385,9 +394,9 @@ sequences:
 
     frames:
       - wait: 20
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
       - wait: 10
-        sprite: { sheet: 0, index: 13 }
+        sprite: { sheet: 0, index: 16 }
         spawns:
           - object: "default/buster_shot_weak"
             position: { x: 22, y: 33 }
@@ -398,15 +407,15 @@ sequences:
 
     frames:
       - wait: 3
-        sprite: { sheet: 0, index: 12 }
+        sprite: { sheet: 0, index: 15 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 11 }
+        sprite: { sheet: 0, index: 14 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 3
-        sprite: { sheet: 0, index: 10 }
+        sprite: { sheet: 0, index: 13 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   dodge:
@@ -417,25 +426,25 @@ sequences:
   jump:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 14 }
+        sprite: { sheet: 0, index: 17 }
         body: [{ box: { x: 15, y: 13, w: 28, h: 50 } }]
 
       - wait: 1
-        sprite: { sheet: 0, index: 15 }
+        sprite: { sheet: 0, index: 18 }
         body: [{ box: { x: 15, y: 9, w: 28, h: 54 } }]
 
       - wait: 1
-        sprite: { sheet: 0, index: 16 }
+        sprite: { sheet: 0, index: 19 }
         body: [{ box: { x: 17, y: 6, w: 27, h: 57 } }]
 
       - wait: 1
-        sprite: { sheet: 0, index: 17 }
+        sprite: { sheet: 0, index: 20 }
         body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_off:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 18 }
+        sprite: { sheet: 0, index: 21 }
         body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
         acceleration:
           kind: "once"
@@ -446,23 +455,23 @@ sequences:
   jump_ascend:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 18 }
+        sprite: { sheet: 0, index: 21 }
         body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_descend:
     frames:
       - wait: 1
-        sprite: { sheet: 0, index: 18 }
+        sprite: { sheet: 0, index: 21 }
         body: [{ box: { x: 17, y: 5, w: 27, h: 58 } }]
 
   jump_descend_land:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 15 }
+        sprite: { sheet: 0, index: 18 }
         body: [{ box: { x: 15, y: 9, w: 28, h: 54 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 14 }
+        sprite: { sheet: 0, index: 17 }
         body: [{ box: { x: 15, y: 13, w: 28, h: 50 } }]
 
   jump_attack:
@@ -568,70 +577,100 @@ sequences:
   flinch_0:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 22 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 23 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 24 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   flinch_1:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 22 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 23 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
+        sprite: { sheet: 0, index: 24 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   dazed:
     frames:
-      - wait: 30
-        sprite: { sheet: 0, index: 0 }
+      - wait: 2
+        sprite: { sheet: 0, index: 22 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 2
+        sprite: { sheet: 0, index: 23 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 10
+        sprite: { sheet: 0, index: 24 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 2
+        sprite: { sheet: 0, index: 23 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 2
+        sprite: { sheet: 0, index: 22 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 2
+        sprite: { sheet: 0, index: 23 }
+        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+      - wait: 10
+        sprite: { sheet: 0, index: 24 }
         body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
 
   # Fall when knocked down.
   fall_forward_ascend:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 25 }
+        body: [
+          { box: { x: 11, y: 9, w: 27, h: 26 } },
+          { box: { x: 21, y: 34, w: 27, h: 21 } },
+        ]
 
   fall_forward_descend:
     frames:
       - wait: 3
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 25 }
+        body: [
+          { box: { x: 11, y: 9, w: 27, h: 26 } },
+          { box: { x: 21, y: 34, w: 27, h: 21 } },
+        ]
 
       - wait: 4
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 26 }
+        body: [
+          { box: { x: 9, y: 18, w: 24, h: 24 } },
+          { box: { x: 33, y: 27, w: 24, h: 22 } },
+        ]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 27 }
+        body: [{ box: { x: 7, y: 38, w: 53, h: 20 } }]
 
   fall_forward_land:
     frames:
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 26 }
+        body: [
+          { box: { x: 9, y: 18, w: 24, h: 24 } },
+          { box: { x: 33, y: 27, w: 24, h: 22 } },
+        ]
 
       - wait: 2
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 27 }
+        body: [{ box: { x: 7, y: 38, w: 53, h: 20 } }]
 
   lie_face_down:
     frames:
       - wait: 120
-        sprite: { sheet: 0, index: 0 }
-        body: [{ box: { x: 16, y: 10, w: 28, h: 53 } }]
+        sprite: { sheet: 0, index: 27 }
+        # body: [{ box: { x: 7, y: 38, w: 53, h: 20 } }]
