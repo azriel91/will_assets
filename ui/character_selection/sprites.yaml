@@ -33,3 +33,10 @@ sheets:
     row_count   : 1
     column_count: 1
     has_border  : false
+
+  - path        : "../common/player_tags.png"
+    sprite_w    : 20
+    sprite_h    : 15
+    row_count   : 2
+    column_count: 3
+    has_border  : true

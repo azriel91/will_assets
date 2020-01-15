@@ -19,6 +19,28 @@ character_selection:
         sequence: "portrait_press_to_join"
         position: { z: 2 }
 
+  characters_available_selector:
+    position: { x: 100, y: 100, z: 12 }
+    layout:
+      grid:
+        column_count: 7
+        cell_size: { w: 100, h: 100 }
+
+    selection_highlights:
+      # Position relative to highlighted asset entity.
+      - position: { x: 0, y: -15, z: 0 }
+        sequence: "p0_highlight"
+      - position: { x: 20, y: -15, z: 0 }
+        sequence: "p1_highlight"
+      - position: { x: 40, y: -15, z: 0 }
+        sequence: "p2_highlight"
+      - position: { x: 60, y: -15, z: 0 }
+        sequence: "p3_highlight"
+      - position: { x: 0, y: -30, z: 0 }
+        sequence: "p4_highlight"
+      - position: { x: 20, y: -30, z: 0 }
+        sequence: "p5_highlight"
+
 sequences:
   widget_inactive:
     input_reactions:
@@ -93,3 +115,10 @@ sequences:
   portrait_select:
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 0 } }
+
+  p0_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 0 } }] }
+  p1_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 1 } }] }
+  p2_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 2 } }] }
+  p3_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 3 } }] }
+  p4_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 4 } }] }
+  p5_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 5 } }] }
