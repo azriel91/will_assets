@@ -1,9 +1,9 @@
 character_selection:
   widgets:
-    - position: { x: 200, y: 350, z: 11 } # p0
-    - position: { x: 500, y: 350, z: 11 } # p1
-    - position: { x: 200, y: 150, z: 11 } # p2
-    - position: { x: 500, y: 150, z: 11 } # p3
+    - position: { x: 50, y: 350, z: 11 } # p0
+    - position: { x: 630, y: 350, z: 11 } # p1
+    - position: { x: 50, y: 150, z: 11 } # p2
+    - position: { x: 630, y: 150, z: 11 } # p3
 
   widget_template:
     portraits:
@@ -20,7 +20,7 @@ character_selection:
         position: { z: 2 }
 
   characters_available_selector:
-    position: { x: 100, y: 100, z: 12 }
+    position: { x: 200, y: 400, z: 12 }
     layout:
       grid:
         column_count: 7
@@ -29,17 +29,17 @@ character_selection:
     selection_highlights:
       # Position relative to highlighted asset entity.
       - position: { x: 0, y: -15, z: 0 }
-        sequence: "p0_highlight"
+        sequence: "p0_inactive"
       - position: { x: 20, y: -15, z: 0 }
-        sequence: "p1_highlight"
+        sequence: "p1_inactive"
       - position: { x: 40, y: -15, z: 0 }
-        sequence: "p2_highlight"
+        sequence: "p2_inactive"
       - position: { x: 60, y: -15, z: 0 }
-        sequence: "p3_highlight"
+        sequence: "p3_inactive"
       - position: { x: 0, y: -30, z: 0 }
-        sequence: "p4_highlight"
+        sequence: "p4_inactive"
       - position: { x: 20, y: -30, z: 0 }
-        sequence: "p5_highlight"
+        sequence: "p5_inactive"
 
 sequences:
   widget_inactive:
@@ -116,9 +116,218 @@ sequences:
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 0 } }
 
-  p0_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 0 } }] }
-  p1_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 1 } }] }
-  p2_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 2 } }] }
-  p3_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 3 } }] }
-  p4_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 4 } }] }
-  p5_highlight: { frames: [{ wait: 2, sprite: { sheet: 5, index: 5 } }] }
+  p0_inactive:
+    input_reactions:
+      press_attack:
+        next: "p0_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p0_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }] # Blank sprite
+  p0_select:
+    input_reactions:
+      press_attack:
+        next: "p0_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p0_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p0_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p0_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 0 } }]
+  p0_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p0_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p0_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 0 }, scale: 2.0 }]
+
+  p1_inactive:
+    input_reactions:
+      press_attack:
+        next: "p1_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p1_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }]
+  p1_select:
+    input_reactions:
+      press_attack:
+        next: "p1_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p1_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p1_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p1_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 1 } }]
+  p1_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p1_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p1_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 1 }, scale: 2.0 }]
+
+  p2_inactive:
+    input_reactions:
+      press_attack:
+        next: "p2_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p2_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }]
+  p2_select:
+    input_reactions:
+      press_attack:
+        next: "p2_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p2_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p2_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p2_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 2 } }]
+  p2_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p2_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p2_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 2 }, scale: 2.0 }]
+
+  p3_inactive:
+    input_reactions:
+      press_attack:
+        next: "p3_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p3_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }]
+  p3_select:
+    input_reactions:
+      press_attack:
+        next: "p3_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p3_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p3_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p3_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 3 } }]
+  p3_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p3_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p3_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 3 }, scale: 2.0 }]
+
+  p4_inactive:
+    input_reactions:
+      press_attack:
+        next: "p4_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p4_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }]
+  p4_select:
+    input_reactions:
+      press_attack:
+        next: "p4_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p4_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p4_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p4_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 4 } }]
+  p4_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p4_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p4_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 4 }, scale: 2.0 }]
+
+  p5_inactive:
+    input_reactions:
+      press_attack:
+        next: "p5_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "p5_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }]
+  p5_select:
+    input_reactions:
+      press_attack:
+        next: "p5_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "p5_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "p5_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "p5_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 5 } }]
+  p5_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "p5_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "p5_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 5 }, scale: 2.0 }]
