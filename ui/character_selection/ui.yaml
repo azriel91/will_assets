@@ -46,10 +46,10 @@ sequences:
     input_reactions:
       press_attack:
         next: "widget_character_select"
-        events: [{ character_selection: "join" }]
+        events: [{ asset_selection: "join" }]
       press_jump:
         next: "widget_inactive"
-        events: [{ character_selection: "return" }]
+        events: [{ asset_selection: "return" }]
     frames:
       - { wait: 3, sprite: { sheet: 1, index: 0 } }
 
@@ -58,16 +58,16 @@ sequences:
     input_reactions:
       press_attack:
         next: "widget_confirmed"
-        events: [{ character_selection: "select" }]
+        events: [{ asset_selection: "select" }]
       press_jump:
         next: "widget_inactive"
-        events: [{ character_selection: "leave" }]
+        events: [{ asset_selection: "leave" }]
       press_x:
         - next: "widget_character_select"
-          events: [{ character_selection: { switch: "previous" } }]
+          events: [{ asset_selection: { switch: "previous" } }]
           requirement: [{ input_dir_x: "left" }]
         - next: "widget_character_select"
-          events: [{ character_selection: { switch: "next" } }]
+          events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
 
     frames:
@@ -83,10 +83,10 @@ sequences:
     input_reactions:
       press_attack:
         next: "widget_confirmed"
-        events: [{ character_selection: "confirm" }]
+        events: [{ asset_selection: "confirm" }]
       press_jump:
         next: "widget_character_select"
-        events: [{ character_selection: "deselect" }]
+        events: [{ asset_selection: "deselect" }]
     frames:
       - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.6, g: 2.1, b: 1.0 } }
       - { wait: 3, sprite: { sheet: 1, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
