@@ -30,15 +30,15 @@ character_selection:
       # Position relative to highlighted asset entity.
       - position: { x: 0, y: -15, z: 2 }
         sequence: "p0_inactive"
-      - position: { x: 20, y: -15, z: 2 }
+      - position: { x: 20, y: -15, z: 3 }
         sequence: "p1_inactive"
-      - position: { x: 40, y: -15, z: 2 }
+      - position: { x: 40, y: -15, z: 4 }
         sequence: "p2_inactive"
-      - position: { x: 60, y: -15, z: 2 }
+      - position: { x: 60, y: -15, z: 5 }
         sequence: "p3_inactive"
-      - position: { x: 0, y: -30, z: 2 }
+      - position: { x: 0, y: -30, z: 6 }
         sequence: "p4_inactive"
-      - position: { x: 20, y: -30, z: 2 }
+      - position: { x: 20, y: -30, z: 7 }
         sequence: "p5_inactive"
 
 sequences:
