@@ -1,0 +1,116 @@
+map_selection:
+  map_preview:
+    position: { x: 50, y: 700, z: 11 }
+    portraits:
+      random: "portrait_random"
+      select: "portrait_select"
+
+    layers:
+      main:
+        sequence: "widget_inactive"
+        position: { z: 1 }
+      portrait:
+        sequence: "portrait_random"
+        position: { z: 2 }
+
+  maps_available_selector:
+    position: { x: 200, y: 400, z: 12 }
+    layout:
+      grid:
+        column_count: 7
+        cell_size: { w: 100, h: 100 }
+
+    selection_highlights:
+      # Position relative to highlighted asset entity.
+      - position: { x: 0, y: -15, z: 2 }
+        sequence: "highlight_inactive"
+
+sequences:
+  widget_inactive:
+    input_reactions:
+      press_attack:
+        next: "widget_map_select"
+      press_jump:
+        next: "widget_inactive"
+    frames:
+      - { wait: 3, sprite: { sheet: 1, index: 0 } }
+
+  widget_map_select:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "widget_confirmed"
+      press_jump:
+        next: "widget_inactive"
+      press_x:
+        - next: "widget_map_select"
+          requirement: [{ input_dir_x: "left" }]
+        - next: "widget_map_select"
+          requirement: [{ input_dir_x: "right" }]
+
+    frames:
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.3, g: 1.1, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.9, g: 1.4, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
+
+  widget_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "widget_confirmed"
+      press_jump:
+        next: "widget_map_select"
+    frames:
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.6, g: 2.1, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.75, g: 2.7, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
+
+  portrait_random:
+    frames:
+      - { wait: 2, sprite: { sheet: 4, index: 0 } }
+
+  portrait_select:
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 0 } }
+
+  highlight_inactive:
+    input_reactions:
+      press_attack:
+        next: "highlight_select"
+        events: [{ asset_selection: "join" }]
+      press_jump:
+        next: "highlight_inactive"
+        events: [{ asset_selection: "return" }]
+    frames: [{ wait: 2, sprite: { sheet: 1, index: 0 } }] # Blank sprite
+  highlight_select:
+    input_reactions:
+      press_attack:
+        next: "highlight_confirmed"
+        events: [{ asset_selection: "select" }]
+      press_jump:
+        next: "highlight_inactive"
+        events: [{ asset_selection: "leave" }]
+      press_x:
+        - next: "highlight_select"
+          events: [{ asset_selection: { switch: "previous" } }]
+          requirement: [{ input_dir_x: "left" }]
+        - next: "highlight_select"
+          events: [{ asset_selection: { switch: "next" } }]
+          requirement: [{ input_dir_x: "right" }]
+    frames: [{ wait: 2, sprite: { sheet: 2, index: 0 } }]
+  highlight_confirmed:
+    next: "repeat"
+    input_reactions:
+      press_attack:
+        next: "highlight_confirmed"
+        events: [{ asset_selection: "confirm" }]
+      press_jump:
+        next: "highlight_select"
+        events: [{ asset_selection: "deselect" }]
+    frames: [{ wait: 2, sprite: { sheet: 2, index: 0 }, scale: 2.0 }]

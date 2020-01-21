@@ -5,3 +5,31 @@ sheets:
     row_count   : 1
     column_count: 1
     has_border  : false
+
+  - path        : "../common/1x1.png"
+    sprite_w    : 1
+    sprite_h    : 1
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - path        : "../common/player_tags.png"
+    sprite_w    : 20
+    sprite_h    : 15
+    row_count   : 2
+    column_count: 3
+    has_border  : true
+
+  - path        : "../character_selection/widget_frame.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+
+  - path        : "../character_selection/widget_random.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 1
+    column_count: 1
+    has_border  : false
