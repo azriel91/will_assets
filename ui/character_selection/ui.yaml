@@ -132,7 +132,7 @@ sequences:
         - next: "p0_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 0 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 0 }, scale: 1.0 }]
   p0_confirmed:
     next: "repeat"
     input_reactions:
@@ -168,7 +168,7 @@ sequences:
         - next: "p1_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 1 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 1 }, scale: 1.0 }]
   p1_confirmed:
     next: "repeat"
     input_reactions:
@@ -204,7 +204,7 @@ sequences:
         - next: "p2_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 2 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 2 }, scale: 1.0 }]
   p2_confirmed:
     next: "repeat"
     input_reactions:
@@ -240,7 +240,7 @@ sequences:
         - next: "p3_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 3 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 3 }, scale: 1.0 }]
   p3_confirmed:
     next: "repeat"
     input_reactions:
@@ -276,7 +276,7 @@ sequences:
         - next: "p4_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 4 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 4 }, scale: 1.0 }]
   p4_confirmed:
     next: "repeat"
     input_reactions:
@@ -312,7 +312,7 @@ sequences:
         - next: "p5_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 5, index: 5 } }]
+    frames: [{ wait: 2, sprite: { sheet: 5, index: 5 }, scale: 1.0 }]
   p5_confirmed:
     next: "repeat"
     input_reactions:

@@ -23,7 +23,7 @@ map_selection:
     selection_highlights:
       # Position relative to highlighted asset entity.
       - position: { x: 0, y: -15, z: 2 }
-        sequence: "highlight_inactive"
+        sequence: "highlight_select"
 
 sequences:
   widget_inactive:
@@ -79,23 +79,14 @@ sequences:
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 0 } }
 
-  highlight_inactive:
-    input_reactions:
-      press_attack:
-        next: "highlight_select"
-        events: [{ asset_selection: "join" }]
-      press_jump:
-        next: "highlight_inactive"
-        events: [{ asset_selection: "return" }]
-    frames: [{ wait: 2, sprite: { sheet: 1, index: 0 } }] # Blank sprite
   highlight_select:
     input_reactions:
       press_attack:
         next: "highlight_confirmed"
         events: [{ asset_selection: "select" }]
       press_jump:
-        next: "highlight_inactive"
-        events: [{ asset_selection: "leave" }]
+        next: "highlight_select"
+        events: [{ asset_selection: "return" }]
       press_x:
         - next: "highlight_select"
           events: [{ asset_selection: { switch: "previous" } }]
@@ -103,7 +94,7 @@ sequences:
         - next: "highlight_select"
           events: [{ asset_selection: { switch: "next" } }]
           requirement: [{ input_dir_x: "right" }]
-    frames: [{ wait: 2, sprite: { sheet: 2, index: 0 } }]
+    frames: [{ wait: 2, sprite: { sheet: 2, index: 0 }, scale: 1.0 }]
   highlight_confirmed:
     next: "repeat"
     input_reactions:
