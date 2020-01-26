@@ -1,20 +1,48 @@
 map_selection:
   map_preview:
-    position: { x: 50, y: 700, z: 11 }
+    position: { x: 200, y: 200, z: 11 }
+    dimensions: { w: 400, h: 300 }
     portraits:
       random: "portrait_random"
       select: "portrait_select"
 
     layers:
       main:
-        sequence: "widget_inactive"
+        sequence: "widget_map_select"
         position: { z: 1 }
       portrait:
         sequence: "portrait_random"
         position: { z: 2 }
+      top_left:
+        sequence: "preview_top_left"
+        position: { x: 0, y: 300, z: 2 }
+      top:
+        sequence: "preview_top"
+        position: { x: 0, y: 300, z: 2 }
+      top_right:
+        sequence: "preview_top_right"
+        position: { x: 400, y: 300, z: 2 }
+      bottom_left:
+        sequence: "preview_bottom_left"
+        position: { x: 0, y: 0, z: 2 }
+      bottom:
+        sequence: "preview_bottom"
+        position: { x: 0, y: 0, z: 2 }
+      bottom_right:
+        sequence: "preview_bottom_right"
+        position: { x: 400, y: 0, z: 2 }
+      left:
+        sequence: "preview_left"
+        position: { x: 0, y: 0, z: 2 }
+      right:
+        sequence: "preview_right"
+        position: { x: 400, y: 0, z: 2 }
+      center:
+        sequence: "preview_center"
+        position: { x: 0, y: 0, z: 0 }
 
   maps_available_selector:
-    position: { x: 200, y: 400, z: 12 }
+    position: { x: 100, y: 100, z: 12 }
     layout:
       grid:
         column_count: 7
@@ -26,35 +54,10 @@ map_selection:
         sequence: "highlight_select"
 
 sequences:
-  widget_inactive:
-    input_reactions:
-      press_attack:
-        next: "widget_map_select"
-      press_jump:
-        next: "widget_inactive"
-    frames:
-      - { wait: 3, sprite: { sheet: 1, index: 0 } }
-
   widget_map_select:
     next: "repeat"
-    input_reactions:
-      press_attack:
-        next: "widget_confirmed"
-      press_jump:
-        next: "widget_inactive"
-      press_x:
-        - next: "widget_map_select"
-          requirement: [{ input_dir_x: "left" }]
-        - next: "widget_map_select"
-          requirement: [{ input_dir_x: "right" }]
-
     frames:
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.3, g: 1.1, b: 0.6 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.9, g: 1.4, b: 0.6 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.7, g: 1.3, b: 0.6 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 3.5, g: 1.2, b: 0.6 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 } }
 
   widget_confirmed:
     next: "repeat"
@@ -64,20 +67,25 @@ sequences:
       press_jump:
         next: "widget_map_select"
     frames:
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.6, g: 2.1, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.75, g: 2.7, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.7, g: 2.5, b: 1.0 } }
-      - { wait: 3, sprite: { sheet: 3, index: 0 }, tint: { r: 0.65, g: 2.3, b: 1.0 } }
+      - { wait: 3, sprite: { sheet: 1, index: 0 } }
 
   portrait_random:
     frames:
-      - { wait: 2, sprite: { sheet: 4, index: 0 } }
+      - { wait: 2, sprite: { sheet: 1, index: 0 } }
 
   portrait_select:
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 0 } }
+
+  preview_top_left    : { frames: [{ wait: 2, sprite: { sheet: 3, index: 0 } }] }
+  preview_top         : { frames: [{ wait: 2, sprite: { sheet: 4, index: 0 } }] }
+  preview_top_right   : { frames: [{ wait: 2, sprite: { sheet: 3, index: 1 } }] }
+  preview_bottom_left : { frames: [{ wait: 2, sprite: { sheet: 3, index: 2 } }] }
+  preview_bottom      : { frames: [{ wait: 2, sprite: { sheet: 4, index: 1 } }] }
+  preview_bottom_right: { frames: [{ wait: 2, sprite: { sheet: 3, index: 3 } }] }
+  preview_left        : { frames: [{ wait: 2, sprite: { sheet: 5, index: 0 } }] }
+  preview_right       : { frames: [{ wait: 2, sprite: { sheet: 5, index: 1 } }] }
+  preview_center      : { frames: [{ wait: 2, sprite: { sheet: 6, index: 0 } }] }
 
   highlight_select:
     input_reactions:

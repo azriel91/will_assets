@@ -20,16 +20,41 @@ sheets:
     column_count: 3
     has_border  : true
 
-  - path        : "../character_selection/widget_frame.png"
-    sprite_w    : 120
-    sprite_h    : 120
-    row_count   : 1
+  - path        : "preview_corner.png"
+    sprite_w    : 25
+    sprite_h    : 25
+    row_count   : 2
+    column_count: 2
+    has_border  : false
+    offsets:
+      - { x: 25, y: 25 } # 0
+      - { x: 25, y: 25 } # 1  0, 25
+      - { x: 25, y: 25 } # 2 25,  0
+      - { x: 25, y: 25 } # 3  0,  0
+
+  - path        : "preview_horizontal_slice.png"
+    sprite_w    : 400
+    sprite_h    : 25
+    row_count   : 2
     column_count: 1
     has_border  : false
+    offsets:
+      - { x: 0, y: 25 } # 0
+      - { x: 0, y: 25 } # 1  0, 0
 
-  - path        : "../character_selection/widget_random.png"
-    sprite_w    : 120
-    sprite_h    : 120
+  - path        : "preview_vertical_slice.png"
+    sprite_w    : 25
+    sprite_h    : 300
+    row_count   : 1
+    column_count: 2
+    has_border  : false
+    offsets:
+      - { x: 25, y: 300 } # 0
+      - { x: 25, y: 300 } # 1  0, 0
+
+  - path        : "../common/1x1_black.png"
+    sprite_w    : 400
+    sprite_h    : 300
     row_count   : 1
     column_count: 1
     has_border  : false
