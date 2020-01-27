@@ -71,7 +71,7 @@ sequences:
 
   portrait_random:
     frames:
-      - { wait: 2, sprite: { sheet: 1, index: 0 } }
+      - { wait: 2, sprite: { sheet: 7, index: 0 } }
 
   portrait_select:
     frames:

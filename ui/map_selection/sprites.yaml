@@ -58,3 +58,12 @@ sheets:
     row_count   : 1
     column_count: 1
     has_border  : false
+
+  - path        : "../character_selection/widget_random.png"
+    sprite_w    : 120
+    sprite_h    : 120
+    row_count   : 1
+    column_count: 1
+    has_border  : false
+    offsets:
+      - { x: -140, y: 210 }
