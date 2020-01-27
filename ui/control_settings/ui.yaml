@@ -2,6 +2,7 @@ control_settings:
   title: { position: { x: 0, y: 500, z: 10 }, text: "Control Settings" }
   keyboard:
     position: { x: 50, y: 200, z: 10 }
+    scale: 2.0
     controller_tints:
       - { r: 1.0, g: 0.15, b: 0.15 }
       - { r: 0.15, g: 1.0, b: 0.3 }
