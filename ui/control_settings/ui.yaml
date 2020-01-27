@@ -6,6 +6,7 @@ control_settings:
       - { r: 1.0, g: 0.15, b: 0.15 }
       - { r: 0.15, g: 1.0, b: 0.3 }
       - { r: 0.2, g: 0.4, b: 1.0 }
+      - { r: 1.1, g: 0.4, b: 0.1 }
 
     layout: "us"
     layout_positions:
