@@ -53,6 +53,8 @@ map_selection:
       - position: { x: 0, y: -15, z: 2 }
         sequence: "highlight_select"
 
+display_control_buttons: true
+
 sequences:
   widget_map_select:
     next: "repeat"

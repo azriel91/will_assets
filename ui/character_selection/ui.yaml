@@ -41,6 +41,8 @@ character_selection:
       - position: { x: 20, y: -30, z: 7 }
         sequence: "p5_inactive"
 
+display_control_buttons: true
+
 sequences:
   widget_inactive:
     input_reactions:

@@ -15,6 +15,8 @@ menu:
     label: { position: { x: 0, y: 20, z: 0 }, text: "Exit" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "exit_inactive" }
 
+display_control_buttons: true
+
 sequences:
   start_game_inactive:
     next: "none"
