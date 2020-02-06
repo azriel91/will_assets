@@ -20,38 +20,115 @@ display_control_buttons: true
 sequences:
   start_game_inactive:
     next: "none"
+    input_reactions:
+      press_x:
+        next: "start_game_active"
+        requirement: [{ input_dir_x: "some" }]
     frames:
-      - { wait: 2, sprite: { sheet: 0, index: 0 } }
+      - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
+      - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
 
   start_game_active:
     next: "repeat"
+    input_reactions:
+      press_attack: { next: "start_game_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
       - { wait: 2, sprite: { sheet: 4, index: 4 } }
 
   start_game_selected:
-    next: "none"
+    next: "start_game_active"
     frames:
-      - wait: 2
-        sprite: { sheet: 0, index: 0 }
+      - { wait: 1, sprite: { sheet: 5, index: 0 } }
+      - { wait: 1, sprite: { sheet: 5, index: 1 } }
+      - { wait: 1, sprite: { sheet: 5, index: 2 } }
+      - { wait: 1, sprite: { sheet: 5, index: 3 } }
+      - { wait: 1, sprite: { sheet: 5, index: 4 } }
+      - { wait: 1, sprite: { sheet: 5, index: 5 } }
+      - { wait: 1, sprite: { sheet: 5, index: 6 } }
+      - { wait: 1, sprite: { sheet: 5, index: 7 } }
+      - { wait: 1, sprite: { sheet: 5, index: 8 } }
+      - { wait: 1, sprite: { sheet: 5, index: 9 } }
+      - { wait: 1, sprite: { sheet: 5, index: 10 } }
+      - { wait: 1, sprite: { sheet: 5, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "start_game_active", events: [{ game_mode_selection: { select: { index: "start_game" } } }] }
+        sprite: { sheet: 5, index: 11 }
 
-  control_settings_inactive: &control_settings_inactive
+  control_settings_inactive:
     next: "repeat"
+    frames:
+      - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
+      - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
+
+  control_settings_active:
+    next: "repeat"
+    input_reactions:
+      press_attack: { next: "control_settings_selected" }
+      press_x:
+        next: "control_settings_inactive"
+        requirement: [{ input_dir_x: "some" }]
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
       - { wait: 2, sprite: { sheet: 4, index: 4 } }
 
-  exit_inactive: *control_settings_inactive
+  control_settings_selected:
+    next: "control_settings_active"
+    frames:
+      - { wait: 1, sprite: { sheet: 5, index: 0 } }
+      - { wait: 1, sprite: { sheet: 5, index: 1 } }
+      - { wait: 1, sprite: { sheet: 5, index: 2 } }
+      - { wait: 1, sprite: { sheet: 5, index: 3 } }
+      - { wait: 1, sprite: { sheet: 5, index: 4 } }
+      - { wait: 1, sprite: { sheet: 5, index: 5 } }
+      - { wait: 1, sprite: { sheet: 5, index: 6 } }
+      - { wait: 1, sprite: { sheet: 5, index: 7 } }
+      - { wait: 1, sprite: { sheet: 5, index: 8 } }
+      - { wait: 1, sprite: { sheet: 5, index: 9 } }
+      - { wait: 1, sprite: { sheet: 5, index: 10 } }
+      - { wait: 1, sprite: { sheet: 5, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "control_settings_active", events: [{ game_mode_selection: { select: { index: "control_settings" } } }] }
+        sprite: { sheet: 5, index: 11 }
+
+  exit_inactive:
+    next: "repeat"
+    frames:
+      - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
+      - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
 
   exit_active:
     next: "repeat"
+    input_reactions:
+      press_attack: { next: "exit_selected" }
     frames:
-      - { wait: 2, sprite: { sheet: 0, index: 0 } }
+      - { wait: 2, sprite: { sheet: 4, index: 2 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 } }
+      - { wait: 2, sprite: { sheet: 4, index: 4 } }
 
   exit_selected:
-    next: "none"
+    next: "exit_active"
     frames:
-      - wait: 2
-        sprite: { sheet: 0, index: 0 }
+      - { wait: 1, sprite: { sheet: 5, index: 0 } }
+      - { wait: 1, sprite: { sheet: 5, index: 1 } }
+      - { wait: 1, sprite: { sheet: 5, index: 2 } }
+      - { wait: 1, sprite: { sheet: 5, index: 3 } }
+      - { wait: 1, sprite: { sheet: 5, index: 4 } }
+      - { wait: 1, sprite: { sheet: 5, index: 5 } }
+      - { wait: 1, sprite: { sheet: 5, index: 6 } }
+      - { wait: 1, sprite: { sheet: 5, index: 7 } }
+      - { wait: 1, sprite: { sheet: 5, index: 8 } }
+      - { wait: 1, sprite: { sheet: 5, index: 9 } }
+      - { wait: 1, sprite: { sheet: 5, index: 10 } }
+      - { wait: 1, sprite: { sheet: 5, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "exit_active", events: [{ game_mode_selection: { select: { index: "exit" } } }] }
+        sprite: { sheet: 5, index: 11 }
