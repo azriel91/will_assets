@@ -4,27 +4,32 @@ menu:
     position: { x: 250, y: 320, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Start Game" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "start_game_active" }
+    widget_status_sequences:
+      idle: "start_game_inactive"
+      active: "start_game_active"
 
   - index: "control_settings"
     position: { x: 250, y: 250, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Control Settings" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "control_settings_inactive" }
+    widget_status_sequences:
+      idle: "control_settings_inactive"
+      active: "control_settings_active"
 
   - index: "exit"
     position: { x: 250, y: 180, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Exit" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "exit_inactive" }
+    widget_status_sequences:
+      idle: "exit_inactive"
+      active: "exit_active"
 
 display_control_buttons: true
 
 sequences:
   start_game_inactive:
-    next: "none"
-    input_reactions:
-      press_x:
-        next: "start_game_active"
-        requirement: [{ input_dir_x: "some" }]
-    frames:
+    next: "repeat"
+    frames: &greyscale_weak
       - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
       - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
@@ -60,18 +65,12 @@ sequences:
 
   control_settings_inactive:
     next: "repeat"
-    frames:
-      - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
-      - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
-      - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
+    frames: *greyscale_weak
 
   control_settings_active:
     next: "repeat"
     input_reactions:
       press_attack: { next: "control_settings_selected" }
-      press_x:
-        next: "control_settings_inactive"
-        requirement: [{ input_dir_x: "some" }]
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 } }
@@ -99,10 +98,7 @@ sequences:
 
   exit_inactive:
     next: "repeat"
-    frames:
-      - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
-      - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
-      - { wait: 2, sprite: { sheet: 4, index: 4 }, tint: *greyscale }
+    frames: *greyscale_weak
 
   exit_active:
     next: "repeat"
