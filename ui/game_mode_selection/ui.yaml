@@ -1,7 +1,7 @@
 menu:
   # First item is active by default. The sequence here should correspond to the active status.
   - index: "start_game"
-    position: { x: 250, y: 320, z: 10 }
+    position: { x: 250, y: 350, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Start Game" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "start_game_active" }
     widget_status_sequences:
@@ -9,15 +9,23 @@ menu:
       active: "start_game_active"
 
   - index: "control_settings"
-    position: { x: 250, y: 250, z: 10 }
+    position: { x: 250, y: 280, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Control Settings" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "control_settings_inactive" }
     widget_status_sequences:
       idle: "control_settings_inactive"
       active: "control_settings_active"
 
+  - index: "network_play"
+    position: { x: 250, y: 210, z: 10 }
+    label: { position: { x: 0, y: 20, z: 0 }, text: "Network Play" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "network_play_inactive" }
+    widget_status_sequences:
+      idle: "network_play_inactive"
+      active: "network_play_active"
+
   - index: "exit"
-    position: { x: 250, y: 180, z: 10 }
+    position: { x: 250, y: 140, z: 10 }
     label: { position: { x: 0, y: 20, z: 0 }, text: "Exit" }
     sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "exit_inactive" }
     widget_status_sequences:
@@ -61,6 +69,39 @@ sequences:
       - wait: 1
         input_reactions:
           fallback: { next: "start_game_active", events: [{ game_mode_selection: { select: { index: "start_game" } } }] }
+        sprite: { sheet: 5, index: 11 }
+
+  network_play_inactive:
+    next: "repeat"
+    frames: *greyscale_weak
+
+  network_play_active:
+    next: "repeat"
+    input_reactions:
+      press_attack: { next: "network_play_selected" }
+    frames:
+      - { wait: 2, sprite: { sheet: 4, index: 2 } }
+      - { wait: 2, sprite: { sheet: 4, index: 3 } }
+      - { wait: 2, sprite: { sheet: 4, index: 4 } }
+
+  network_play_selected:
+    next: "network_play_active"
+    frames:
+      - { wait: 1, sprite: { sheet: 5, index: 0 } }
+      - { wait: 1, sprite: { sheet: 5, index: 1 } }
+      - { wait: 1, sprite: { sheet: 5, index: 2 } }
+      - { wait: 1, sprite: { sheet: 5, index: 3 } }
+      - { wait: 1, sprite: { sheet: 5, index: 4 } }
+      - { wait: 1, sprite: { sheet: 5, index: 5 } }
+      - { wait: 1, sprite: { sheet: 5, index: 6 } }
+      - { wait: 1, sprite: { sheet: 5, index: 7 } }
+      - { wait: 1, sprite: { sheet: 5, index: 8 } }
+      - { wait: 1, sprite: { sheet: 5, index: 9 } }
+      - { wait: 1, sprite: { sheet: 5, index: 10 } }
+      - { wait: 1, sprite: { sheet: 5, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "network_play_active", events: [{ game_mode_selection: { select: { index: "network_play" } } }] }
         sprite: { sheet: 5, index: 11 }
 
   control_settings_inactive:
