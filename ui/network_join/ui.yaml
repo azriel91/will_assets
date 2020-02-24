@@ -1,0 +1,82 @@
+form:
+  # First item is active by default. The sequence here should correspond to the active status.
+  - position: { x: 250, y: 320, z: 10 }
+
+    label:
+      position: { x: 0, y: 20, z: 0 }
+      dimensions: { w: 100, h: 50 }
+      font_size: 20
+      text: "Computer\nName: "
+      align: "MiddleLeft"
+      line_mode: "Wrap"
+
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "active" }
+
+    widget_status_sequences:
+      idle: "inactive"
+      active: "active"
+
+    input_field:
+      position: { x: 100, y: 20, z: 0 }
+      dimensions: { w: 300, h: 50 }
+      text: "Azriel's Computer"
+
+  - position: { x: 250, y: 250, z: 10 }
+
+    label:
+      position: { x: 0, y: 20, z: 0 }
+      dimensions: { w: 100, h: 50 }
+      font_size: 20
+      text: "Session Code: "
+      align: "MiddleLeft"
+      line_mode: "Wrap"
+
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "inactive" }
+
+    widget_status_sequences:
+      idle: "inactive"
+      active: "active"
+
+    input_field:
+      position: { x: 100, y: 20, z: 0 }
+      dimensions: { w: 300, h: 50 }
+      text: "ABCD"
+
+display_control_buttons: true
+
+sequences:
+  inactive:
+    next: "repeat"
+    frames: &greyscale_weak
+      - { wait: 2, sprite: { sheet: 1, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 }, tint: *greyscale }
+      - { wait: 2, sprite: { sheet: 1, index: 4 }, tint: *greyscale }
+
+  active:
+    next: "repeat"
+    input_reactions:
+      press_attack: { next: "selected" }
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 2 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 } }
+      - { wait: 2, sprite: { sheet: 1, index: 4 } }
+
+  selected:
+    next: "active"
+    frames:
+      - { wait: 1, sprite: { sheet: 2, index: 0 } }
+      - { wait: 1, sprite: { sheet: 2, index: 1 } }
+      - { wait: 1, sprite: { sheet: 2, index: 2 } }
+      - { wait: 1, sprite: { sheet: 2, index: 3 } }
+      - { wait: 1, sprite: { sheet: 2, index: 4 } }
+      - { wait: 1, sprite: { sheet: 2, index: 5 } }
+      - { wait: 1, sprite: { sheet: 2, index: 6 } }
+      - { wait: 1, sprite: { sheet: 2, index: 7 } }
+      - { wait: 1, sprite: { sheet: 2, index: 8 } }
+      - { wait: 1, sprite: { sheet: 2, index: 9 } }
+      - { wait: 1, sprite: { sheet: 2, index: 10 } }
+      - { wait: 1, sprite: { sheet: 2, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "active", events: [{ network_mode_selection: { select: { index: "host" } } }] }
+        sprite: { sheet: 2, index: 11 }
