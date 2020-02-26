@@ -42,7 +42,7 @@ form:
       dimensions: { w: 300, h: 50 }
       text: "ABCD"
 
-display_control_buttons: true
+display_control_buttons: false
 
 sequences:
   inactive:
