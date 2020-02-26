@@ -45,6 +45,7 @@ sequences:
   start_game_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "start_game_selected" }
       press_attack: { next: "start_game_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
@@ -78,6 +79,7 @@ sequences:
   network_play_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "network_play_selected" }
       press_attack: { next: "network_play_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
@@ -111,6 +113,7 @@ sequences:
   control_settings_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "control_settings_selected" }
       press_attack: { next: "control_settings_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }
@@ -144,6 +147,7 @@ sequences:
   exit_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "exit_selected" }
       press_attack: { next: "exit_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 4, index: 2 } }

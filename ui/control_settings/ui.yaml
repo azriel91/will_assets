@@ -333,9 +333,13 @@ sequences:
   back_active:
     next: "repeat"
     input_reactions:
-      press_attack:
-        next: "back_active"
-        events: [{ control_settings: "return" }]
+      press_button:
+        - button: { Mouse: "Left" }
+          next: "back_active"
+          events: [{ control_settings: "return" }]
+        - button: { Key: "Return" }
+          next: "back_active"
+          events: [{ control_settings: "return" }]
     frames:
       - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.5 }
       - { wait: 3, sprite: { sheet: 9, index: 0 }, scale: 1.45 }
@@ -1104,7 +1108,7 @@ sequences:
   "key_enter":
     input_reactions:
       press_button:
-        button: { Key: Return }
+        button: { Key: "Return" }
         next: "key_enter_press"
     frames:
       - { wait: 4, sprite: { sheet: 6, index: 0 } }
