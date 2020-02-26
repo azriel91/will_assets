@@ -10,11 +10,11 @@ form:
       align: "MiddleLeft"
       line_mode: "Wrap"
 
-    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "active" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "label_active" }
 
     widget_status_sequences:
-      idle: "inactive"
-      active: "active"
+      idle: "label_inactive"
+      active: "label_active"
 
     input_field:
       position: { x: 100, y: 20, z: 0 }
@@ -31,11 +31,11 @@ form:
       align: "MiddleLeft"
       line_mode: "Wrap"
 
-    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "inactive" }
+    sprite: { position: { x: 0, y: 50, z: 0 }, sequence: "label_inactive" }
 
     widget_status_sequences:
-      idle: "inactive"
-      active: "active"
+      idle: "label_inactive"
+      active: "label_active"
 
     input_field:
       position: { x: 100, y: 20, z: 0 }
@@ -44,25 +44,63 @@ form:
 
 display_control_buttons: false
 
+buttons:
+  # Join
+  - position: { x: 400, y: 200, z: 10 }
+    label:
+      position: { x: 0, y: 20, z: 0 }
+      dimensions: { w: 100, h: 40 }
+      font_size: 30
+      text: "Join"
+      align: "MiddleLeft"
+      line_mode: "Wrap"
+    sprite: { position: { x: 50, y: 30, z: 0 }, sequence: "join_active" }
+
+  # Back
+  - position: { x: 10, y: 10, z: 10 }
+    label:
+      position: { x: 0, y: 0, z: 0 }
+      dimensions: { w: 100, h: 40 }
+      font_size: 30
+      text: "Back"
+      align: "MiddleLeft"
+      line_mode: "Wrap"
+    sprite: { position: { x: 50, y: 30, z: 0 }, sequence: "back_active" }
+
 sequences:
-  inactive:
+  label_inactive:
+    next: "repeat"
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 2 }, tint: &label_greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 }, tint: *label_greyscale }
+      - { wait: 2, sprite: { sheet: 1, index: 4 }, tint: *label_greyscale }
+
+  label_active:
+    next: "repeat"
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 2 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 } }
+      - { wait: 2, sprite: { sheet: 1, index: 4 } }
+
+  join_inactive:
     next: "repeat"
     frames: &greyscale_weak
       - { wait: 2, sprite: { sheet: 1, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
       - { wait: 2, sprite: { sheet: 1, index: 3 }, tint: *greyscale }
       - { wait: 2, sprite: { sheet: 1, index: 4 }, tint: *greyscale }
 
-  active:
+  join_active:
     next: "repeat"
     input_reactions:
-      press_attack: { next: "selected" }
+      press_button: { button: { Mouse: "Left" }, next: "join_selected" }
+      press_attack: { next: "join_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 2 } }
       - { wait: 2, sprite: { sheet: 1, index: 3 } }
       - { wait: 2, sprite: { sheet: 1, index: 4 } }
 
-  selected:
-    next: "active"
+  join_selected:
+    next: "join_active"
     frames:
       - { wait: 1, sprite: { sheet: 2, index: 0 } }
       - { wait: 1, sprite: { sheet: 2, index: 1 } }
@@ -78,5 +116,44 @@ sequences:
       - { wait: 1, sprite: { sheet: 2, index: 11 } }
       - wait: 1
         input_reactions:
-          fallback: { next: "active", events: [{ network_mode_selection: { select: { index: "host" } } }] }
+          fallback: { next: "join_active", events: [{ network_join: "session_join_request" }] }
+        sprite: { sheet: 2, index: 11 }
+
+  back_inactive:
+    next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "back_selected" }
+    frames: &greyscale_weak
+      - { wait: 2, sprite: { sheet: 1, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 }, tint: *greyscale }
+      - { wait: 2, sprite: { sheet: 1, index: 4 }, tint: *greyscale }
+
+  back_active:
+    next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "back_selected" }
+      press_attack: { next: "back_selected" }
+    frames:
+      - { wait: 2, sprite: { sheet: 1, index: 2 } }
+      - { wait: 2, sprite: { sheet: 1, index: 3 } }
+      - { wait: 2, sprite: { sheet: 1, index: 4 } }
+
+  back_selected:
+    next: "back_active"
+    frames:
+      - { wait: 1, sprite: { sheet: 2, index: 0 } }
+      - { wait: 1, sprite: { sheet: 2, index: 1 } }
+      - { wait: 1, sprite: { sheet: 2, index: 2 } }
+      - { wait: 1, sprite: { sheet: 2, index: 3 } }
+      - { wait: 1, sprite: { sheet: 2, index: 4 } }
+      - { wait: 1, sprite: { sheet: 2, index: 5 } }
+      - { wait: 1, sprite: { sheet: 2, index: 6 } }
+      - { wait: 1, sprite: { sheet: 2, index: 7 } }
+      - { wait: 1, sprite: { sheet: 2, index: 8 } }
+      - { wait: 1, sprite: { sheet: 2, index: 9 } }
+      - { wait: 1, sprite: { sheet: 2, index: 10 } }
+      - { wait: 1, sprite: { sheet: 2, index: 11 } }
+      - wait: 1
+        input_reactions:
+          fallback: { next: "back_active", events: [{ network_join: "back" }] }
         sprite: { sheet: 2, index: 11 }
