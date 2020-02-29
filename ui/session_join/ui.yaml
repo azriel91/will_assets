@@ -116,7 +116,7 @@ sequences:
       - { wait: 1, sprite: { sheet: 2, index: 11 } }
       - wait: 1
         input_reactions:
-          fallback: { next: "join_active", events: [{ network_join: "session_join_request" }] }
+          fallback: { next: "join_active", events: [{ session_join: "session_join_request" }] }
         sprite: { sheet: 2, index: 11 }
 
   back_inactive:
@@ -155,5 +155,5 @@ sequences:
       - { wait: 1, sprite: { sheet: 2, index: 11 } }
       - wait: 1
         input_reactions:
-          fallback: { next: "back_active", events: [{ network_join: "back" }] }
+          fallback: { next: "back_active", events: [{ session_join: "back" }] }
         sprite: { sheet: 2, index: 11 }
