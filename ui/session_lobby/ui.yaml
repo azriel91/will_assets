@@ -1,8 +1,8 @@
 session_lobby:
   session_code:
-    position: { x: 400, y: 500, z: 11 }
+    position: { x: 300, y: 500, z: 11 }
     dimensions: { w: 300, h: 100 }
-    align: "Middle"
+    align: "BottomLeft"
     font_colour: [0.6, 0.7, 1.0, 1.0]
     font_size: 99
 
@@ -20,7 +20,7 @@ session_lobby:
         font_size  : 30
 
       device_name:
-        position   : { x: 30, y: 5 }
+        position   : { x: 60, y: 5 }
         dimensions : { w: 300, h: 30 }
         align      : "BottomLeft"
         font_colour: [1.0, 1.0, 1.0, 1.0]
