@@ -19,7 +19,7 @@ form:
     input_field:
       position: { x: 100, y: 20, z: 0 }
       dimensions: { w: 300, h: 50 }
-      text: "azriel"
+      text: "Computer X"
 
 display_control_buttons: false
 
