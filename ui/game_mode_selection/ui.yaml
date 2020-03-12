@@ -37,6 +37,8 @@ display_control_buttons: true
 sequences:
   start_game_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "start_game_selected" }
     frames: &greyscale_weak
       - { wait: 2, sprite: { sheet: 4, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
       - { wait: 2, sprite: { sheet: 4, index: 3 }, tint: *greyscale }
@@ -74,6 +76,8 @@ sequences:
 
   network_play_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "network_play_selected" }
     frames: *greyscale_weak
 
   network_play_active:
@@ -108,6 +112,8 @@ sequences:
 
   control_settings_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "control_settings_selected" }
     frames: *greyscale_weak
 
   control_settings_active:
@@ -142,6 +148,8 @@ sequences:
 
   exit_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "exit_selected" }
     frames: *greyscale_weak
 
   exit_active:

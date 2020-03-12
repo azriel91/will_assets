@@ -29,6 +29,8 @@ display_control_buttons: true
 sequences:
   host_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "host_selected" }
     frames: &greyscale_weak
       - { wait: 2, sprite: { sheet: 1, index: 2 }, tint: &greyscale { r: 0.3, g: 0.59, b: 0.11 } }
       - { wait: 2, sprite: { sheet: 1, index: 3 }, tint: *greyscale }
@@ -37,6 +39,7 @@ sequences:
   host_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "host_selected" }
       press_attack: { next: "host_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 2 } }
@@ -65,11 +68,14 @@ sequences:
 
   join_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "join_selected" }
     frames: *greyscale_weak
 
   join_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "join_selected" }
       press_attack: { next: "join_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 2 } }
@@ -98,11 +104,14 @@ sequences:
 
   back_inactive:
     next: "repeat"
+    input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "back_selected" }
     frames: *greyscale_weak
 
   back_active:
     next: "repeat"
     input_reactions:
+      press_button: { button: { Mouse: "Left" }, next: "back_selected" }
       press_attack: { next: "back_selected" }
     frames:
       - { wait: 2, sprite: { sheet: 1, index: 2 } }
